@@ -4,5 +4,11 @@
 	<string name="tab1">Cerca</string>
 	<string name="tab2">Corse</string>
 	<string name="tab3">Tariffe</string>
-	<string name="tab4">Lingua</string>	
+	<string name="tab4">Lingua</string>
+	<string name="cerca">Cerca</string>
+	<string name="annulla">Annulla</string>
+	<string name="Da">Da:</string>
+	<string name="A">A:</string>
+	<string name="DaCheOra">Dalle ore?</string>
+	 	
 </resources>
