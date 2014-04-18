@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>  
+ <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical" >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="top"
+          android:orientation="horizontal"
+          android:background="@drawable/navbarlayout"  >
+
+      <Button     
+          android:textColor="@color/button_text"
+          style="@style/bottoniNavbar"
+          android:id="@+id/idBottoni_cerca"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="@string/tab1" />
+      <Button
+          android:textColor="@color/button_text"
+          style="@style/bottoniNavbar"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="@string/tab2" />
+      <Button
+		  android:textColor="@color/button_text"
+          style="@style/bottoniNavbar"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="@string/tab3" />
+      <Button
+          android:textColor="@color/button_text"
+          style="@style/bottoniNavbar"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="@string/tab4" />
+	
+      </LinearLayout>
+
+      <FrameLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+		  android:background="@drawable/framelayout" >
+      </FrameLayout>
+ </LinearLayout>  

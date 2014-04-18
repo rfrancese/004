@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>
+	<string name="app_name">Buonotourist-Unisa</string>
+	<string name="tab1">Cerca</string>
+	<string name="tab2">Corse</string>
+	<string name="tab3">Tariffe</string>
+	<string name="tab4">Lingua</string>	
+</resources>
