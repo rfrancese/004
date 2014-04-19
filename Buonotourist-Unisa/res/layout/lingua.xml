@@ -100,7 +100,9 @@ android:background="@color/body">
      <Button
             android:textColor="@color/button_confirm"
           	style="@style/bottoniConfirm"
-            android:text="Conferma" />	
+            android:text="Conferma"
+            android:id="@+id/idBottoniFormLingua_Conferma"
+             />	
         		
       
       </LinearLayout>
