@@ -1,21 +1,14 @@
 package com.example.proveandroid;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
-import android.os.Build;
 
 public class MainActivity extends Activity {
 	
@@ -30,8 +23,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 	
 		setContentView(R.layout.cerca);
-		View widgetPartenza=findViewById(R.id.partenza);
-		View widgetArrivo=findViewById(R.id.arrivo);
+		View widgetPartenza=findViewById(R.id.idBottoni_Provenienza);
+		View widgetArrivo=findViewById(R.id.idBottoni_Destinazione);
 		widgetPartenza.setId(1);
 		widgetArrivo.setId(2);
 		registerForContextMenu(widgetPartenza);
