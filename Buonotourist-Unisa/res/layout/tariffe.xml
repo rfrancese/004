@@ -93,10 +93,12 @@ android:background="@color/body">
         		android:layout_height="wrap_content" 
         		android:background="@color/body">
             	<Button
+            	    android:id="@+id/idBottoniFormTariffe_Cerca"
             		android:textColor="@color/button_confirm"
           			style="@style/bottoniConfirm"
             		android:text="@string/cerca" />	
         		<Button
+        		    android:id="@+id/idBottoniFormTariffe_Annulla"
         	    	android:textColor="@color/button_confirm"
           			style="@style/bottoniConfirm"
             		android:text="@string/annulla" />

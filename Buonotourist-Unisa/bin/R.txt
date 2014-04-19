@@ -261,6 +261,8 @@ int id homeAsUp 0x7f050005
 int id icon 0x7f05002a
 int id idBottoniFormCerca_Annulla 0x7f050045
 int id idBottoniFormCerca_Cerca 0x7f050044
+int id idBottoniFormTariffe_Annulla 0x7f050049
+int id idBottoniFormTariffe_Cerca 0x7f050048
 int id idBottoniNavbar_Cerca 0x7f05003d
 int id idBottoniNavbar_Corse 0x7f05003e
 int id idBottoniNavbar_Lingua 0x7f050040
