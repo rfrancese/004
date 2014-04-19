@@ -888,6 +888,10 @@ containing a value of this type.
  Minimum width of the search view text entry area. 
          */
         public static final int abc_search_view_text_min_width=0x7f08000c;
+        /**  Default screen margins, per the Android Design guidelines. 
+         */
+        public static final int activity_horizontal_margin=0x7f080011;
+        public static final int activity_vertical_margin=0x7f080012;
     }
     public static final class drawable {
         public static final int abc_ab_bottom_solid_dark_holo=0x7f020000;
@@ -1146,17 +1150,21 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
+        public static final int action_settings=0x7f0a001b;
         public static final int annulla=0x7f0a0013;
         public static final int app_name=0x7f0a000d;
         public static final int cerca=0x7f0a0012;
         public static final int costoA=0x7f0a0017;
         public static final int costoB=0x7f0a0018;
         public static final int da=0x7f0a0014;
+        public static final int hello_world=0x7f0a001a;
         public static final int orario=0x7f0a0016;
         public static final int tab1=0x7f0a000e;
         public static final int tab2=0x7f0a000f;
         public static final int tab3=0x7f0a0010;
         public static final int tab4=0x7f0a0011;
+        public static final int title_activity_main=0x7f0a0019;
+        public static final int title_activity_tariffe=0x7f0a001c;
     }
     public static final class style {
         /**  Mimic text appearance in select_dialog_item.xml 
