@@ -27,7 +27,6 @@
         <activity
         	android:theme="@android:style/Theme.Translucent" 
             android:name="com.example.proveandroid.TariffeActivity" >
-             
         </activity>
         <activity
             android:theme="@android:style/Theme.Translucent" 

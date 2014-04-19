@@ -1013,16 +1013,17 @@ containing a value of this type.
         public static final int icon=0x7f05002a;
         public static final int idBottoniFormCerca_Annulla=0x7f050045;
         public static final int idBottoniFormCerca_Cerca=0x7f050044;
-        public static final int idBottoniFormTariffe_Annulla=0x7f050049;
-        public static final int idBottoniFormTariffe_Cerca=0x7f050048;
+        public static final int idBottoniFormLingua_Conferma=0x7f050046;
+        public static final int idBottoniFormTariffe_Annulla=0x7f05004a;
+        public static final int idBottoniFormTariffe_Cerca=0x7f050049;
         public static final int idBottoniNavbar_Cerca=0x7f05003d;
         public static final int idBottoniNavbar_Corse=0x7f05003e;
         public static final int idBottoniNavbar_Lingua=0x7f050040;
         public static final int idBottoniNavbar_Tariffe=0x7f05003f;
         public static final int idBottoni_Destinazione=0x7f050042;
         public static final int idBottoni_Provenienza=0x7f050041;
-        public static final int idBottoni_TariffaA=0x7f050047;
-        public static final int idBottoni_TariffaDa=0x7f050046;
+        public static final int idBottoni_TariffaA=0x7f050048;
+        public static final int idBottoni_TariffaDa=0x7f050047;
         public static final int idTimePicker_Orario=0x7f050043;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
@@ -1109,8 +1110,9 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int cerca=0x7f030017;
-        public static final int support_simple_spinner_dropdown_item=0x7f030018;
-        public static final int tariffe=0x7f030019;
+        public static final int lingua=0x7f030018;
+        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int tariffe=0x7f03001a;
     }
     public static final class string {
         public static final int a=0x7f0a0015;
