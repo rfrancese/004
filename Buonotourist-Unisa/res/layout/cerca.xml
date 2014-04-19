@@ -19,24 +19,24 @@ android:background="@color/body">
       <Button     
           android:textColor="@color/focusTab"
           style="@style/bottoniNavbar"
-          android:id="@+id/idBottoniNavbar_cerca"
+          android:id="@+id/idBottoniNavbar_Cerca"
           android:text="@string/tab1" />
       <Button
           android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
-          android:id="@+id/idBottoniNavbar_corse"
+          android:id="@+id/idBottoniNavbar_Corse"
           android:text="@string/tab2" />
       <Button
 		  android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:text="@string/tab3"
-          android:id="@+id/idBottoniNavbar_tariffe"
+          android:id="@+id/idBottoniNavbar_Tariffe"
            />
       <Button
           android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:text="@string/tab4" 
-          android:id="@+id/idBottoniNavbar_lingua"
+          android:id="@+id/idBottoniNavbar_Lingua"
           />
 	
     </LinearLayout>
@@ -57,7 +57,7 @@ android:background="@color/body">
             		android:layout_height="match_parent"
                 	android:text="@string/da" />
          	   <Button
-         	   		android:text="@string/partenza" />
+         	   		android:text="@string/partenza" 
                 	android:id="@+id/idBottoni_Provenienza" 
                 	android:layout_width="match_parent"
                 	android:layout_height="match_parent"
@@ -77,7 +77,7 @@ android:background="@color/body">
             		android:layout_height="match_parent"
             		android:text="@string/a" />
          		<Button
-         		    android:text="@string/destinazione" />
+         		    android:text="@string/destinazione"
             		android:id="@+id/idBottoni_Destinazione"
             		android:layout_width="match_parent"
             		android:layout_height="match_parent"
@@ -109,11 +109,15 @@ android:background="@color/body">
             	<Button
             		android:textColor="@color/button_confirm"
           			style="@style/bottoniConfirm"
-            		android:text="@string/cerca" />	
+            		android:text="@string/cerca" 
+            		android:id="@+id/idBottoniForm_Cerca"
+            		/>	
         		<Button
         	    	android:textColor="@color/button_confirm"
           			style="@style/bottoniConfirm"
-            		android:text="@string/annulla" />
+            		android:text="@string/annulla" 
+            		android:id="@+id/idBottoniForm_Annulla"
+            		/>
       </LinearLayout>
 </LinearLayout>
 </ScrollView> 

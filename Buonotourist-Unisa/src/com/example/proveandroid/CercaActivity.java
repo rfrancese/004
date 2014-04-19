@@ -2,12 +2,14 @@ package com.example.proveandroid;
 
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -22,22 +24,80 @@ public class CercaActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-	
 		setContentView(R.layout.cerca);
-		View widgetPartenza=findViewById(R.id.ID);
+		
+		View widgetPartenza=findViewById(R.id.idBottoni_Provenienza);
 		View widgetArrivo=findViewById(R.id.idBottoni_Destinazione);
 		widgetPartenza.setId(1);
 		widgetArrivo.setId(2);
 		registerForContextMenu(widgetPartenza);
 		registerForContextMenu(widgetArrivo);
-		Button cercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_cerca);
-		Button corseNavbar =(Button)findViewById(R.id.idBottoniNavbar_cerca);
-		Button tariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_cerca);
-		Button linguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_cerca);
-
 		
+		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
+		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
+		Button buttonCorseNavbar =(Button)findViewById(R.id.idBottoniNavbar_Corse);
+		Button buttonTariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_Tariffe);
+		Button buttonLinguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Lingua);
+		settaListenerBottoniNavbar(buttonCercaNavbar,buttonCorseNavbar,buttonTariffeNavbar,buttonLinguaNavbar,savedInstanceState);
+		Button buttonCercaForm =(Button)findViewById(R.id.idBottoniForm_Cerca);
+		Button buttonAnnullaForm =(Button)findViewById(R.id.idBottoniForm_Annulla);
+		settaListenerBottoniForm(buttonCercaForm,buttonAnnullaForm,savedInstanceState);
 	}
 	
+	private void settaListenerBottoniForm(Button buttonCercaForm,Button buttonAnnullaForm, final Bundle savedInstanceState) {
+		buttonAnnullaForm.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+			 onCreate(savedInstanceState);
+			}
+		});
+		buttonCercaForm.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				//INTERROGHERA' IL DATABASE
+			}
+		});
+	}
+
+	private void settaListenerBottoniNavbar(Button buttonCercaNavbar,Button buttonCorseNavbar, Button buttonTariffeNavbar,Button buttonLinguaNavbar, final Bundle savedInstanceState) {
+		buttonCercaNavbar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				 onCreate(savedInstanceState);
+			}
+		});
+		buttonCorseNavbar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				createCorseActivity();
+			}
+		});
+		buttonTariffeNavbar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				createTariffeeActivity();
+			}
+		});
+		buttonLinguaNavbar.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				createLinguaActivity();
+			}
+		});
+	}
+
+	protected void createCorseActivity() {
+		startActivity(new Intent(this,CorseActivity.class));
+	}
+
+	protected void createLinguaActivity() {
+		startActivity(new Intent(this,LinguaActivity.class));
+	}
+
+	protected void createTariffeeActivity() {
+		startActivity(new Intent(this,TariffeActivity.class));
+	}
+
 	public void onCreateContextMenu(ContextMenu menu,View v,ContextMenuInfo menuInfo){
 		
 		if(v.getId()==1){

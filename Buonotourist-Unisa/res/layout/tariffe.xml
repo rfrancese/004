@@ -19,24 +19,24 @@ android:background="@color/body">
       <Button     
           android:textColor="@color/focusTab"
           style="@style/bottoniNavbar"
-          android:id="@+id/idBottoniNavbar_cerca"
+          android:id="@+id/idBottoniNavbar_Cerca"
           android:text="@string/tab1" />
       <Button
           android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
-          android:id="@+id/idBottoniNavbar_corse"
+          android:id="@+id/idBottoniNavbar_Corse"
           android:text="@string/tab2" />
       <Button
 		  android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:text="@string/tab3"
-          android:id="@+id/idBottoniNavbar_tariffe"
+          android:id="@+id/idBottoniNavbar_Tariffe"
            />
       <Button
           android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:text="@string/tab4" 
-          android:id="@+id/idBottoniNavbar_lingua"
+          android:id="@+id/idBottoniNavbar_Lingua"
           />
 	
     </LinearLayout>
