@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>  
 <resources>
-	<color name="navBar">#3F2903</color>
-	<color name="body">#F7D16A</color>
+	<color name="navBar">#000000</color>
+	<color name="body">#FFC049</color>
+	<color name="focusTab">#FFA808</color>
 </resources>
