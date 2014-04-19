@@ -1,61 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-  <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-     
+  <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"  
       android:id="@+id/scroll" 
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
-     android:background="@drawable/framelayout">
-
+      android:background="#F7D16A">
     <LinearLayout
     	android:layout_width="wrap_content"
     	android:layout_height="wrap_content"
     	android:gravity="center"
     	android:orientation="vertical"
-    	android:background="@drawable/framelayout"
-     >
-
+    	android:background="#F7D16A">
     <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:gravity="top"
           android:orientation="horizontal"
-          android:background="@drawable/navbarlayout"  >
-
+          android:background="#322A1C"  >
       <Button     
-          android:textColor="@color/button_text"
+          android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoni_cerca"
           android:layout_width="wrap_content"
           android:layout_height="match_parent"
           android:text="@string/tab1" />
       <Button
-          android:textColor="@color/button_text"
+          android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:layout_width="wrap_content"
           android:layout_height="match_parent"
           android:text="@string/tab2" />
       <Button
-		  android:textColor="@color/button_text"
+		  android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:layout_width="wrap_content"
           android:layout_height="match_parent"
           android:text="@string/tab3" />
       <Button
-          android:textColor="@color/button_text"
+          android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:layout_width="wrap_content"
           android:layout_height="match_parent"
           android:text="@string/tab4" />
 	
-      </LinearLayout>
-
-       <TableLayout
+    </LinearLayout>
+    <TableLayout
            android:layout_width="wrap_content"
            android:layout_height="334dp"
            android:layout_gravity="top|center_horizontal"
-           android:background="@drawable/framelayout"
+           android:background="#F7D16A"
            android:gravity="center"
            android:shrinkColumns="0"
            android:stretchColumns="1" >
@@ -65,14 +59,14 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp" >
 
-        <TextView
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:text="@string/Da" />
+        	  <TextView
+        	  android:textColor="#000000"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/Da" />
 
-         <EditText
-             android:id="@+id/partenza"
-             
+         	  <EditText
+              android:id="@+id/partenza" 
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               />
@@ -82,17 +76,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/A" />
-
-         <EditText
-             android:id="@+id/arrivo"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content" />
-
+       			<TextView
+       			android:textColor="#000000"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/A" />
+         		<EditText
+            	android:id="@+id/arrivo"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content" />
          </TableRow>
          
 
@@ -100,31 +92,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp" >
-
-         <TextView
+         		<TextView
+         		android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="fill_horizontal|center_vertical"
                 android:text="@string/DaCheOra" />
-
-          <TimePicker
+        		<TimePicker
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-           </TableRow>
-           </TableLayout>
-
+         </TableRow>
+     </TableLayout>
            <LinearLayout
         		android:layout_width="wrap_content"
         		android:layout_height="wrap_content" 
-        		android:background="@drawable/framelayout"
-        		>
-
+        		android:background="#F7D16A">
             <Button
+            	android:textColor="@color/button_confirm"
+          		style="@style/bottoniConfirm"
             	android:layout_width="wrap_content"
             	android:layout_height="wrap_content"
             	android:text="@string/cerca" />	
-
         	<Button
+        	    android:textColor="@color/button_confirm"
+          		style="@style/bottoniConfirm"
             	android:layout_width="wrap_content"
             	android:layout_height="wrap_content"
             	android:text="@string/annulla" />
