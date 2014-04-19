@@ -1,8 +1,8 @@
 package com.example.proveandroid;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
-public class LinguaActivity extends ActionBarActivity {
+public class LinguaActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

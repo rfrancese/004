@@ -16,8 +16,8 @@ android:background="@color/body">
           android:gravity="center"
           android:orientation="horizontal"
           android:background="@color/navBar" >
-      <Button     
-          android:textColor="@color/focusTab"
+      <Button    
+      	  android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Cerca"
           android:text="@string/tab1" />
@@ -27,13 +27,13 @@ android:background="@color/body">
           android:id="@+id/idBottoniNavbar_Corse"
           android:text="@string/tab2" />
       <Button
-		  android:textColor="@color/button_navbar"
+          android:textColor="@color/focusTab"
           style="@style/bottoniNavbar"
           android:text="@string/tab3"
           android:id="@+id/idBottoniNavbar_Tariffe"
            />
       <Button
-          android:textColor="@color/button_navbar"
+		  android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:text="@string/tab4" 
           android:id="@+id/idBottoniNavbar_Lingua"

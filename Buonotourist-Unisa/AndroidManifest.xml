@@ -15,9 +15,8 @@
         <activity
             android:name="com.example.proveandroid.CercaActivity"
             android:theme="@android:style/Theme.Translucent" >
-            <intent-filter>
+           <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,13 +25,15 @@
             android:name="com.example.proveandroid.CorseActivity" >
         </activity>
         <activity
+        	android:theme="@android:style/Theme.Translucent" 
+            android:name="com.example.proveandroid.TariffeActivity" >
+             
+        </activity>
+        <activity
             android:theme="@android:style/Theme.Translucent" 
             android:name="com.example.proveandroid.LinguaActivity" >
         </activity>
-        <activity
-        	android:theme="@android:style/Theme.Translucent" 
-            android:name="com.example.proveandroid.TariffeActivity" >
-        </activity>
+        
     </application>
 
 </manifest>
