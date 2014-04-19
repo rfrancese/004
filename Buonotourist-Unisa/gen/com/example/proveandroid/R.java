@@ -1011,8 +1011,8 @@ containing a value of this type.
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
-        public static final int idBottoniForm_Annulla=0x7f050045;
-        public static final int idBottoniForm_Cerca=0x7f050044;
+        public static final int idBottoniFormCerca_Annulla=0x7f050045;
+        public static final int idBottoniFormCerca_Cerca=0x7f050044;
         public static final int idBottoniNavbar_Cerca=0x7f05003d;
         public static final int idBottoniNavbar_Corse=0x7f05003e;
         public static final int idBottoniNavbar_Lingua=0x7f050040;

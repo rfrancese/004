@@ -110,13 +110,13 @@ android:background="@color/body">
             		android:textColor="@color/button_confirm"
           			style="@style/bottoniConfirm"
             		android:text="@string/cerca" 
-            		android:id="@+id/idBottoniForm_Cerca"
+            		android:id="@+id/idBottoniFormCerca_Cerca"
             		/>	
         		<Button
         	    	android:textColor="@color/button_confirm"
           			style="@style/bottoniConfirm"
             		android:text="@string/annulla" 
-            		android:id="@+id/idBottoniForm_Annulla"
+            		android:id="@+id/idBottoniFormCerca_Annulla"
             		/>
       </LinearLayout>
 </LinearLayout>

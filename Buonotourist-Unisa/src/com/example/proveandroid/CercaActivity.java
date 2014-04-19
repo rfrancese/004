@@ -39,8 +39,8 @@ public class CercaActivity extends Activity {
 		Button buttonTariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_Tariffe);
 		Button buttonLinguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Lingua);
 		settaListenerBottoniNavbar(buttonCercaNavbar,buttonCorseNavbar,buttonTariffeNavbar,buttonLinguaNavbar,savedInstanceState);
-		Button buttonCercaForm =(Button)findViewById(R.id.idBottoniForm_Cerca);
-		Button buttonAnnullaForm =(Button)findViewById(R.id.idBottoniForm_Annulla);
+		Button buttonCercaForm =(Button)findViewById(R.id.idBottoniFormCerca_Cerca);
+		Button buttonAnnullaForm =(Button)findViewById(R.id.idBottoniFormCerca_Annulla);
 		settaListenerBottoniForm(buttonCercaForm,buttonAnnullaForm,savedInstanceState);
 	}
 	
