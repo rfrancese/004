@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+  <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     
+      android:id="@+id/scroll" 
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+     android:background="@drawable/framelayout">
+
+    <LinearLayout
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:gravity="center"
+    	android:orientation="vertical"
+    	android:background="@drawable/framelayout"
+     >
+
+    <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="top"
+          android:orientation="horizontal"
+          android:background="@drawable/navbarlayout"  >
+
+      <Button     
+          android:textColor="@color/button_text"
+          style="@style/bottoniNavbar"
+          android:id="@+id/idBottoni_cerca"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="@string/tab1" />
+      <Button
+          android:textColor="@color/button_text"
+          style="@style/bottoniNavbar"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="@string/tab2" />
+      <Button
+		  android:textColor="@color/button_text"
+          style="@style/bottoniNavbar"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="@string/tab3" />
+      <Button
+          android:textColor="@color/button_text"
+          style="@style/bottoniNavbar"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:text="@string/tab4" />
+	
+      </LinearLayout>
+
+       <TableLayout
+           android:layout_width="wrap_content"
+           android:layout_height="334dp"
+           android:layout_gravity="top|center_horizontal"
+           android:background="@drawable/framelayout"
+           android:gravity="center"
+           android:shrinkColumns="0"
+           android:stretchColumns="1" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="@string/Da" />
+
+         <EditText
+             android:id="@+id/partenza"
+             
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/A" />
+
+         <EditText
+             android:id="@+id/arrivo"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+         </TableRow>
+         
+
+         <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+         <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="fill_horizontal|center_vertical"
+                android:text="@string/DaCheOra" />
+
+          <TimePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+           </TableRow>
+           </TableLayout>
+
+           <LinearLayout
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content" 
+        		android:background="@drawable/framelayout"
+        		>
+
+            <Button
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/cerca" />	
+
+        	<Button
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="@string/annulla" />
+    		</LinearLayout>
+
+</LinearLayout>
+</ScrollView> 
