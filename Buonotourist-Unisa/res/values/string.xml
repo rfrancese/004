@@ -12,4 +12,6 @@
 	<string name="orario">Orario :</string>	
 	<string name="costoA">Costo abbonamento:</string>
 	<string name="costoB">Costo Biglietto:</string>	
+	<string name="partenza">Partenza</string>
+	<string name="destinazione">Destinazione</string>
 </resources>

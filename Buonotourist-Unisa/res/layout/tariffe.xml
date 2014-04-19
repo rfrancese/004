@@ -19,24 +19,24 @@ android:background="@color/body">
       <Button     
           android:textColor="@color/focusTab"
           style="@style/bottoniNavbar"
-          android:id="@+id/idBottoni_cerca"
+          android:id="@+id/idBottoniNavbar_cerca"
           android:text="@string/tab1" />
       <Button
           android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
-          android:id="@+id/idBottoni_corse"
+          android:id="@+id/idBottoniNavbar_corse"
           android:text="@string/tab2" />
       <Button
 		  android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:text="@string/tab3"
-          android:id="@+id/idBottoni_tariffe"
+          android:id="@+id/idBottoniNavbar_tariffe"
            />
       <Button
           android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
           android:text="@string/tab4" 
-          android:id="@+id/idBottoni_lingua"
+          android:id="@+id/idBottoniNavbar_lingua"
           />
 	
     </LinearLayout>
@@ -100,34 +100,25 @@ android:background="@color/body">
         	    	android:textColor="@color/button_confirm"
           			style="@style/bottoniConfirm"
             		android:text="@string/annulla" />
-      </LinearLayout>
-      
+      </LinearLayout>    
        <LinearLayout
            android:layout_width="wrap_content"
            android:layout_height="150dp"
            android:background="@color/body"
            android:gravity="bottom"
            android:orientation="vertical" >
-
             <TextView
                 android:layout_marginTop="30dp"
             	android:layout_width="201dp"
             	android:layout_height="40dp"
             	android:text="@string/costoA"
             	android:textColor="#000000" />
-
         	<TextView
         	    android:layout_marginTop="30dp"
         	    android:layout_width="178dp"
         	    android:layout_height="match_parent"
         	    android:text="@string/costoB"
         	    android:textColor="#000000" />
-
       </LinearLayout>
-     
-     
-     
-     
-     
 </LinearLayout>
 </ScrollView> 

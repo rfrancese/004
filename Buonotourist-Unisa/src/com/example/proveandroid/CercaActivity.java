@@ -8,6 +8,7 @@ import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class CercaActivity extends Activity {
@@ -23,12 +24,17 @@ public class CercaActivity extends Activity {
 		super.onCreate(savedInstanceState);
 	
 		setContentView(R.layout.cerca);
-		View widgetPartenza=findViewById(R.id.idBottoni_Provenienza);
+		View widgetPartenza=findViewById(R.id.ID);
 		View widgetArrivo=findViewById(R.id.idBottoni_Destinazione);
 		widgetPartenza.setId(1);
 		widgetArrivo.setId(2);
 		registerForContextMenu(widgetPartenza);
 		registerForContextMenu(widgetArrivo);
+		Button cercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_cerca);
+		Button corseNavbar =(Button)findViewById(R.id.idBottoniNavbar_cerca);
+		Button tariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_cerca);
+		Button linguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_cerca);
+
 		
 	}
 	
