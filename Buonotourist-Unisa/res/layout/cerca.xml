@@ -24,15 +24,20 @@ android:background="@color/body">
       <Button
           android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
+          android:id="@+id/idBottoni_corse"
           android:text="@string/tab2" />
       <Button
 		  android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
-          android:text="@string/tab3" />
+          android:text="@string/tab3"
+          android:id="@+id/idBottoni_tariffe"
+           />
       <Button
           android:textColor="@color/button_navbar"
           style="@style/bottoniNavbar"
-          android:text="@string/tab4" />
+          android:text="@string/tab4" 
+          android:id="@+id/idBottoni_lingua"
+          />
 	
     </LinearLayout>
     <TableLayout
