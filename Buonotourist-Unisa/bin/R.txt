@@ -125,6 +125,7 @@ int color abc_search_url_text_selected 0x7f070001
 int color body 0x7f070004
 int color button_confirm 0x7f070007
 int color button_navbar 0x7f070008
+int color button_navbar_selected 0x7f070009
 int color focusTab 0x7f070005
 int color navBar 0x7f070003
 int dimen abc_action_bar_default_height 0x7f080002
@@ -371,6 +372,8 @@ int string tab3 0x7f0a0010
 int string tab4 0x7f0a0011
 int string title_activity_main 0x7f0a001e
 int string title_activity_tariffe 0x7f0a0021
+int style MyActionBar 0x7f0b0086
+int style MyTheme 0x7f0b0085
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0063
 int style TextAppearance_AppCompat_Base_SearchResult 0x7f0b006d
 int style TextAppearance_AppCompat_Base_SearchResult_Subtitle 0x7f0b006f

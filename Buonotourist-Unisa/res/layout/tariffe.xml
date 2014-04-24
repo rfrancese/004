@@ -27,7 +27,7 @@ android:background="@color/body">
           android:id="@+id/idBottoniNavbar_Corse"
           android:text="@string/tab2" />
       <Button
-          android:textColor="@color/focusTab"
+          android:textColor="@color/button_navbar_selected"
           style="@style/bottoniNavbar"
           android:text="@string/tab3"
           android:id="@+id/idBottoniNavbar_Tariffe"

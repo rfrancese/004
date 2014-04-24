@@ -33,7 +33,7 @@ android:background="@color/body">
           android:id="@+id/idBottoniNavbar_Tariffe"
            />
       <Button
-          android:textColor="@color/focusTab"
+          android:textColor="@color/button_navbar_selected"
           style="@style/bottoniNavbar"
           android:text="@string/tab4" 
           android:id="@+id/idBottoniNavbar_Lingua"

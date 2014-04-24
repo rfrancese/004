@@ -11,7 +11,8 @@ android:orientation="vertical"
           android:orientation="horizontal"
           android:background="@color/navBar" >
       <Button     
-          android:textColor="@color/focusTab"
+          android:textColor="@color/button_navbar_selected"
+          android:textStyle="bold"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Cerca"
           android:text="@string/tab1" />

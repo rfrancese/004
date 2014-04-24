@@ -803,6 +803,7 @@ containing a value of this type.
         public static final int body=0x7f070004;
         public static final int button_confirm=0x7f070007;
         public static final int button_navbar=0x7f070008;
+        public static final int button_navbar_selected=0x7f070009;
         public static final int focusTab=0x7f070005;
         public static final int navBar=0x7f070003;
     }
@@ -1180,6 +1181,8 @@ containing a value of this type.
         public static final int title_activity_tariffe=0x7f0a0021;
     }
     public static final class style {
+        public static final int MyActionBar=0x7f0b0086;
+        public static final int MyTheme=0x7f0b0085;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;
