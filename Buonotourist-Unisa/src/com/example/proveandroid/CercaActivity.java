@@ -74,7 +74,8 @@ public class CercaActivity extends Activity {
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class));
-		}finally{
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			}finally{
 			finish();
 		}
 	}
@@ -82,6 +83,7 @@ public class CercaActivity extends Activity {
 	protected void createLinguaActivity() {
 		try{
 			startActivity(new Intent(this,LinguaActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		}
@@ -90,6 +92,7 @@ public class CercaActivity extends Activity {
 	protected void createTariffeeActivity() {
 		try{
 			startActivity(new Intent(this,TariffeActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		}

@@ -13,23 +13,19 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="com.example.proveandroid.CercaActivity"
-            android:theme="@android:style/Theme.Translucent" >
+            android:name="com.example.proveandroid.CercaActivity">
            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:theme="@android:style/Theme.Translucent" 
             android:name="com.example.proveandroid.CorseActivity" >
         </activity>
         <activity
-        	android:theme="@android:style/Theme.Translucent" 
             android:name="com.example.proveandroid.TariffeActivity" >
         </activity>
         <activity
-            android:theme="@android:style/Theme.Translucent" 
             android:name="com.example.proveandroid.LinguaActivity" >
         </activity>
         

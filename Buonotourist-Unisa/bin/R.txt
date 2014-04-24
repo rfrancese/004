@@ -4,6 +4,8 @@ int anim abc_slide_in_bottom 0x7f040002
 int anim abc_slide_in_top 0x7f040003
 int anim abc_slide_out_bottom 0x7f040004
 int anim abc_slide_out_top 0x7f040005
+int anim late_in_left 0x7f040006
+int anim zero 0x7f040007
 int attr actionBarDivider 0x7f01000b
 int attr actionBarItemBackground 0x7f01000c
 int attr actionBarSize 0x7f01000a
@@ -264,10 +266,10 @@ int id idBottoniFormCerca_Cerca 0x7f050044
 int id idBottoniFormLingua_Conferma 0x7f050046
 int id idBottoniFormTariffe_Annulla 0x7f05004a
 int id idBottoniFormTariffe_Cerca 0x7f050049
-int id idBottoniNavbar_Cerca 0x7f05003d
-int id idBottoniNavbar_Corse 0x7f05003e
-int id idBottoniNavbar_Lingua 0x7f050040
-int id idBottoniNavbar_Tariffe 0x7f05003f
+int id idBottoniNavbar_Cerca 0x7f05003c
+int id idBottoniNavbar_Corse 0x7f05003d
+int id idBottoniNavbar_Lingua 0x7f05003f
+int id idBottoniNavbar_Tariffe 0x7f05003e
 int id idBottoni_Destinazione 0x7f050042
 int id idBottoni_Provenienza 0x7f050041
 int id idBottoni_TariffaA 0x7f050048
@@ -284,7 +286,7 @@ int id normal 0x7f050000
 int id progress_circular 0x7f050018
 int id progress_horizontal 0x7f050019
 int id radio 0x7f05002f
-int id scroll 0x7f05003c
+int id scroll 0x7f050040
 int id search_badge 0x7f050032
 int id search_bar 0x7f050031
 int id search_button 0x7f050033

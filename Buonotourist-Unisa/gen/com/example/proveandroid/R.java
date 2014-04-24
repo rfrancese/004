@@ -15,6 +15,8 @@ public final class R {
         public static final int abc_slide_in_top=0x7f040003;
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
+        public static final int late_in_left=0x7f040006;
+        public static final int zero=0x7f040007;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -1016,10 +1018,10 @@ containing a value of this type.
         public static final int idBottoniFormLingua_Conferma=0x7f050046;
         public static final int idBottoniFormTariffe_Annulla=0x7f05004a;
         public static final int idBottoniFormTariffe_Cerca=0x7f050049;
-        public static final int idBottoniNavbar_Cerca=0x7f05003d;
-        public static final int idBottoniNavbar_Corse=0x7f05003e;
-        public static final int idBottoniNavbar_Lingua=0x7f050040;
-        public static final int idBottoniNavbar_Tariffe=0x7f05003f;
+        public static final int idBottoniNavbar_Cerca=0x7f05003c;
+        public static final int idBottoniNavbar_Corse=0x7f05003d;
+        public static final int idBottoniNavbar_Lingua=0x7f05003f;
+        public static final int idBottoniNavbar_Tariffe=0x7f05003e;
         public static final int idBottoni_Destinazione=0x7f050042;
         public static final int idBottoni_Provenienza=0x7f050041;
         public static final int idBottoni_TariffaA=0x7f050048;
@@ -1036,7 +1038,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int scroll=0x7f05003c;
+        public static final int scroll=0x7f050040;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;

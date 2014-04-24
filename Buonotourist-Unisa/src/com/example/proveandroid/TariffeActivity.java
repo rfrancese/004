@@ -50,6 +50,7 @@ public class TariffeActivity extends Activity {
 	protected void createCercaActivity() {
 		try{
 			startActivity(new Intent(this,CercaActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		}
@@ -57,6 +58,7 @@ public class TariffeActivity extends Activity {
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		}
@@ -65,6 +67,7 @@ public class TariffeActivity extends Activity {
 	protected void createLinguaActivity() {
 		try{
 			startActivity(new Intent(this,LinguaActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		}	}

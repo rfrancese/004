@@ -51,6 +51,7 @@ public class LinguaActivity extends Activity {
 	protected void createTariffeActivity() {
 		try{
 			startActivity(new Intent(this,TariffeActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		}
@@ -58,6 +59,7 @@ public class LinguaActivity extends Activity {
 	protected void createCercaActivity() {
 		try{
 			startActivity(new Intent(this,CercaActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		}
@@ -65,6 +67,7 @@ public class LinguaActivity extends Activity {
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		}
