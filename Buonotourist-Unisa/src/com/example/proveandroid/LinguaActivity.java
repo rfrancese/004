@@ -13,16 +13,15 @@ public class LinguaActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.lingua);
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
+		settaListenerBottoniNavbar(savedInstanceState);
+		settaListenerBottoniForm();	
+	
+	}
+	private void settaListenerBottoniNavbar(final Bundle savedInstanceState) {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
 		Button buttonCorseNavbar =(Button)findViewById(R.id.idBottoniNavbar_Corse);
 		Button buttonTariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_Tariffe);
 		Button buttonLinguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Lingua);
-		settaListenerBottoniNavbar(buttonCercaNavbar,buttonCorseNavbar,buttonTariffeNavbar,buttonLinguaNavbar,savedInstanceState);
-		Button buttonConfermaForm =(Button)findViewById(R.id.idBottoniFormLingua_Conferma);
-		settaListenerBottoniForm(buttonConfermaForm);	
-	
-	}
-	private void settaListenerBottoniNavbar(Button buttonCercaNavbar,Button buttonCorseNavbar, Button buttonTariffeNavbar,Button buttonLinguaNavbar, final Bundle savedInstanceState) {
 		buttonCercaNavbar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -50,17 +49,30 @@ public class LinguaActivity extends Activity {
 	}
 
 	protected void createTariffeActivity() {
-		startActivity(new Intent(this,TariffeActivity.class));
+		try{
+			startActivity(new Intent(this,TariffeActivity.class));
+		}finally{
+			finish();
+		}
 	}
 	protected void createCercaActivity() {
-		startActivity(new Intent(this,CercaActivity.class));
+		try{
+			startActivity(new Intent(this,CercaActivity.class));
+		}finally{
+			finish();
+		}
 	}
 	protected void createCorseActivity() {
-		startActivity(new Intent(this,CorseActivity.class));
+		try{
+			startActivity(new Intent(this,CorseActivity.class));
+		}finally{
+			finish();
+		}
 	}
 	
 	
-	private void settaListenerBottoniForm(Button buttonConfermaForm) {
+	private void settaListenerBottoniForm() {
+		Button buttonConfermaForm =(Button)findViewById(R.id.idBottoniFormLingua_Conferma);
 		buttonConfermaForm.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {

@@ -34,32 +34,17 @@ public class CercaActivity extends Activity {
 		registerForContextMenu(widgetArrivo);
 		
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
+		settaListenerBottoniNavbar(savedInstanceState);
+		settaListenerBottoniForm(savedInstanceState);
+	}
+	
+
+
+	private void settaListenerBottoniNavbar(final Bundle savedInstanceState) {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
 		Button buttonCorseNavbar =(Button)findViewById(R.id.idBottoniNavbar_Corse);
 		Button buttonTariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_Tariffe);
 		Button buttonLinguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Lingua);
-		settaListenerBottoniNavbar(buttonCercaNavbar,buttonCorseNavbar,buttonTariffeNavbar,buttonLinguaNavbar,savedInstanceState);
-		Button buttonCercaForm =(Button)findViewById(R.id.idBottoniFormCerca_Cerca);
-		Button buttonAnnullaForm =(Button)findViewById(R.id.idBottoniFormCerca_Annulla);
-		settaListenerBottoniForm(buttonCercaForm,buttonAnnullaForm,savedInstanceState);
-	}
-	
-	private void settaListenerBottoniForm(Button buttonCercaForm,Button buttonAnnullaForm, final Bundle savedInstanceState) {
-		buttonAnnullaForm.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-			 onCreate(savedInstanceState);
-			}
-		});
-		buttonCercaForm.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				//INTERROGHERA' IL DATABASE
-			}
-		});
-	}
-
-	private void settaListenerBottoniNavbar(Button buttonCercaNavbar,Button buttonCorseNavbar, Button buttonTariffeNavbar,Button buttonLinguaNavbar, final Bundle savedInstanceState) {
 		buttonCercaNavbar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -87,17 +72,46 @@ public class CercaActivity extends Activity {
 	}
 
 	protected void createCorseActivity() {
-		startActivity(new Intent(this,CorseActivity.class));
+		try{
+			startActivity(new Intent(this,CorseActivity.class));
+		}finally{
+			finish();
+		}
 	}
 
 	protected void createLinguaActivity() {
-		startActivity(new Intent(this,LinguaActivity.class));
+		try{
+			startActivity(new Intent(this,LinguaActivity.class));
+		}finally{
+			finish();
+		}
 	}
 
 	protected void createTariffeeActivity() {
-		startActivity(new Intent(this,TariffeActivity.class));
+		try{
+			startActivity(new Intent(this,TariffeActivity.class));
+		}finally{
+			finish();
+		}
 	}
 
+	private void settaListenerBottoniForm(final Bundle savedInstanceState) {
+		Button buttonCercaForm =(Button)findViewById(R.id.idBottoniFormCerca_Cerca);
+		Button buttonAnnullaForm =(Button)findViewById(R.id.idBottoniFormCerca_Annulla);
+		buttonAnnullaForm.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+					 onCreate(savedInstanceState);
+			}
+		});
+		buttonCercaForm.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				//INTERROGHERA' IL DATABASE
+			}
+		});
+	}
+	
 	public void onCreateContextMenu(ContextMenu menu,View v,ContextMenuInfo menuInfo){
 		
 		if(v.getId()==1){
