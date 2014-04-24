@@ -20,7 +20,7 @@
           android:textColor="@color/button_navbar_selected_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Corse"
-          android:text="@string/tab2" />
+          android:text="@string/tab2Selected" />
       <Button
 		  android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
@@ -30,7 +30,7 @@
       <Button
       	  android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
-          android:text="@string/tab4Selected" 
+          android:text="@string/tab4" 
           android:id="@+id/idBottoniNavbar_Lingua"
           />
 	
