@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"  
-android:id="@+id/scroll" 
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-android:background="@color/body">
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical"
+			    android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/body" >
 <LinearLayout
-    	android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-    	android:gravity="center"
-    	android:orientation="vertical"
-    	android:background="@color/body">
-    <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:gravity="center"
@@ -35,11 +29,23 @@ android:background="@color/body">
       <Button
           android:textColor="@color/button_navbar_selected"
           style="@style/bottoniNavbar"
-          android:text="@string/tab4" 
+          android:text="@string/tab4Selected" 
           android:id="@+id/idBottoniNavbar_Lingua"
           />
 	
-    </LinearLayout>
+</LinearLayout>
+<ScrollView   
+android:id="@+id/scroll" 
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@color/body">
+<LinearLayout
+    	android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:gravity="center"
+    	android:orientation="vertical"
+    	android:background="@color/body">
+    
     
     
      <LinearLayout
@@ -109,3 +115,4 @@ android:background="@color/body">
       </LinearLayout>
 </LinearLayout>
 </ScrollView> 
+</LinearLayout>

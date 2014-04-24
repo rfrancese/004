@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>  
 <resources>
+	<string name="tab1Selected"><u>Cerca</u></string>
+	<string name="tab2Selected"><u>Corse</u></string>
+	<string name="tab3Selected"><u>Tariffe</u></string>
+	<string name="tab4Selected"><u>Lingua</u></string>
 	<string name="app_name">Buonotourist-Unisa</string>
 	<string name="tab1">Cerca</string>
 	<string name="tab2">Corse</string>

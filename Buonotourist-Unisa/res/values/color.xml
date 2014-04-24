@@ -2,5 +2,4 @@
 <resources>
 	<color name="navBar">#FFFFFF</color>
 	<color name="body">#FFFFFF</color>
-	<color name="focusTab">#A2B2B3</color>
 </resources>
