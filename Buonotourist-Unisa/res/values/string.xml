@@ -14,4 +14,8 @@
 	<string name="costoB">Costo Biglietto:</string>	
 	<string name="partenza">Partenza</string>
 	<string name="destinazione">Destinazione</string>
+	<string name="scegliLingua">Scegliere la lingua: </string>
+	<string name="italianoLingua">Italiano</string>
+	<string name="ingleseLingua">Inglese</string>
+	
 </resources>
