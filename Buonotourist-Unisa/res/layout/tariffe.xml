@@ -9,27 +9,27 @@
           android:layout_height="wrap_content"
           android:gravity="center"
           android:orientation="horizontal"
-          android:background="@drawable/border_navbar"
+          android:background="@drawable/border_navbar_sfondo"
           android:padding="2dp"    
           >
       <Button    
-      	  android:textColor="@color/button_navbar"
+      	  android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Cerca"
           android:text="@string/tab1" />
       <Button
-          android:textColor="@color/button_navbar"
+          android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Corse"
           android:text="@string/tab2" />
       <Button
-          android:textColor="@color/button_navbar_selected"
+          android:textColor="@color/button_navbar_selected_text"
           style="@style/bottoniNavbar"
           android:text="@string/tab3Selected"
           android:id="@+id/idBottoniNavbar_Tariffe"
            />
       <Button
-		  android:textColor="@color/button_navbar"
+		  android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
           android:text="@string/tab4" 
           android:id="@+id/idBottoniNavbar_Lingua"
@@ -64,6 +64,11 @@ android:background="@color/body">
             		android:layout_height="match_parent"
                 	android:text="@string/da" />
          	   <Button
+         	        android:textStyle="italic"
+         		    android:textSize="15dp"
+         	   		android:textColor="@color/button_confirm_text"
+         	   		android:text="@string/partenza" 
+         	        android:background="@drawable/bottoni_select_body_sfondo"
                 	android:id="@+id/idBottoni_TariffaDa" 
                 	android:layout_width="match_parent"
                 	android:layout_height="match_parent"
@@ -84,6 +89,11 @@ android:background="@color/body">
             		android:layout_height="match_parent"
             		android:text="@string/a" />
          		<Button
+         		    android:textStyle="italic"
+         		    android:textSize="15dp"
+         			android:textColor="@color/button_confirm_text"
+         	   		android:text="@string/destinazione" 
+         		    android:background="@drawable/bottoni_select_body_sfondo"
             		android:id="@+id/idBottoni_TariffaA"
             		android:layout_width="match_parent"
             		android:layout_height="match_parent"
@@ -100,12 +110,14 @@ android:background="@color/body">
         		android:gravity="center">
             	<Button
             	    android:id="@+id/idBottoniFormTariffe_Cerca"
-            		android:textColor="@color/button_confirm"
+            		android:textColor="@color/button_confirm_text"
+            		android:background="@drawable/bottoni_body_sfondo"
           			style="@style/bottoniConfirm"
             		android:text="@string/cerca" />	
         		<Button
         		    android:id="@+id/idBottoniFormTariffe_Annulla"
-        	    	android:textColor="@color/button_confirm"
+        	    	android:textColor="@color/button_confirm_text"
+        	    	android:background="@drawable/bottoni_body_sfondo"
           			style="@style/bottoniConfirm"
             		android:text="@string/annulla" />
       </LinearLayout>    
@@ -120,13 +132,13 @@ android:background="@color/body">
             	android:layout_width="201dp"
             	android:layout_height="40dp"
             	android:text="@string/costoA"
-            	android:textColor="#000000" />
+            	android:textColor="#AABDC1" />
         	<TextView
         	    android:layout_marginTop="30dp"
         	    android:layout_width="178dp"
         	    android:layout_height="match_parent"
         	    android:text="@string/costoB"
-        	    android:textColor="#000000" />
+        	    android:textColor="#AABDC1" />
       </LinearLayout>
 </LinearLayout>
 </ScrollView> 

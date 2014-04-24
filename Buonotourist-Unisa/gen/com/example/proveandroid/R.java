@@ -801,9 +801,9 @@ containing a value of this type.
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
         public static final int body=0x7f070004;
-        public static final int button_confirm=0x7f070006;
-        public static final int button_navbar=0x7f070007;
-        public static final int button_navbar_selected=0x7f070008;
+        public static final int button_confirm_text=0x7f070006;
+        public static final int button_navbar_selected_text=0x7f070007;
+        public static final int button_navbar_text=0x7f070008;
         public static final int navBar=0x7f070003;
     }
     public static final class dimen {
@@ -983,8 +983,10 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int border_navbar=0x7f020057;
-        public static final int ic_launcher=0x7f020058;
+        public static final int border_navbar_sfondo=0x7f020057;
+        public static final int bottoni_body_sfondo=0x7f020058;
+        public static final int bottoni_select_body_sfondo=0x7f020059;
+        public static final int ic_launcher=0x7f02005a;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
@@ -1113,9 +1115,10 @@ containing a value of this type.
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
         public static final int cerca=0x7f030017;
-        public static final int lingua=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
-        public static final int tariffe=0x7f03001a;
+        public static final int corse=0x7f030018;
+        public static final int lingua=0x7f030019;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
+        public static final int tariffe=0x7f03001b;
     }
     public static final class string {
         public static final int a=0x7f0a0019;

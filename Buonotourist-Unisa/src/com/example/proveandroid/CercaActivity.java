@@ -3,6 +3,7 @@ package com.example.proveandroid;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -11,10 +12,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
-public class CercaActivity extends Activity {
-	
+public class CercaActivity extends Activity  {
+
+    
 	private static final int MENUITEM_COMANDO_1=1;
 	private static final int MENUITEM_COMANDO_2=2;
 	private static final int MENUITEM_COMANDO_3=3;
@@ -36,8 +39,7 @@ public class CercaActivity extends Activity {
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListenerBottoniForm(savedInstanceState);
-	}
-	
+}
 
 
 	private void settaListenerBottoniNavbar(final Bundle savedInstanceState) {
@@ -160,6 +162,7 @@ public class CercaActivity extends Activity {
 		Toast.makeText(this, "chiuso", Toast.LENGTH_SHORT).show();
 		
 	}
+
 	
 	
 }

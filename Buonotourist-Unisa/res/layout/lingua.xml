@@ -9,26 +9,26 @@
           android:layout_height="wrap_content"
           android:gravity="center"
           android:orientation="horizontal"
-          android:background="@drawable/border_navbar"
+          android:background="@drawable/border_navbar_sfondo"
           android:padding="2dp" >
       <Button     
-          android:textColor="@color/button_navbar"
+          android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Cerca"
           android:text="@string/tab1" />
       <Button
-          android:textColor="@color/button_navbar"
+          android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Corse"
           android:text="@string/tab2" />
       <Button
-		  android:textColor="@color/button_navbar"
+		  android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
           android:text="@string/tab3"
           android:id="@+id/idBottoniNavbar_Tariffe"
            />
       <Button
-          android:textColor="@color/button_navbar_selected"
+          android:textColor="@color/button_navbar_selected_text"
           style="@style/bottoniNavbar"
           android:text="@string/tab4Selected" 
           android:id="@+id/idBottoniNavbar_Lingua"
@@ -103,7 +103,8 @@ android:background="@color/body">
            android:background="@color/body"
            android:gravity="center">
      <Button
-            android:textColor="@color/button_confirm"
+            android:textColor="@color/button_confirm_text"
+            android:background="@drawable/bottoni_body_sfondo"
           	style="@style/bottoniConfirm"
             android:text="Conferma"
             android:id="@+id/idBottoniFormLingua_Conferma"
