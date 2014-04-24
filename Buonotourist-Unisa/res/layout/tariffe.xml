@@ -9,7 +9,8 @@
           android:layout_height="wrap_content"
           android:gravity="center"
           android:orientation="horizontal"
-          android:background="@color/navBar"    
+          android:background="@drawable/border_navbar"
+          android:padding="2dp"    
           >
       <Button    
       	  android:textColor="@color/button_navbar"
@@ -54,7 +55,8 @@ android:background="@color/body">
      			android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="15dp" >
+                android:layout_margin="15dp" 
+                android:gravity="center">
         	    <TextView
         	    	android:gravity="center"
         	    	android:textColor="#000000"
@@ -65,15 +67,16 @@ android:background="@color/body">
                 	android:id="@+id/idBottoni_TariffaDa" 
                 	android:layout_width="match_parent"
                 	android:layout_height="match_parent"
-                	android:minWidth="280dp"
-                	android:maxWidth="280dp"
+                	android:minWidth="180dp"
+                	android:maxWidth="180dp"
                 />
         </TableRow>
         <TableRow
      			android:orientation="horizontal"
             	android:layout_width="match_parent"
             	android:layout_height="match_parent"
-            	android:layout_margin="15dp" >
+            	android:layout_margin="15dp" 
+            	android:gravity="center">
        			<TextView
        				android:gravity="center"
        				android:textColor="#000000"
@@ -84,8 +87,8 @@ android:background="@color/body">
             		android:id="@+id/idBottoni_TariffaA"
             		android:layout_width="match_parent"
             		android:layout_height="match_parent"
-            		android:minWidth="280dp"
-                	android:maxWidth="280dp" />
+            		android:minWidth="180dp"
+                	android:maxWidth="180dp" />
          </TableRow>
          
      </TableLayout>
@@ -93,7 +96,8 @@ android:background="@color/body">
      			android:orientation="horizontal"
         		android:layout_width="wrap_content"
         		android:layout_height="wrap_content" 
-        		android:background="@color/body">
+        		android:background="@color/body"
+        		android:gravity="center">
             	<Button
             	    android:id="@+id/idBottoniFormTariffe_Cerca"
             		android:textColor="@color/button_confirm"
