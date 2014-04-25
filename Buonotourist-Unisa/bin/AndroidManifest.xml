@@ -14,20 +14,20 @@
         android:label="@string/app_name" 
         android:theme="@style/MyTheme" >
         <activity
-            android:name="com.example.proveandroid.CercaActivity">
+            android:name="activity.principali.CercaActivity">
            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.proveandroid.CorseActivity" >
+            android:name="activity.principali.CorseActivity" >
         </activity>
         <activity
-            android:name="com.example.proveandroid.TariffeActivity" >
+            android:name="activity.principali.TariffeActivity" >
         </activity>
         <activity
-            android:name="com.example.proveandroid.LinguaActivity" >
+            android:name="activity.principali.LinguaActivity" >
         </activity>
         
     </application>
