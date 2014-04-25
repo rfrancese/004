@@ -14,7 +14,7 @@ public class TariffeActivity extends Activity {
 		setContentView(R.layout.tariffe);
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
-		settaListenerBottoniForm(savedInstanceState);		
+		settaListenerBottoniForm(savedInstanceState);			
 	}
 	private void settaListenerBottoniNavbar(final Bundle savedInstanceState) {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);

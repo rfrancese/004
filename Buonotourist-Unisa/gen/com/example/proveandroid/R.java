@@ -1029,6 +1029,8 @@ containing a value of this type.
         public static final int idBottoni_Provenienza=0x7f050041;
         public static final int idBottoni_TariffaA=0x7f050048;
         public static final int idBottoni_TariffaDa=0x7f050047;
+        public static final int idTextViewFormTariffe_Abbonamento=0x7f05004b;
+        public static final int idTextViewFormTariffe_Biglietto=0x7f05004c;
         public static final int idTimePicker_Orario=0x7f050043;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;

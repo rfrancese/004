@@ -128,12 +128,14 @@ android:background="@color/body">
            android:gravity="bottom"
            android:orientation="vertical" >
             <TextView
+            	android:id="@+id/idTextViewFormTariffe_Abbonamento"
                 android:layout_marginTop="30dp"
             	android:layout_width="201dp"
             	android:layout_height="40dp"
             	android:text="@string/costoA"
             	android:textColor="#AABDC1" />
         	<TextView
+        	    android:id="@+id/idTextViewFormTariffe_Biglietto"
         	    android:layout_marginTop="30dp"
         	    android:layout_width="178dp"
         	    android:layout_height="match_parent"

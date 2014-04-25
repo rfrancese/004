@@ -37,6 +37,9 @@ public class CercaActivity extends Activity  {
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListenerBottoniForm(savedInstanceState);
+		
+		
+
 }
 
 
