@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generato il: Apr 25, 2014 alle 16:49
+-- Generato il: Apr 25, 2014 alle 18:27
 -- Versione del server: 5.5.32
 -- Versione PHP: 5.4.19
 
@@ -56,14 +56,15 @@ CREATE TABLE IF NOT EXISTS `corsa` (
   `CodiceCorsa` int(11) NOT NULL AUTO_INCREMENT,
   `NomeCorsa` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`CodiceCorsa`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
 -- Dump dei dati per la tabella `corsa`
 --
 
 INSERT INTO `corsa` (`CodiceCorsa`, `NomeCorsa`) VALUES
-(1, 'Pomigliano - Fisciano/Lancusi');
+(1, 'Pomigliano - Fisciano/Lancusi'),
+(2, 'MAMMT');
 
 -- --------------------------------------------------------
 
