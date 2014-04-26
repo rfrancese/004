@@ -236,7 +236,7 @@ int drawable abc_textfield_searchview_right_holo_light 0x7f020056
 int drawable border_navbar_sfondo 0x7f020057
 int drawable bottoni_body_sfondo 0x7f020058
 int drawable bottoni_select_body_sfondo 0x7f020059
-int drawable ic_launcher 0x7f02005a
+int drawable icon_buonotourist 0x7f02005a
 int id action_bar 0x7f05001c
 int id action_bar_activity_content 0x7f050015
 int id action_bar_container 0x7f05001b

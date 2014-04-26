@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/iconBuonotourist"
+        android:icon="@drawable/icon_buonotourist"
         android:label="@string/app_name" 
         android:theme="@style/MyTheme" >
         <activity
@@ -33,5 +33,4 @@
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />   
-
 </manifest>
