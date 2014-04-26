@@ -358,7 +358,7 @@ int string abc_searchview_description_voice 0x7f0a0008
 int string abc_shareactionprovider_share_with 0x7f0a000c
 int string abc_shareactionprovider_share_with_application 0x7f0a000b
 int string annulla 0x7f0a0017
-int string app_name 0x7f0a0011
+int string app_name 0x7f0a0015
 int string cerca 0x7f0a0016
 int string costoA 0x7f0a001b
 int string costoB 0x7f0a001c
@@ -369,13 +369,13 @@ int string italianoLingua 0x7f0a0020
 int string orario 0x7f0a001a
 int string partenza 0x7f0a001d
 int string scegliLingua 0x7f0a001f
-int string tab1 0x7f0a0012
+int string tab1 0x7f0a0011
 int string tab1Selected 0x7f0a000d
-int string tab2 0x7f0a0013
+int string tab2 0x7f0a0012
 int string tab2Selected 0x7f0a000e
-int string tab3 0x7f0a0014
+int string tab3 0x7f0a0013
 int string tab3Selected 0x7f0a000f
-int string tab4 0x7f0a0015
+int string tab4 0x7f0a0014
 int string tab4Selected 0x7f0a0010
 int style MyActionBar 0x7f0b0086
 int style MyTheme 0x7f0b0085
