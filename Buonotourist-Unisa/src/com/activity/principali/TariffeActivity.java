@@ -150,7 +150,7 @@ public Dialog TariffaDa(){
 		
 			public void onClick(DialogInterface dialog, int which) {
 			String option = options[which];
-			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
+			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_TariffaDa);
 			widgetPartenza.setText(option);
 			}
 		});
@@ -164,6 +164,7 @@ public Dialog TariffaDa(){
 		});
 		
 		builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+		@SuppressWarnings("deprecation")
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
 			
@@ -185,7 +186,7 @@ public Dialog TariffaA(){
 		
 			public void onClick(DialogInterface dialog, int which) {
 			String option = options[which];
-			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
+			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_TariffaA);
 			widgetPartenza.setText(option);
 			}
 		});
