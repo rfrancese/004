@@ -4,6 +4,10 @@ package com.activity.principali;
 import com.example.proveandroid.R;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.TimePickerDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -13,35 +17,57 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 public class CercaActivity extends Activity  {
 
     
-	private static final int MENUITEM_COMANDO_1=1;
-	private static final int MENUITEM_COMANDO_2=2;
-	private static final int MENUITEM_COMANDO_3=3;
-	private static final int MENUITEM_COMANDO_4=4;
-	private static final int MENUITEM_COMANDO_5=5;
-	private static final int MENUITEM_COMANDO_6=6;
+	private static final int PartenzaDa = 1;
+	private static final int PartenzaA = 2;
+	private static final int TimePiker = 3;
+	private int hour;
+    private int minute;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cerca);
 		
-		View widgetPartenza=findViewById(R.id.idBottoni_Provenienza);
-		View widgetArrivo=findViewById(R.id.idBottoni_Destinazione);
-		widgetPartenza.setId(1);
-		widgetArrivo.setId(2);
-		registerForContextMenu(widgetPartenza);
-		registerForContextMenu(widgetArrivo);
+		
 		
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListenerBottoniForm(savedInstanceState);
 		
+		View widgetPartenza=findViewById(R.id.idBottoni_Provenienza);
+		View widgetArrivo=findViewById(R.id.idBottoni_Destinazione);
+		View widgetOrario=findViewById(R.id.idBottoni_Orario);
 		
-
+		
+		widgetPartenza.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				showDialog(PartenzaDa);
+			}
+		});
+		
+		
+		widgetArrivo.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				showDialog(PartenzaA);
+			}
+		});
+		
+		
+		widgetOrario.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				showDialog(TimePiker);
+			}
+		});
+		
+		
 }
 
 
@@ -120,52 +146,145 @@ public class CercaActivity extends Activity  {
 		});
 	}
 	
-	public void onCreateContextMenu(ContextMenu menu,View v,ContextMenuInfo menuInfo){
-		
-		if(v.getId()==1){
-		menu.setHeaderTitle("Partenza da:");
-		menu.add(Menu.NONE,MENUITEM_COMANDO_1,1,"Nola");
-		menu.add(Menu.NONE,MENUITEM_COMANDO_2,2,"Sarno");
-		menu.add(Menu.NONE,MENUITEM_COMANDO_3,3,"Palma Campania");
-		menu.add(Menu.NONE,MENUITEM_COMANDO_4,4,"Caserta");}
-		else
-		{
-			menu.setHeaderTitle("Arrivo a:");
-			menu.add(Menu.NONE,MENUITEM_COMANDO_5,5,"Fisciano");
-			menu.add(Menu.NONE,MENUITEM_COMANDO_6,6,"Lancusi");
+	//sovrascrivo il metodo di activity ,e viene richiamato quando viene creata la prima volta la finestra di dialogo per associargli un id
+		protected Dialog onCreateDialog(int id) {
+			Dialog dialog;
+				switch (id) {
+					case PartenzaDa:
+						dialog = createDa();
+						break;
+					case PartenzaA:
+						dialog = createA();
+						break;
+					case TimePiker:
+				            return new TimePickerDialog(this, timePickerListener, hour, minute,false);
+				    default:
+						dialog = null;
+						break;
+					}
+			return dialog;
+			}
+		 private TimePickerDialog.OnTimeSetListener timePickerListener = new TimePickerDialog.OnTimeSetListener() {
+	         
+			 
+		        @Override
+		        public void onTimeSet(TimePicker view, int hourOfDay, int minutes) {
+		            // TODO Auto-generated method stub
+		            hour   = hourOfDay;
+		            minute = minutes;
+		 
+		            updateTime(hour,minute);
+		             
+		         }
+		 
+		    };
+		 // finestra di dialogo del primo bottone
+			public Dialog createDa(){
 			
-		}
- 	}
-	
-	public boolean onContextItemSelected(MenuItem item){
-		int id=item.getItemId();
-		switch(id){
-		case MENUITEM_COMANDO_1:
-			Toast.makeText(this, "Nola", Toast.LENGTH_SHORT).show();
-			return true;
-		case MENUITEM_COMANDO_2:
-			Toast.makeText(this, "Sarno", Toast.LENGTH_SHORT).show();
-			return true;
-		case MENUITEM_COMANDO_3:
-			Toast.makeText(this, "Palma campania", Toast.LENGTH_SHORT).show();
-			return true;
-		case MENUITEM_COMANDO_4:
-			Toast.makeText(this, "Caserta", Toast.LENGTH_SHORT).show();
-			return true;
-		case MENUITEM_COMANDO_5:
-			Toast.makeText(this, "fisciano", Toast.LENGTH_SHORT).show();
-			return true;
-		case MENUITEM_COMANDO_6:
-			Toast.makeText(this, "lancusi", Toast.LENGTH_SHORT).show();
-			return true;
-		}
-		return false;
-		}
-	public void onContextMenuClosed(Menu menu){
-		Toast.makeText(this, "chiuso", Toast.LENGTH_SHORT).show();
-		
-	}
+				final String[] options = { "Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				builder.setTitle("Partenza Da:");
+				builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
+				@Override
+				
+					public void onClick(DialogInterface dialog, int which) {
+					String option = options[which];
+					Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
+					widgetPartenza.setText(option);
+					}
+				});
+				
+				builder.setCancelable(false);
+				builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+				@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dismissDialog(PartenzaDa);
+					}
+				});
+				
+				builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					
+				       dismissDialog(PartenzaDa);
+				}
+				});
+				AlertDialog alert = builder.create();
+				return alert;
+			}
+			
+			
+			//finestra dialogo del secondo bottone
+			public Dialog createA(){
+				
+				final String[] options = {"Fisciano","Lancusi"};
+				AlertDialog.Builder builder = new AlertDialog.Builder(this);
+				builder.setTitle("Arrivo A:");
+				
+				builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
+				@Override
+				
+					public void onClick(DialogInterface dialog, int which) {
+					String option = options[which];
+					Button widgetDestinazione=(Button)findViewById(R.id.idBottoni_Destinazione);
+					widgetDestinazione.setText(option);
+					}
+				});
+				
+				builder.setCancelable(false);
+				builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+				@Override
+					public void onClick(DialogInterface dialog, int which) {
+						dismissDialog(PartenzaA);
+					}
+				});
+				
+				builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					
+				       dismissDialog(PartenzaA);
+				}
+				});
+				AlertDialog alert = builder.create();
+				return alert;
+			}
+			
+			//gestisce il tempo
+			private void updateTime(int hours, int mins) {
+		        
+		        String timeSet = "";
+		        if (hours > 12) {
+		            hours -= 12;
+		            timeSet = "PM";
+		        } else if (hours == 0) {
+		            hours += 12;
+		            timeSet = "AM";
+		        } else if (hours == 12)
+		            timeSet = "PM";
+		        else
+		            timeSet = "AM";
+		 
+		         
+		        String minutes = "";
+		        if (mins < 10)
+		            minutes = "0" + mins;
+		        else
+		            minutes = String.valueOf(mins);
+		 
+		        // Append in a StringBuilder
+		         String aTime = new StringBuilder().append(hours).append(':')
+		                .append(minutes).append(" ").append(timeSet).toString();
+		 
+		         
+		       Button widgetOrario=(Button)findViewById(R.id.idBottoni_Orario);
+		       widgetOrario.setText(aTime);
+		    }
 
+
+			
+	
+	
 	
 	
 }

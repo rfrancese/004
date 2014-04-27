@@ -4,6 +4,9 @@ package com.activity.principali;
 import com.example.proveandroid.R;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +14,35 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class TariffeActivity extends Activity {
-	@Override
+
+	private static final int TariffaDa = 1;
+	private static final int TariffaA = 2;
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tariffe);
+		
+		
+		View widgetTariffaDa=findViewById(R.id.idBottoni_TariffaDa);
+		View widgetTariffaA=findViewById(R.id.idBottoni_TariffaA);
+		
+		widgetTariffaDa.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				showDialog(TariffaDa);
+			}
+		});
+		
+		
+		widgetTariffaA.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				showDialog(TariffaA);
+			}
+		});
+		
+		
+		
+		
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListenerBottoniForm(savedInstanceState);	
@@ -94,4 +122,93 @@ public class TariffeActivity extends Activity {
 		});
 	}
 
+	
+	protected Dialog onCreateDialog(int id) {
+		Dialog dialog;
+			switch (id) {
+				case TariffaDa:
+					dialog = TariffaDa();
+					break;
+				case TariffaA:
+					dialog = TariffaA();
+					break;
+				  
+				default:
+					dialog = null;
+					break;
+				}
+		return dialog;
+		}
+	
+public Dialog TariffaDa(){
+		
+		final String[] options = { "Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Tariffa Da:");
+		builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
+		@Override
+		
+			public void onClick(DialogInterface dialog, int which) {
+			String option = options[which];
+			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
+			widgetPartenza.setText(option);
+			}
+		});
+		
+		builder.setCancelable(false);
+		builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+		@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dismissDialog(TariffaDa);
+			}
+		});
+		
+		builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, int which) {
+			
+		       dismissDialog(TariffaDa);
+		}
+		});
+		AlertDialog alert = builder.create();
+		return alert;
+	}
+	
+	
+public Dialog TariffaA(){
+		
+		final String[] options = {"Fisciano","Lancusi"};
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Tariffa A:");
+		builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
+		@Override
+		
+			public void onClick(DialogInterface dialog, int which) {
+			String option = options[which];
+			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
+			widgetPartenza.setText(option);
+			}
+		});
+		
+		builder.setCancelable(false);
+		builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+		@Override
+			public void onClick(DialogInterface dialog, int which) {
+				dismissDialog(TariffaA);
+			}
+		});
+		
+		builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+		@Override
+		public void onClick(DialogInterface dialog, int which) {
+			
+		       dismissDialog(TariffaA);
+		}
+		});
+		AlertDialog alert = builder.create();
+		return alert;
+	}
+	
+	
+	
 }

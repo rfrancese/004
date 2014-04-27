@@ -116,10 +116,18 @@ android:fillViewport="true">
                 	android:layout_width="match_parent"
                 	android:layout_height="match_parent"
                 	android:text="@string/orario" />
-        		<TimePicker
-        		    android:id="@+id/idTimePicker_Orario"
+        		   <Button
+         		    android:textStyle="italic"
+         		    android:textSize="15dp"
+         	        android:textColor="@color/button_confirm_text"
+         	   		android:text="@string/partenza" 
+         	   		android:background="@drawable/bottoni_select_body_sfondo"
+                	android:id="@+id/idBottoni_Orario" 
                 	android:layout_width="match_parent"
-                	android:layout_height="match_parent" />
+                	android:layout_height="match_parent"
+                	android:minWidth="180dp"
+                	android:maxWidth="180dp"
+                />
          </TableRow>
      </TableLayout>
      <LinearLayout
