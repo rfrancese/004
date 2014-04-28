@@ -19,5 +19,20 @@
 	<string name="costoB">Ticket price:</string>	
 	<string name="partenza">Start</string>
 	<string name="destinazione">Destination</string>
+	
+	<string name="datiNonValidi">Form data not valid!</string>
+	
+	
+	<string name="stoControllandoRete">I m checking the network</string>
+	<string name="caricamento">Loading ...</string>
+	<string name="connessioneAssente">No connection </string>
+	
+	
+	<string name="contattoServer">Contact the Server</string>
+	<string name="invioDati">Send the data ...</string>
+	<string name="caricamentoDatiRicevuti">Loading data received</string>
+	<string name="RicevoDati">Get the data ...</string>
+	
+	<string name="datiInviatiNonValidi">Data sent invalid!</string>
 
 </resources>

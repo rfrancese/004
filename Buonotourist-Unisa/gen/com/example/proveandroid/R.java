@@ -1116,6 +1116,7 @@ containing a value of this type.
         public static final int tariffe=0x7f03001a;
     }
     public static final class string {
+        public static final int RicevoDati=0x7f0a0024;
         public static final int a=0x7f0a0017;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
@@ -1159,13 +1160,21 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int annulla=0x7f0a0015;
         public static final int app_name=0x7f0a0013;
+        public static final int caricamento=0x7f0a001f;
+        public static final int caricamentoDatiRicevuti=0x7f0a0023;
         public static final int cerca=0x7f0a0014;
+        public static final int connessioneAssente=0x7f0a0020;
+        public static final int contattoServer=0x7f0a0021;
         public static final int costoA=0x7f0a0019;
         public static final int costoB=0x7f0a001a;
         public static final int da=0x7f0a0016;
+        public static final int datiInviatiNonValidi=0x7f0a0025;
+        public static final int datiNonValidi=0x7f0a001d;
         public static final int destinazione=0x7f0a001c;
+        public static final int invioDati=0x7f0a0022;
         public static final int orario=0x7f0a0018;
         public static final int partenza=0x7f0a001b;
+        public static final int stoControllandoRete=0x7f0a001e;
         public static final int tab1=0x7f0a0010;
         public static final int tab1Selected=0x7f0a000d;
         public static final int tab2=0x7f0a0011;

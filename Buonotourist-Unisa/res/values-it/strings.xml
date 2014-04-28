@@ -18,5 +18,22 @@
 	<string name="costoB">Costo biglietto:</string>	
 	<string name="partenza">Partenza</string>
 	<string name="destinazione">Destinazione</string>
-
+	
+	
+	<string name="datiNonValidi">Dati form non validi!</string>
+	
+	
+	<string name="stoControllandoRete">Sto controllando la rete</string>
+	<string name="caricamento">Caricamento ...</string>
+	<string name="connessioneAssente">Connessione Assente </string>
+	
+	
+	<string name="contattoServer">Contatto il server</string>
+	<string name="invioDati">Invio i dati ...</string>
+	<string name="caricamentoDatiRicevuti">Caricamento dati ricevuti</string>
+	<string name="RicevoDati">Ricevo i dati ...</string>
+	
+	<string name="datiInviatiNonValidi">Dati inviati non validi!</string>
+	
+	
 </resources>
