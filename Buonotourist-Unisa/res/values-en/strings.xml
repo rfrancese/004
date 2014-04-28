@@ -3,12 +3,10 @@
 	<string name="tab1Selected"><u>Search</u></string>
 	<string name="tab2Selected"><u>Bus Rides</u></string>
 	<string name="tab3Selected"><u>Price</u></string>
-	<string name="tab4Selected"><u>Language</u></string>
 	
 	<string name="tab1">Search</string>
 	<string name="tab2">Bus Rides</string>
 	<string name="tab3">Price</string>
-	<string name="tab4">Language</string>
 	
 	<string name="app_name">Buonotourist-Unisa</string>
 	
@@ -21,9 +19,5 @@
 	<string name="costoB">Ticket price:</string>	
 	<string name="partenza">Start</string>
 	<string name="destinazione">Destination</string>
-	<string name="scegliLingua">Choose your language: </string>
-	
-	
-	<string name="italianoLingua">Italiano</string>
-	<string name="ingleseLingua">Inglese</string>
+
 </resources>

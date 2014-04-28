@@ -54,7 +54,6 @@ public class TariffeActivity extends Activity {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
 		Button buttonCorseNavbar =(Button)findViewById(R.id.idBottoniNavbar_Corse);
 		Button buttonTariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_Tariffe);
-		Button buttonLinguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Lingua);
 		buttonCercaNavbar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -71,12 +70,6 @@ public class TariffeActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				onCreate(savedInstanceState);
-			}
-		});
-		buttonLinguaNavbar.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				createLinguaActivity();
 			}
 		});
 	}
@@ -97,15 +90,6 @@ public class TariffeActivity extends Activity {
 			finish();
 		}
 	}
-
-	protected void createLinguaActivity() {
-		try{
-			startActivity(new Intent(this,LinguaActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
-		}finally{
-			finish();
-		}	}
-	
 	
 	private void settaListenerBottoniForm(final Bundle savedInstanceState) {
 		Button buttonCercaForm =(Button)findViewById(R.id.idBottoniFormTariffe_Cerca);

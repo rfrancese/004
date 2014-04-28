@@ -28,12 +28,6 @@
           android:text="@string/tab3Selected"
           android:id="@+id/idBottoniNavbar_Tariffe"
            />
-      <Button
-		  android:textColor="@color/button_navbar_text"
-          style="@style/bottoniNavbar"
-          android:text="@string/tab4" 
-          android:id="@+id/idBottoniNavbar_Lingua"
-          />
     </LinearLayout>
 <ScrollView  
 android:id="@+id/scroll" 

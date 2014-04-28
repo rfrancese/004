@@ -10,15 +10,10 @@ import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.ContextMenu;
-import android.view.ContextMenu.ContextMenuInfo;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TimePicker;
-import android.widget.Toast;
 
 public class CercaActivity extends Activity  {
 
@@ -77,7 +72,6 @@ public class CercaActivity extends Activity  {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
 		Button buttonCorseNavbar =(Button)findViewById(R.id.idBottoniNavbar_Corse);
 		Button buttonTariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_Tariffe);
-		Button buttonLinguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Lingua);
 		buttonCercaNavbar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -96,12 +90,6 @@ public class CercaActivity extends Activity  {
 				createTariffeeActivity();
 			}
 		});
-		buttonLinguaNavbar.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				createLinguaActivity();
-			}
-		});
 	}
 
 	protected void createCorseActivity() {
@@ -113,14 +101,6 @@ public class CercaActivity extends Activity  {
 		}
 	}
 
-	protected void createLinguaActivity() {
-		try{
-			startActivity(new Intent(this,LinguaActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
-		}finally{
-			finish();
-		}
-	}
 
 	protected void createTariffeeActivity() {
 		try{

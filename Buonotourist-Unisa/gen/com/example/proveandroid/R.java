@@ -1012,22 +1012,20 @@ containing a value of this type.
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
-        public static final int idBottoniFormCerca_Annulla=0x7f050045;
-        public static final int idBottoniFormCerca_Cerca=0x7f050044;
-        public static final int idBottoniFormLingua_Conferma=0x7f050046;
-        public static final int idBottoniFormTariffe_Annulla=0x7f05004a;
-        public static final int idBottoniFormTariffe_Cerca=0x7f050049;
+        public static final int idBottoniFormCerca_Annulla=0x7f050044;
+        public static final int idBottoniFormCerca_Cerca=0x7f050043;
+        public static final int idBottoniFormTariffe_Annulla=0x7f050048;
+        public static final int idBottoniFormTariffe_Cerca=0x7f050047;
         public static final int idBottoniNavbar_Cerca=0x7f05003c;
         public static final int idBottoniNavbar_Corse=0x7f05003d;
-        public static final int idBottoniNavbar_Lingua=0x7f05003f;
         public static final int idBottoniNavbar_Tariffe=0x7f05003e;
-        public static final int idBottoni_Destinazione=0x7f050042;
-        public static final int idBottoni_Orario=0x7f050043;
-        public static final int idBottoni_Provenienza=0x7f050041;
-        public static final int idBottoni_TariffaA=0x7f050048;
-        public static final int idBottoni_TariffaDa=0x7f050047;
-        public static final int idTextViewFormTariffe_Abbonamento=0x7f05004b;
-        public static final int idTextViewFormTariffe_Biglietto=0x7f05004c;
+        public static final int idBottoni_Destinazione=0x7f050041;
+        public static final int idBottoni_Orario=0x7f050042;
+        public static final int idBottoni_Provenienza=0x7f050040;
+        public static final int idBottoni_TariffaA=0x7f050046;
+        public static final int idBottoni_TariffaDa=0x7f050045;
+        public static final int idTextViewFormTariffe_Abbonamento=0x7f050049;
+        public static final int idTextViewFormTariffe_Biglietto=0x7f05004a;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int listMode=0x7f050001;
@@ -1039,7 +1037,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int scroll=0x7f050040;
+        public static final int scroll=0x7f05003f;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1114,12 +1112,11 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int cerca=0x7f030017;
         public static final int corse=0x7f030018;
-        public static final int lingua=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
-        public static final int tariffe=0x7f03001b;
+        public static final int support_simple_spinner_dropdown_item=0x7f030019;
+        public static final int tariffe=0x7f03001a;
     }
     public static final class string {
-        public static final int a=0x7f0a0019;
+        public static final int a=0x7f0a0017;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f0a0001;
@@ -1160,26 +1157,21 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int annulla=0x7f0a0017;
-        public static final int app_name=0x7f0a0015;
-        public static final int cerca=0x7f0a0016;
-        public static final int costoA=0x7f0a001b;
-        public static final int costoB=0x7f0a001c;
-        public static final int da=0x7f0a0018;
-        public static final int destinazione=0x7f0a001e;
-        public static final int ingleseLingua=0x7f0a0021;
-        public static final int italianoLingua=0x7f0a0020;
-        public static final int orario=0x7f0a001a;
-        public static final int partenza=0x7f0a001d;
-        public static final int scegliLingua=0x7f0a001f;
-        public static final int tab1=0x7f0a0011;
+        public static final int annulla=0x7f0a0015;
+        public static final int app_name=0x7f0a0013;
+        public static final int cerca=0x7f0a0014;
+        public static final int costoA=0x7f0a0019;
+        public static final int costoB=0x7f0a001a;
+        public static final int da=0x7f0a0016;
+        public static final int destinazione=0x7f0a001c;
+        public static final int orario=0x7f0a0018;
+        public static final int partenza=0x7f0a001b;
+        public static final int tab1=0x7f0a0010;
         public static final int tab1Selected=0x7f0a000d;
-        public static final int tab2=0x7f0a0012;
+        public static final int tab2=0x7f0a0011;
         public static final int tab2Selected=0x7f0a000e;
-        public static final int tab3=0x7f0a0013;
+        public static final int tab3=0x7f0a0012;
         public static final int tab3Selected=0x7f0a000f;
-        public static final int tab4=0x7f0a0014;
-        public static final int tab4Selected=0x7f0a0010;
     }
     public static final class style {
         public static final int MyActionBar=0x7f0b0086;

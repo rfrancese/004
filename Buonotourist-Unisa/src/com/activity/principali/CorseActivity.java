@@ -23,7 +23,6 @@ public class CorseActivity extends Activity {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
 		Button buttonCorseNavbar =(Button)findViewById(R.id.idBottoniNavbar_Corse);
 		Button buttonTariffeNavbar =(Button)findViewById(R.id.idBottoniNavbar_Tariffe);
-		Button buttonLinguaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Lingua);
 		buttonCercaNavbar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -40,12 +39,6 @@ public class CorseActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				createTariffeActivity();
-			}
-		});
-		buttonLinguaNavbar.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				createLinguaActivity();
 			}
 		});
 	}
@@ -66,11 +59,4 @@ public class CorseActivity extends Activity {
 			finish();
 		}
 	}
-	protected void createLinguaActivity() {
-		try{
-			startActivity(new Intent(this,LinguaActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
-		}finally{
-			finish();
-		}	}
 }
