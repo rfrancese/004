@@ -26,6 +26,8 @@ public class CercaActivity extends Activity  {
 	private static final int PartenzaDa = 1;
 	private static final int PartenzaA = 2;
 	private static final int TimePiker = 3;
+	private String sceltaPartenzaDa;
+	private String sceltaArrivoA;
 	private int hour;
     private int minute;
 	@Override
@@ -188,9 +190,7 @@ public class CercaActivity extends Activity  {
 				@Override
 				
 					public void onClick(DialogInterface dialog, int which) {
-					String option = options[which];
-					Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
-					widgetPartenza.setText(option);
+					sceltaPartenzaDa = options[which];
 					}
 				});
 				
@@ -198,6 +198,8 @@ public class CercaActivity extends Activity  {
 				builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 				@Override
 					public void onClick(DialogInterface dialog, int which) {
+					Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
+					widgetPartenza.setText(sceltaPartenzaDa);
 						dismissDialog(PartenzaDa);
 					}
 				});
@@ -225,9 +227,7 @@ public class CercaActivity extends Activity  {
 				@Override
 				
 					public void onClick(DialogInterface dialog, int which) {
-					String option = options[which];
-					Button widgetDestinazione=(Button)findViewById(R.id.idBottoni_Destinazione);
-					widgetDestinazione.setText(option);
+					sceltaArrivoA = options[which];
 					}
 				});
 				
@@ -235,6 +235,8 @@ public class CercaActivity extends Activity  {
 				builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 				@Override
 					public void onClick(DialogInterface dialog, int which) {
+					Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Destinazione);
+					widgetPartenza.setText(sceltaArrivoA);
 						dismissDialog(PartenzaA);
 					}
 				});

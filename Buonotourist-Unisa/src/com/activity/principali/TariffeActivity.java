@@ -17,6 +17,9 @@ public class TariffeActivity extends Activity {
 
 	private static final int TariffaDa = 1;
 	private static final int TariffaA = 2;
+	private String sceltaTariffaDa;
+	private String sceltaTariffaA;
+	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.tariffe);
@@ -149,9 +152,7 @@ public Dialog TariffaDa(){
 		@Override
 		
 			public void onClick(DialogInterface dialog, int which) {
-			String option = options[which];
-			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_TariffaDa);
-			widgetPartenza.setText(option);
+			sceltaTariffaDa = options[which];
 			}
 		});
 		
@@ -159,7 +160,9 @@ public Dialog TariffaDa(){
 		builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 		@Override
 			public void onClick(DialogInterface dialog, int which) {
-				dismissDialog(TariffaDa);
+			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_TariffaDa);
+			widgetPartenza.setText(sceltaTariffaDa);
+				dismissDialog(TariffaDa);;
 			}
 		});
 		
@@ -185,9 +188,7 @@ public Dialog TariffaA(){
 		@Override
 		
 			public void onClick(DialogInterface dialog, int which) {
-			String option = options[which];
-			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_TariffaA);
-			widgetPartenza.setText(option);
+			sceltaTariffaA = options[which];
 			}
 		});
 		
@@ -195,6 +196,8 @@ public Dialog TariffaA(){
 		builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
 		@Override
 			public void onClick(DialogInterface dialog, int which) {
+			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_TariffaA);
+			widgetPartenza.setText(sceltaTariffaA);
 				dismissDialog(TariffaA);
 			}
 		});
