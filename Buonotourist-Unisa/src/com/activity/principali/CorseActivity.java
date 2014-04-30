@@ -204,7 +204,7 @@ public class CorseActivity extends Activity {
 					        if(Integer.parseInt(number) == 1){
 					            pDialog.setMessage(getString(R.string.caricamentoDatiRicevuti));
 					            pDialog.setTitle(getString(R.string.RicevoDati));
-					            Toast.makeText(getApplicationContext(),json.length()+"", Toast.LENGTH_SHORT).show();            
+					                
 					            TableLayout tableLayoutCorse = (TableLayout) findViewById(R.id.idTableLayoutCorse_AndataRitorno);
 					            JSONObject json_riga = null;
 					            for (int i = 0; i < json.length()-1; i++) {
