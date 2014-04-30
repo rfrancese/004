@@ -6,14 +6,12 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.classi.server.UserFunctions;
 import com.example.proveandroid.R;
 
-import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -21,7 +19,6 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -30,7 +27,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -136,7 +132,7 @@ public class TariffeActivity extends Activity {
 	            String partenza = inputPartenza.getText().toString();
 	            String destinazione = inputDestinazione.getText().toString();
 	            if( partenza.compareTo(getString(R.string.partenza)) !=0 && destinazione.compareTo(getString(R.string.destinazione))!= 0 ){
-	            	 NetAsync(v);
+	            	 NetAsync();
 	            }else{
 	            	
 	            
@@ -271,7 +267,7 @@ public Dialog Alert(){
 	return alert;
 }
 	
-	public void NetAsync(View view){
+	public void NetAsync(){
 	    new NetCheck().execute();
 	}
 	

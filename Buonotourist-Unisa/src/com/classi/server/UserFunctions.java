@@ -20,6 +20,11 @@ public class UserFunctions {
     //URL of the PHP API
     private static String tariffeURL = "http://buonotouristunisa.altervista.org/buonotourist_script/";
     private static String tariffe_tag = "tariffe";
+    
+    private static String corseAndataRitornoURL = "http://buonotouristunisa.altervista.org/buonotourist_script/";
+    private static String corseAndataRitorno_tag = "corseTotali";
+    
+    
     // constructor
     public UserFunctions(){
         jsonParser = new JSONParser();
@@ -34,6 +39,16 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("partenza",partenza));
         params.add(new BasicNameValuePair("destinazione", destinazione));
         JSONObject json = jsonParser.getJSONFromUrl(tariffeURL, params);
+        return json;
+	}
+	/**
+     * Funzione che ritorna corse di Andata o di Ritorno
+     **/
+	public JSONObject caricaCorseAndataRitorno(String andataRitornoChar) {
+		List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("tag", corseAndataRitorno_tag));
+        params.add(new BasicNameValuePair("andataRitorno",andataRitornoChar));
+        JSONObject json = jsonParser.getJSONFromUrl(corseAndataRitornoURL, params);
         return json;
 	}
 

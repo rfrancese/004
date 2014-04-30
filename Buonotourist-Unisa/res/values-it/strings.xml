@@ -35,5 +35,6 @@
 	
 	<string name="datiInviatiNonValidi">Dati inviati non validi!</string>
 	
-	
+	<string name="andata">Corse Andata:</string>
+	<string name="ritorno">Corse Ritorno:</string>
 </resources>
