@@ -38,8 +38,9 @@ public class TariffeActivity extends Activity {
 
 	private static final int TariffaDa = 1;
 	private static final int TariffaA = 2;
-	private String sceltaTariffaDa;
-	private String sceltaTariffaA;
+	private static final int Alert = 3;
+	private String sceltaTariffaDa="";
+	private String sceltaTariffaA="";
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -64,9 +65,14 @@ public class TariffeActivity extends Activity {
 			}
 		});
 		
+		widgetTariffaA.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				showDialog(TariffaA);
+			}
+		});
 		
-		
-		
+	
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListenerBottoniForm(savedInstanceState);	
@@ -132,8 +138,10 @@ public class TariffeActivity extends Activity {
 	            if( partenza.compareTo(getString(R.string.partenza)) !=0 && destinazione.compareTo(getString(R.string.destinazione))!= 0 ){
 	            	 NetAsync(v);
 	            }else{
-		            Toast.makeText(getApplicationContext(),getString(R.string.datiNonValidi), Toast.LENGTH_SHORT).show();            
-	            }
+	            	
+	            
+	        				showDialog(Alert);
+	        		 }
                
 			}
 		});
@@ -149,7 +157,9 @@ public class TariffeActivity extends Activity {
 				case TariffaA:
 					dialog = TariffaA();
 					break;
-				  
+				case Alert:
+					dialog = Alert();
+					break; 
 				default:
 					dialog = null;
 					break;
@@ -162,7 +172,7 @@ public Dialog TariffaDa(){
 		final String[] options = { "Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle("Tariffa Da:");
-		builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
+		builder.setSingleChoiceItems(options, 139, new DialogInterface.OnClickListener() {
 		@Override
 		
 			public void onClick(DialogInterface dialog, int which) {
@@ -175,9 +185,17 @@ public Dialog TariffaDa(){
 		@Override
 			public void onClick(DialogInterface dialog, int which) {
 			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_TariffaDa);
-			widgetPartenza.setText(sceltaTariffaDa);
-				dismissDialog(TariffaDa);;
+			if(sceltaTariffaDa=="")
+			{
+				widgetPartenza.setText(getString(R.string.partenza));
+				dismissDialog(TariffaDa);
 			}
+			else
+			{
+			widgetPartenza.setText(sceltaTariffaDa);
+				dismissDialog(TariffaDa);
+			}
+		}
 		});
 		
 		builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
@@ -212,7 +230,16 @@ public Dialog TariffaA(){
 			public void onClick(DialogInterface dialog, int which) {
 			Button widgetPartenza=(Button)findViewById(R.id.idBottoni_TariffaA);
 			widgetPartenza.setText(sceltaTariffaA);
+			if(sceltaTariffaA=="")
+			{
+				widgetPartenza.setText(getString(R.string.destinazione));
 				dismissDialog(TariffaA);
+			}
+			else
+			{
+			widgetPartenza.setText(sceltaTariffaA);
+				dismissDialog(TariffaA);
+			}
 			}
 		});
 		
@@ -226,6 +253,23 @@ public Dialog TariffaA(){
 		AlertDialog alert = builder.create();
 		return alert;
 	}
+
+public Dialog Alert(){
+	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+	builder.setTitle("Attenzione");
+	builder.setMessage("Dati non inseriti correttamente");
+	builder.setCancelable(false);
+	
+	builder.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+	@Override
+	public void onClick(DialogInterface dialog, int which) {
+	// Annullato!
+	dismissDialog(Alert);
+	}
+	});
+	AlertDialog alert = builder.create();
+	return alert;
+}
 	
 	public void NetAsync(View view){
 	    new NetCheck().execute();

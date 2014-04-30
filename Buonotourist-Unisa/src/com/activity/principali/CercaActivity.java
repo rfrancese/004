@@ -19,10 +19,10 @@ public class CercaActivity extends Activity  {
 
     
 	private static final int PartenzaDa = 1;
-	private static final int PartenzaA = 2;
+	private static final int ArrivoA = 2;
 	private static final int TimePiker = 3;
-	private String sceltaPartenzaDa;
-	private String sceltaArrivoA;
+	private String sceltaPartenzaDa="";
+	private String sceltaArrivoA="";
 	private int hour;
     private int minute;
 	@Override
@@ -52,7 +52,7 @@ public class CercaActivity extends Activity  {
 		widgetArrivo.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				showDialog(PartenzaA);
+				showDialog(ArrivoA);
 			}
 		});
 		
@@ -135,7 +135,7 @@ public class CercaActivity extends Activity  {
 					case PartenzaDa:
 						dialog = createDa();
 						break;
-					case PartenzaA:
+					case ArrivoA:
 						dialog = createA();
 						break;
 					case TimePiker:
@@ -166,7 +166,7 @@ public class CercaActivity extends Activity  {
 				final String[] options = { "Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				builder.setTitle("Partenza Da:");
-				builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
+				builder.setSingleChoiceItems(options, 190, new DialogInterface.OnClickListener() {
 				@Override
 				
 					public void onClick(DialogInterface dialog, int which) {
@@ -179,8 +179,17 @@ public class CercaActivity extends Activity  {
 				@Override
 					public void onClick(DialogInterface dialog, int which) {
 					Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
-					widgetPartenza.setText(sceltaPartenzaDa);
+					
+					if(sceltaPartenzaDa=="")
+					{
+						widgetPartenza.setText(getString(R.string.partenza));
 						dismissDialog(PartenzaDa);
+					}
+					else
+					{
+				    	widgetPartenza.setText(sceltaPartenzaDa);
+				    	dismissDialog(PartenzaDa);
+					}	
 					}
 				});
 				
@@ -216,8 +225,16 @@ public class CercaActivity extends Activity  {
 				@Override
 					public void onClick(DialogInterface dialog, int which) {
 					Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Destinazione);
-					widgetPartenza.setText(sceltaArrivoA);
-						dismissDialog(PartenzaA);
+					if(sceltaArrivoA=="")
+					{
+						widgetPartenza.setText(getString(R.string.destinazione));
+						dismissDialog(ArrivoA);
+					}
+					else
+					{
+				    	widgetPartenza.setText(sceltaArrivoA);
+				    	dismissDialog(ArrivoA);
+					}	
 					}
 				});
 				
@@ -225,7 +242,7 @@ public class CercaActivity extends Activity  {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					
-				       dismissDialog(PartenzaA);
+				       dismissDialog(ArrivoA);
 				}
 				});
 				AlertDialog alert = builder.create();
