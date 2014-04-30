@@ -27,6 +27,13 @@
           android:text="@string/tab3"
           android:id="@+id/idBottoniNavbar_Tariffe"
            />
+      <ImageButton
+       	  android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+      	  android:id="@+id/button_navbar_imageButton"
+          android:src="@drawable/reverse_icon"
+          style="style/bottoneReverse"
+      />
 	
 	</LinearLayout>
 	<ScrollView   
