@@ -14,11 +14,13 @@
 	<string name="annulla">Delete</string>
 	<string name="da">From :</string>
 	<string name="a">To :</string>
-	<string name="orario">Time :</string>	
+	<string name="orarioL">Time :</string>	
 	<string name="costoA">Season ticket price:</string>
 	<string name="costoB">Ticket price:</string>	
 	<string name="partenza">Start</string>
 	<string name="destinazione">Destination</string>
+    <string name="orario">Time</string>
+	
 	
 	<string name="datiNonValidi">Form data not valid!</string>
 	
