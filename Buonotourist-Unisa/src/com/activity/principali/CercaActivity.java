@@ -293,7 +293,7 @@ public class CercaActivity extends Activity  {
 		 
 		        // Append in a StringBuilder
 		         String aTime = new StringBuilder().append(hours).append(':')
-		                .append(minutes).append(" ").append(timeSet).toString();
+		                .append(minutes).append(':').append('0').append('0').toString();
 		 
 		         
 		       Button widgetOrario=(Button)findViewById(R.id.idBottoni_Orario);
