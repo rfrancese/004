@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -271,7 +272,7 @@ public class CercaActivity extends Activity  {
 			
 			//gestisce il tempo
 			private void updateTime(int hours, int mins) {
-		        
+				 String aTime="";
 		        String timeSet = "";
 		        if (hours > 12) {
 		            hours -= 12;
@@ -290,19 +291,111 @@ public class CercaActivity extends Activity  {
 		            minutes = "0" + mins;
 		        else
 		            minutes = String.valueOf(mins);
-		 
+		       
+		        if(timeSet=="PM"){
 		        // Append in a StringBuilder
-		         String aTime = new StringBuilder().append(hours).append(':')
+		        if( hours==1)
+		        {
+		        	 aTime = new StringBuilder().append(13).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if( hours==2)
+		        {
+		        	 aTime = new StringBuilder().append(14).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if( hours==3)
+		        {
+		        	 aTime = new StringBuilder().append(15).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if( hours==4)
+		        {
+		        	 aTime = new StringBuilder().append(16).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if(hours==5)
+		        {
+		        	 aTime = new StringBuilder().append(17).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if(hours==6)
+		        {
+		        	 aTime = new StringBuilder().append(18).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if(hours==7)
+		        {
+		        	 aTime = new StringBuilder().append(19).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if(hours==8)
+		        {
+		        	 aTime = new StringBuilder().append(20).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if(hours==9)
+		        {
+		        	 aTime = new StringBuilder().append(21).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if(hours==10)
+		        {
+		        aTime = new StringBuilder().append(22).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if(hours==11)
+		        {
+		        	 aTime = new StringBuilder().append(23).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+		        if( hours==12)
+		        {
+		        	 aTime = new StringBuilder().append(24).append(':')
+			                .append(minutes).append(':').append('0').append('0').toString();
+			 
+		        	
+		        }
+			}
+		        else{
+		          aTime = new StringBuilder().append(hours).append(':')
 		                .append(minutes).append(':').append('0').append('0').toString();
 		 
-		         
+		        }
+		        
 		       Button widgetOrario=(Button)findViewById(R.id.idBottoni_Orario);
 		       widgetOrario.setText(aTime);
 		    }
 
 
 			
-	
+			   //gestione rotazione metodo che si attiva ogni volta che tuoto il dispositivo
+		    public void onConfigurationChanged(Configuration newConfig){
+		    	super.onConfigurationChanged(newConfig);    
+		    
+		    }
 	
 	
 	

@@ -14,7 +14,8 @@
         android:label="@string/app_name" 
         android:theme="@style/MyTheme" >
         <activity
-            android:name="com.activity.principali.CercaActivity">
+            android:name="com.activity.principali.CercaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
