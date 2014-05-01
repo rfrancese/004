@@ -29,6 +29,9 @@
         <activity
             android:name="com.activity.principali.LinguaActivity" >
         </activity>
+        <activity
+            android:name="com.activity.principali.RisultatiRicercaActivity" >
+        </activity>
         
     </application>
     <uses-permission android:name="android.permission.INTERNET" />

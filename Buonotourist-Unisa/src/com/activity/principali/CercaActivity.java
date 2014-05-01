@@ -15,9 +15,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TimePicker;
 
-public class CercaActivity extends Activity  {
-
-    
+public class CercaActivity extends Activity  {    
 	private static final int PartenzaDa = 1;
 	private static final int ArrivoA = 2;
 	private static final int TimePiker = 3;
@@ -130,8 +128,24 @@ public class CercaActivity extends Activity  {
 	}
 	
 	protected void createRisultatiRicercaActivity() {
-			startActivity(new Intent(this,RisultatiRicercaActivity.class));
+		try{
+			Intent newIntent = new Intent(this,RisultatiRicercaActivity.class);
+			Button partenza = (Button)findViewById(R.id.idBottoni_Provenienza);
+			Button destinazione = (Button)findViewById(R.id.idBottoni_Destinazione);
+			Button orario=(Button) findViewById(R.id.idBottoni_Orario);
+			newIntent.putExtra("partenza",partenza.getText().toString() );
+			newIntent.putExtra("destinazione", destinazione.getText().toString());
+			newIntent.putExtra("orario", orario.getText().toString());
+			if( partenza.getText().toString().compareTo("Fisciano") == 0 &&  partenza.getText().toString().compareTo("Lancusi") == 0 ){
+				newIntent.putExtra("andataRitorno", "R");
+			}else{
+				newIntent.putExtra("andataRitorno", "A");
+			}
+			startActivity(newIntent);
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+		}finally{
+			finish();
+		};		
 	}
 	
 	//sovrascrivo il metodo di activity ,e viene richiamato quando viene creata la prima volta la finestra di dialogo per associargli un id

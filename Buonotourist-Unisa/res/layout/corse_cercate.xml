@@ -11,30 +11,22 @@
           android:orientation="horizontal"
           android:background="@drawable/border_navbar_sfondo"
           android:padding="2dp" >
-      <Button  
-      	  android:textColor="@color/button_navbar_selected_text"   
+      <Button     
+          android:textColor="@color/button_navbar_selected_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Cerca"
-          android:text="@string/tab1" />
+          android:text="@string/tab1Selected" />
       <Button
           android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Corse"
-          android:text="@string/tab2Selected" />
+          android:text="@string/tab2" />
       <Button
 		  android:textColor="@color/button_navbar_text"
           style="@style/bottoniNavbar"
           android:text="@string/tab3"
           android:id="@+id/idBottoniNavbar_Tariffe"
-           />
-      <ImageButton
-       	  android:layout_width="wrap_content"
-          android:layout_height="match_parent"
-      	  android:id="@+id/idBottone_navbar_imageButton"
-          android:src="@drawable/reverse_icon"
-          style="style/bottoneReverse"
-      />
-	
+           />	
 	</LinearLayout>
 	<ScrollView   
 	android:id="@+id/scroll" 
@@ -53,7 +45,7 @@
             		android:layout_width="match_parent"
             		android:layout_height="wrap_content"
                 	android:text="@string/risultatiRicerca" 
-                	android:id="@+id/idTextViewCorse_Ricerca"
+                	android:id="@+id/idTextViewCorse_CorseRicercate"
                 	android:textStyle="bold"
                 	android:layout_marginBottom="10dp"  />
                 	<TableLayout
@@ -61,8 +53,9 @@
            				android:layout_height="wrap_content"
           		 		android:background="@color/body"
            				android:gravity="top"
-           				android:id="@+id/idTableLayoutCorse_Ricercate">		
+           				android:id="@+id/idTableLayoutCorse_CorseRicercate">		
            			</TableLayout>
 	</LinearLayout>
 	</ScrollView> 
 </LinearLayout>
+

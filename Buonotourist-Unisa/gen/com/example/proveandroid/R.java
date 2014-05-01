@@ -1030,9 +1030,9 @@ containing a value of this type.
         public static final int idBottoni_TariffaA=0x7f05004b;
         public static final int idBottoni_TariffaDa=0x7f05004a;
         public static final int idTableLayoutCorse_AndataRitorno=0x7f050047;
-        public static final int idTableLayoutCorse_Ricercate=0x7f050049;
+        public static final int idTableLayoutCorse_CorseRicercate=0x7f050049;
         public static final int idTextViewCorse_AndataRitorno=0x7f050046;
-        public static final int idTextViewCorse_Ricerca=0x7f050048;
+        public static final int idTextViewCorse_CorseRicercate=0x7f050048;
         public static final int idTextViewFormTariffe_Abbonamento=0x7f05004e;
         public static final int idTextViewFormTariffe_Biglietto=0x7f05004f;
         public static final int ifRoom=0x7f05000a;
