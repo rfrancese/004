@@ -11,7 +11,6 @@ import org.json.JSONObject;
 import com.classi.server.UserFunctions;
 import com.example.proveandroid.R;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -195,7 +194,7 @@ public class CorseActivity extends Activity {
             return json;
         }
 
-        @SuppressLint("NewApi")
+
 		@Override
         protected void onPostExecute(JSONObject json) {
 				try {
@@ -213,7 +212,9 @@ public class CorseActivity extends Activity {
 									TextView nomeCorsa = new TextView(getApplicationContext());
 									nomeCorsa.setTextColor(Color.BLACK);
 									nuovaRiga.addView(nomeCorsa);
-									nuovaRiga.setBackground( getResources().getDrawable(R.drawable.riga_corse));
+									nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
+									//nuovaRiga.setBackgroundDrawable(getResources().getDrawable(R.drawable.riga_corse));
+									//nuovaRiga.setBackground( getResources().getDrawable(R.drawable.riga_corse));
 									nomeCorsa.setText(json_riga.getString("NomeCorsa"));
 									tableLayoutCorse.addView(nuovaRiga);
 								}
