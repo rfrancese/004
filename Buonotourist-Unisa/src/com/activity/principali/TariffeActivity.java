@@ -19,6 +19,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -233,7 +234,7 @@ public Dialog TariffaA(){
 			}
 			else
 			{
-			widgetPartenza.setText(sceltaTariffaA);
+			    widgetPartenza.setText(sceltaTariffaA);
 				dismissDialog(TariffaA);
 			}
 			}
@@ -393,5 +394,12 @@ public Dialog Alert(){
 				}
         }
     }
+    
+    //gestione rotazione metodo che si attiva ogni volta che tuoto il dispositivo
+    public void onConfigurationChanged(Configuration newConfig){
+    	super.onConfigurationChanged(newConfig);    
+    
+    }
+    
 	
 }

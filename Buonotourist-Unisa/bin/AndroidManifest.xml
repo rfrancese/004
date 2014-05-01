@@ -24,7 +24,8 @@
             android:name="com.activity.principali.CorseActivity" >
         </activity>
         <activity
-            android:name="com.activity.principali.TariffeActivity" >
+            android:name="com.activity.principali.TariffeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
             android:name="com.activity.principali.LinguaActivity" >
