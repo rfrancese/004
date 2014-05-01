@@ -796,14 +796,15 @@ containing a value of this type.
         public static final int abc_split_action_bar_is_narrow=0x7f060002;
     }
     public static final class color {
-        public static final int abc_search_url_text_holo=0x7f070005;
+        public static final int abc_search_url_text_holo=0x7f070006;
         public static final int abc_search_url_text_normal=0x7f070000;
         public static final int abc_search_url_text_pressed=0x7f070002;
         public static final int abc_search_url_text_selected=0x7f070001;
         public static final int body=0x7f070004;
-        public static final int button_confirm_text=0x7f070006;
-        public static final int button_navbar_selected_text=0x7f070007;
-        public static final int button_navbar_text=0x7f070008;
+        public static final int button_confirm_text=0x7f070007;
+        public static final int button_navbar_selected_text=0x7f070008;
+        public static final int button_navbar_text=0x7f070009;
+        public static final int costiAbbonamentoBiglietto=0x7f070005;
         public static final int navBar=0x7f070003;
     }
     public static final class dimen {
@@ -1018,20 +1019,22 @@ containing a value of this type.
         public static final int idBottone_navbar_imageButton=0x7f050045;
         public static final int idBottoniFormCerca_Annulla=0x7f050044;
         public static final int idBottoniFormCerca_Cerca=0x7f050043;
-        public static final int idBottoniFormTariffe_Annulla=0x7f05004b;
-        public static final int idBottoniFormTariffe_Cerca=0x7f05004a;
+        public static final int idBottoniFormTariffe_Annulla=0x7f05004d;
+        public static final int idBottoniFormTariffe_Cerca=0x7f05004c;
         public static final int idBottoniNavbar_Cerca=0x7f05003c;
         public static final int idBottoniNavbar_Corse=0x7f05003d;
         public static final int idBottoniNavbar_Tariffe=0x7f05003e;
         public static final int idBottoni_Destinazione=0x7f050041;
         public static final int idBottoni_Orario=0x7f050042;
         public static final int idBottoni_Provenienza=0x7f050040;
-        public static final int idBottoni_TariffaA=0x7f050049;
-        public static final int idBottoni_TariffaDa=0x7f050048;
+        public static final int idBottoni_TariffaA=0x7f05004b;
+        public static final int idBottoni_TariffaDa=0x7f05004a;
         public static final int idTableLayoutCorse_AndataRitorno=0x7f050047;
+        public static final int idTableLayoutCorse_Ricercate=0x7f050049;
         public static final int idTextViewCorse_AndataRitorno=0x7f050046;
-        public static final int idTextViewFormTariffe_Abbonamento=0x7f05004c;
-        public static final int idTextViewFormTariffe_Biglietto=0x7f05004d;
+        public static final int idTextViewCorse_Ricerca=0x7f050048;
+        public static final int idTextViewFormTariffe_Abbonamento=0x7f05004e;
+        public static final int idTextViewFormTariffe_Biglietto=0x7f05004f;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int listMode=0x7f050001;
@@ -1118,8 +1121,9 @@ containing a value of this type.
         public static final int abc_search_view=0x7f030016;
         public static final int cerca=0x7f030017;
         public static final int corse=0x7f030018;
-        public static final int support_simple_spinner_dropdown_item=0x7f030019;
-        public static final int tariffe=0x7f03001a;
+        public static final int corse_cercate=0x7f030019;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
+        public static final int tariffe=0x7f03001b;
     }
     public static final class string {
         public static final int RicevoDati=0x7f0a0025;
@@ -1164,7 +1168,7 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int andata=0x7f0a0027;
+        public static final int andata=0x7f0a0028;
         public static final int annulla=0x7f0a0015;
         public static final int app_name=0x7f0a0013;
         public static final int caricamento=0x7f0a0020;
@@ -1182,7 +1186,8 @@ containing a value of this type.
         public static final int orario=0x7f0a001d;
         public static final int orarioL=0x7f0a0018;
         public static final int partenza=0x7f0a001b;
-        public static final int ritorno=0x7f0a0028;
+        public static final int risultatiRicerca=0x7f0a0027;
+        public static final int ritorno=0x7f0a0029;
         public static final int stoControllandoRete=0x7f0a001f;
         public static final int tab1=0x7f0a0010;
         public static final int tab1Selected=0x7f0a000d;

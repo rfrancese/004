@@ -374,10 +374,10 @@ public Dialog Alert(){
 					            JSONObject json_costi = json.getJSONObject("costi");
 					            TextView abbonamento = (TextView)findViewById(R.id.idTextViewFormTariffe_Abbonamento);
 					            abbonamento.setText(getString(R.string.costoA)+" "+json_costi.getString("costoAbbonamento") + "€");
-					            abbonamento.setTextColor(Color.RED);
+					            abbonamento.setTextColor(getResources().getColor(R.color.costiAbbonamentoBiglietto));
 					            TextView biglietto = (TextView)findViewById(R.id.idTextViewFormTariffe_Biglietto);
 					            biglietto.setText(getString(R.string.costoB)+" "+json_costi.getString("costoBiglietto") + "€");
-					            biglietto.setTextColor(Color.RED);
+					            biglietto.setTextColor(getResources().getColor(R.color.costiAbbonamentoBiglietto));
 					            pDialog.dismiss();
 					        }else{
 					            pDialog.dismiss();

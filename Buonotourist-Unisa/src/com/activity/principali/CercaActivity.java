@@ -110,7 +110,8 @@ public class CercaActivity extends Activity  {
 			finish();
 		}
 	}
-
+	
+	
 	private void settaListenerBottoniForm(final Bundle savedInstanceState) {
 		Button buttonCercaForm =(Button)findViewById(R.id.idBottoniFormCerca_Cerca);
 		Button buttonAnnullaForm =(Button)findViewById(R.id.idBottoniFormCerca_Annulla);
@@ -123,9 +124,14 @@ public class CercaActivity extends Activity  {
 		buttonCercaForm.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				//INTERROGHERA' IL DATABASE
+				createRisultatiRicercaActivity();
 			}
 		});
+	}
+	
+	protected void createRisultatiRicercaActivity() {
+			startActivity(new Intent(this,RisultatiRicercaActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 	}
 	
 	//sovrascrivo il metodo di activity ,e viene richiamato quando viene creata la prima volta la finestra di dialogo per associargli un id

@@ -35,6 +35,7 @@
 	<string name="RicevoDati">Ricevo i dati ...</string>
 	
 	<string name="datiInviatiNonValidi">Dati inviati non validi!</string>
+	<string name="risultatiRicerca">Risultati:</string>
 	
 	<string name="andata">Corse Andata:</string>
 	<string name="ritorno">Corse Ritorno:</string>

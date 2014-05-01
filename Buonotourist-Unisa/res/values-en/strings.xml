@@ -37,7 +37,7 @@
 	
 	<string name="datiInviatiNonValidi">Data sent invalid!</string>
 
-	
+	<string name="risultatiRicerca">Results:</string>
 	<string name="andata">Round rides:</string>
 	<string name="ritorno">Return rides:</string>
 </resources>

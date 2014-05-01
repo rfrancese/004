@@ -2,4 +2,5 @@
 <resources>
 	<color name="navBar">#FFFFFF</color>
 	<color name="body">#FFFFFF</color>
+	<color name="costiAbbonamentoBiglietto">#DF5A5A</color>
 </resources>
