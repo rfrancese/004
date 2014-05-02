@@ -16,6 +16,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -23,6 +24,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageButton;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -211,14 +213,20 @@ public class CorseActivity extends Activity {
 									TableRow nuovaRiga = new TableRow(getApplicationContext());
 									TextView nomeCorsa = new TextView(getApplicationContext());
 									nomeCorsa.setTextColor(Color.BLACK);
-									
-									nomeCorsa.setTextSize(11);
+								
+									nomeCorsa.setTextSize(13);
 									nuovaRiga.addView(nomeCorsa);
 									nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
 									//nuovaRiga.setBackgroundDrawable(getResources().getDrawable(R.drawable.riga_corse));
 									//nuovaRiga.setBackground( getResources().getDrawable(R.drawable.riga_corse));
 									nomeCorsa.setText(json_riga.getString("NomeCorsa"));
-									tableLayoutCorse.addView(nuovaRiga);
+									
+									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
+									scrollRiga.setFillViewport(true);
+									scrollRiga.addView(nuovaRiga);
+									
+									tableLayoutCorse.addView(scrollRiga);
+									
 								}
 					            pDialog.dismiss();
 					        }else{

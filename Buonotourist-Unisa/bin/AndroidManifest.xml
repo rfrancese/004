@@ -33,7 +33,8 @@
             android:name="com.activity.principali.LinguaActivity" >
         </activity>
         <activity
-            android:name="com.activity.principali.RisultatiRicercaActivity" >
+            android:name="com.activity.principali.RisultatiRicercaActivity"
+              android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
         
     </application>
