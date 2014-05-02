@@ -253,8 +253,8 @@ public Dialog TariffaA(){
 
 public Dialog Alert(){
 	AlertDialog.Builder builder = new AlertDialog.Builder(this);
-	builder.setTitle("Attenzione");
-	builder.setMessage("Dati non inseriti correttamente");
+	builder.setTitle(getString(R.string.Attenzione));
+	builder.setMessage(getString(R.string.Messaggio));
 	builder.setCancelable(false);
 	
 	builder.setNegativeButton("Ok", new DialogInterface.OnClickListener() {

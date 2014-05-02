@@ -1126,6 +1126,8 @@ containing a value of this type.
         public static final int tariffe=0x7f03001b;
     }
     public static final class string {
+        public static final int Attenzione=0x7f0a002e;
+        public static final int Messaggio=0x7f0a002f;
         public static final int RicevoDati=0x7f0a0025;
         public static final int TariffaA=0x7f0a002d;
         public static final int TariffaDa=0x7f0a002c;

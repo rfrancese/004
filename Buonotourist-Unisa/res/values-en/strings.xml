@@ -46,4 +46,7 @@
 	
 	<string name="TariffaDa">Rate from:</string>
 	<string name="TariffaA">Rate in:</string>
+	
+	<string name="Attenzione">Attention!!</string>
+	<string name="Messaggio">Please fill in all text fields</string>
 </resources>

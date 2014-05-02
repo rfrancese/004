@@ -20,6 +20,7 @@ public class CercaActivity extends Activity  {
 	private static final int PartenzaDa = 1;
 	private static final int ArrivoA = 2;
 	private static final int TimePiker = 3;
+	private static final int Alert = 4;
 	private String sceltaPartenzaDa="";
 	private String sceltaArrivoA="";
 	private int hour;
@@ -121,8 +122,21 @@ public class CercaActivity extends Activity  {
 			}
 		});
 		buttonCercaForm.setOnClickListener(new OnClickListener() {
+		
 			@Override
 			public void onClick(View v) {
+				Button Partenza=(Button)findViewById(R.id.idBottoni_Provenienza);
+				Button Destinazione =(Button) findViewById(R.id.idBottoni_Destinazione);
+				Button Orario =(Button) findViewById(R.id.idBottoni_Orario);
+				String partenza=Partenza.getText().toString();
+				String destinazione=Destinazione.getText().toString();
+				String orario=Orario.getText().toString();	
+				if(partenza.compareTo(getString(R.string.partenza))==0 || destinazione.compareTo(getString(R.string.destinazione))==0 || orario.compareTo(getString(R.string.orario))==0 )
+				{
+					showDialog(Alert);
+					
+				}
+				else
 				createRisultatiRicercaActivity();
 			}
 		});
@@ -159,6 +173,9 @@ public class CercaActivity extends Activity  {
 					case ArrivoA:
 						dialog = createA();
 						break;
+					case Alert:
+						dialog = Alert();
+						break; 
 					case TimePiker:
 				            return new TimePickerDialog(this, timePickerListener, hour, minute,false);
 				    default:
@@ -396,7 +413,22 @@ public class CercaActivity extends Activity  {
 		    	super.onConfigurationChanged(newConfig);    
 		    
 		    }
-	
+		    public Dialog Alert(){
+		    	AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		    	builder.setTitle(getString(R.string.Attenzione));
+		    	builder.setMessage(getString(R.string.Messaggio));
+		    	builder.setCancelable(false);
+		    	
+		    	builder.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+		    	@Override
+		    		public void onClick(DialogInterface dialog, int which) {
+		    	// Annullato!
+		    		dismissDialog(Alert);
+		    		}
+		    	});
+		    	AlertDialog alert = builder.create();
+		    	return alert;
+		    }
 	
 	
 }

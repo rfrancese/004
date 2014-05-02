@@ -348,6 +348,8 @@ int layout corse 0x7f030018
 int layout corse_cercate 0x7f030019
 int layout support_simple_spinner_dropdown_item 0x7f03001a
 int layout tariffe 0x7f03001b
+int string Attenzione 0x7f0a002e
+int string Messaggio 0x7f0a002f
 int string RicevoDati 0x7f0a0025
 int string TariffaA 0x7f0a002d
 int string TariffaDa 0x7f0a002c

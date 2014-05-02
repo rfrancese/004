@@ -46,4 +46,7 @@
 	
 	<string name="TariffaDa">Tariffa Da:</string>
 	<string name="TariffaA">Tariffa A:</string>
+	
+	<string name="Attenzione">Attenzione!!</string>
+	<string name="Messaggio">Compilare tutti i campi</string>
 </resources>
