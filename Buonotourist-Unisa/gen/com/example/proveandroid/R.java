@@ -1201,6 +1201,7 @@ containing a value of this type.
         public static final int tab2Selected=0x7f0a000e;
         public static final int tab3=0x7f0a0012;
         public static final int tab3Selected=0x7f0a000f;
+        public static final int zeroCorseTrovate=0x7f0a0030;
     }
     public static final class style {
         public static final int MyActionBar=0x7f0b0086;

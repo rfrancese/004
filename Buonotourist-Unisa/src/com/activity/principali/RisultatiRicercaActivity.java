@@ -16,6 +16,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -23,6 +24,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -44,13 +46,13 @@ public class RisultatiRicercaActivity extends Activity{
 		destinazione= intentApplicazione.getStringExtra("destinazione");
 		orario= intentApplicazione.getStringExtra("orario");
 		andataRitorno= intentApplicazione.getStringExtra("andataRitorno");
-        Toast.makeText(getApplicationContext(),partenza, Toast.LENGTH_SHORT).show();  
-        Toast.makeText(getApplicationContext(),destinazione, Toast.LENGTH_SHORT).show();  
-        Toast.makeText(getApplicationContext(),orario, Toast.LENGTH_SHORT).show();  
-        Toast.makeText(getApplicationContext(),andataRitorno, Toast.LENGTH_SHORT).show();  
+        //Toast.makeText(getApplicationContext(),partenza, Toast.LENGTH_SHORT).show();  
+        //Toast.makeText(getApplicationContext(),destinazione, Toast.LENGTH_SHORT).show();  
+        //Toast.makeText(getApplicationContext(),orario, Toast.LENGTH_SHORT).show();  
+        //Toast.makeText(getApplicationContext(),andataRitorno, Toast.LENGTH_SHORT).show();  
 
         //AVVIO LA CONNESSIO AD INTERNET
-        //NetAsync();
+        NetAsync();
 	}
 	private void settaListenerBottoniNavbar(final Bundle savedInstanceState) {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
@@ -173,17 +175,9 @@ public class RisultatiRicercaActivity extends Activity{
 
 		private ProgressDialog pDialog;
 
-        String andataRitornoChar;
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-			TextView andataRitorno = (TextView) findViewById(R.id.idTextViewCorse_AndataRitorno);
-			if((andataRitorno.getText().toString()).compareTo(getString(R.string.andata)) == 0){
-				andataRitornoChar="A";
-			}else{
-				andataRitornoChar="R";
-			}
             pDialog = new ProgressDialog(RisultatiRicercaActivity.this);
             pDialog.setTitle(getString(R.string.contattoServer));
             pDialog.setMessage(getString(R.string.invioDati));
@@ -195,7 +189,7 @@ public class RisultatiRicercaActivity extends Activity{
         @Override
         protected JSONObject doInBackground(String... args) {
             UserFunctions userFunction = new UserFunctions();
-            JSONObject json = userFunction.caricaCorseAndataRitorno(andataRitornoChar);
+            JSONObject json = userFunction.caricaCorseRicercate(partenza,destinazione,orario,andataRitorno);
             return json;
         }
 
@@ -203,39 +197,87 @@ public class RisultatiRicercaActivity extends Activity{
 		@Override
         protected void onPostExecute(JSONObject json) {
 				try {
-					if (json.getString("success") != null) {
-							String number = json.getString("success");
-					        if(Integer.parseInt(number) == 1){
-					            pDialog.setMessage(getString(R.string.caricamentoDatiRicevuti));
-					            pDialog.setTitle(getString(R.string.RicevoDati));
-					                
-					            TableLayout tableLayoutCorse = (TableLayout) findViewById(R.id.idTableLayoutCorse_AndataRitorno);
-					            JSONObject json_riga = null;
-					            for (int i = 0; i < json.length()-1; i++) {
-									json_riga= json.getJSONObject(""+i);
-									TableRow nuovaRiga = new TableRow(getApplicationContext());
-									TextView nomeCorsa = new TextView(getApplicationContext());
-									nomeCorsa.setTextColor(Color.BLACK);
-									nomeCorsa.setTextSize(11);
-									nuovaRiga.addView(nomeCorsa);
-									nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
-									//nuovaRiga.setBackgroundDrawable(getResources().getDrawable(R.drawable.riga_corse));
-									//nuovaRiga.setBackground( getResources().getDrawable(R.drawable.riga_corse));
-									nomeCorsa.setText(json_riga.getString("NomeCorsa"));
-									tableLayoutCorse.addView(nuovaRiga);
-								}
-					            pDialog.dismiss();
-					        }else{
-					            pDialog.dismiss();
-					            Toast.makeText(getApplicationContext(),getString(R.string.datiInviatiNonValidi), Toast.LENGTH_SHORT).show();            
-					         }
+					   String successo= json.getString("success");
+					   if (successo != null) {
+				            	//Toast.makeText(getApplicationContext(),"SUCCESS", Toast.LENGTH_SHORT).show();            
+							    String number = json.getString("success");
+						        if(Integer.parseInt(number) == 1){
+							            pDialog.setMessage(getString(R.string.caricamentoDatiRicevuti));
+							            pDialog.setTitle(getString(R.string.RicevoDati));          
+							            TableLayout tableLayoutCorse = (TableLayout) findViewById(R.id.idTableLayoutCorse_CorseRicercate);
+							            JSONObject json_riga = null;
+							            for (int i = 0; i < json.length()-1; i++) {
+											json_riga= json.getJSONObject(""+i);	
+											TableRow nuovaRiga = new TableRow(getApplicationContext());
+											TableLayout righeDellaCella = new TableLayout(getApplicationContext());
+									
+											TableRow nomeCorsaRiga = new TableRow(getApplicationContext());
+											TableRow oraPartenzaRiga = new TableRow(getApplicationContext());
+											TableRow andataRitornoRiga = new TableRow(getApplicationContext());
+
+											TextView CORSA = new TextView(getApplicationContext());
+											CORSA.setText("Nome Corsa : ");  // IN INGLESE
+											CORSA.setTextColor(Color.BLACK);
+											CORSA.setTextSize(15);
+											CORSA.setTypeface(null,Typeface.BOLD);
+											TextView nomeCorsaText = new TextView(getApplicationContext());
+											nomeCorsaText.setTextColor(Color.BLACK);
+											nomeCorsaText.setTextSize(13);
+											nomeCorsaText.setText(json_riga.getString("NomeCorsa"));
+											nomeCorsaRiga.addView(CORSA);
+											nomeCorsaRiga.addView(nomeCorsaText);
+											
+											TextView ORAPARTENZA = new TextView(getApplicationContext());
+											ORAPARTENZA.setText("Ora Partenza : ");  // IN INGLESE
+											ORAPARTENZA.setTextColor(Color.BLACK);
+											ORAPARTENZA.setTextSize(15);
+											ORAPARTENZA.setTypeface(null,Typeface.BOLD);
+											TextView oraPartenzaText = new TextView(getApplicationContext());
+											oraPartenzaText.setTextColor(Color.BLACK);
+											oraPartenzaText.setTextSize(13);
+											oraPartenzaText.setText(json_riga.getString("OraPartenzaCorsaReale") + "  ("+"Da Capolinea"+")");  // DA CAPOLINEA IN INGLESE
+											oraPartenzaRiga.addView(ORAPARTENZA);
+											oraPartenzaRiga.addView(oraPartenzaText);
+											
+											TextView ANDATARITORNO = new TextView(getApplicationContext());
+											ANDATARITORNO.setText("Andata \\ Ritorno : ");  // IN INGLESEEE
+											ANDATARITORNO.setTextColor(Color.BLACK);
+											ANDATARITORNO.setTextSize(15);
+											ANDATARITORNO.setTypeface(null,Typeface.BOLD);
+											TextView andataRitornoText = new TextView(getApplicationContext());
+											andataRitornoText.setTextColor(Color.BLACK);
+											andataRitornoText.setTextSize(13);
+											andataRitornoText.setText(json_riga.getString("AndataRitornoCorsaReale"));
+											andataRitornoRiga.addView(ANDATARITORNO);
+											andataRitornoRiga.addView(andataRitornoText);
+										
+											righeDellaCella.addView(nomeCorsaRiga);
+											righeDellaCella.addView(oraPartenzaRiga);
+											righeDellaCella.addView(andataRitornoRiga);
+											
+											nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
+											nuovaRiga.addView(righeDellaCella);
+											
+											HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
+											scrollRiga.setFillViewport(true);
+											scrollRiga.addView(nuovaRiga);
+											tableLayoutCorse.addView(scrollRiga);
+										}
+							            pDialog.dismiss();
+						         }else{
+						            pDialog.dismiss();
+						            Toast.makeText(getApplicationContext(),getString(R.string.datiInviatiNonValidi), Toast.LENGTH_SHORT).show();            
+						         }
 					   }else{
-				            Toast.makeText(getApplicationContext(),"JSON NULL:", Toast.LENGTH_SHORT).show();            
+				            Toast.makeText(getApplicationContext(),"SUCCESS NULL ERROR", Toast.LENGTH_SHORT).show();
+				            pDialog.dismiss();
 					   }
 				} catch (NumberFormatException e) {
-		            Toast.makeText(getApplicationContext(),"ERROR NUMBER FORMAT", Toast.LENGTH_SHORT).show();            
+		            Toast.makeText(getApplicationContext(),"ERROR SUCCESS NUMBER FORMAT", Toast.LENGTH_SHORT).show();  
+		            pDialog.dismiss();
 				} catch (JSONException e) {
-		            Toast.makeText(getApplicationContext(),"ERROR JSON SUCCESS", Toast.LENGTH_SHORT).show();            
+		            Toast.makeText(getApplicationContext(),getString(R.string.zeroCorseTrovate), Toast.LENGTH_SHORT).show();  
+		            pDialog.dismiss();
 				}
         }
     }

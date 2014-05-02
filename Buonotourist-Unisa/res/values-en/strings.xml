@@ -49,4 +49,6 @@
 	
 	<string name="Attenzione">Attention!!</string>
 	<string name="Messaggio">Please fill in all text fields</string>
+	
+	<string name="zeroCorseTrovate">No bus rides found!</string>
 </resources>

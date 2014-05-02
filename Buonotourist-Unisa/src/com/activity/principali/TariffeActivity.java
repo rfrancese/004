@@ -367,7 +367,7 @@ public Dialog Alert(){
         @Override
         protected void onPostExecute(JSONObject json) {
 				try {
-					if (json.getString("success") != null) {
+					   if (json.getString("success") != null) {
 							String number = json.getString("success");
 					        if(Integer.parseInt(number) == 1){
 					            pDialog.setMessage(getString(R.string.caricamentoDatiRicevuti));

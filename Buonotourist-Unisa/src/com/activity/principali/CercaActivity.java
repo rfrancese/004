@@ -151,7 +151,7 @@ public class CercaActivity extends Activity  {
 			newIntent.putExtra("partenza",partenza.getText().toString() );
 			newIntent.putExtra("destinazione", destinazione.getText().toString());
 			newIntent.putExtra("orario", orario.getText().toString());
-			if( partenza.getText().toString().compareTo("Fisciano") == 0 &&  partenza.getText().toString().compareTo("Lancusi") == 0 ){
+			if( partenza.getText().toString().compareTo("Fisciano") == 0 ||  partenza.getText().toString().compareTo("Lancusi") == 0 ){
 				newIntent.putExtra("andataRitorno", "R");
 			}else{
 				newIntent.putExtra("andataRitorno", "A");
@@ -201,10 +201,10 @@ public class CercaActivity extends Activity  {
 		 // finestra di dialogo del primo bottone
 			public Dialog createDa(){
 			
-				final String[] options = { "Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
+				final String[] options = { "Fisciano","Lancusi","Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				builder.setTitle(getString(R.string.partenzaDa));
-				builder.setSingleChoiceItems(options, 190, new DialogInterface.OnClickListener() {
+				builder.setSingleChoiceItems(options, 99999, new DialogInterface.OnClickListener() {
 				@Override
 				
 					public void onClick(DialogInterface dialog, int which) {
@@ -246,11 +246,11 @@ public class CercaActivity extends Activity  {
 			//finestra dialogo del secondo bottone
 			public Dialog createA(){
 				
-				final String[] options = {"Fisciano","Lancusi"};
+				final String[] options = {"Fisciano","Lancusi","Nola","Sarno"};
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				builder.setTitle(getString(R.string.arrivoA));
 				
-				builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
+				builder.setSingleChoiceItems(options, 99999, new DialogInterface.OnClickListener() {
 				@Override
 				
 					public void onClick(DialogInterface dialog, int which) {
