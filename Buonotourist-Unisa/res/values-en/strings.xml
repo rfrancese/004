@@ -19,7 +19,7 @@
 	<string name="costoB">Ticket price:</string>	
 	<string name="partenza">Start</string>
 	<string name="destinazione">Destination</string>
-    <string name="orario">Time</string>
+    <string name="orario">From that time?</string>
 	
 	
 	<string name="datiNonValidi">Form data not valid!</string>

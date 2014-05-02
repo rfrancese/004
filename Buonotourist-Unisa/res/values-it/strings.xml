@@ -18,7 +18,7 @@
 	<string name="costoB">Costo biglietto:</string>	
 	<string name="partenza">Partenza</string>
 	<string name="destinazione">Destinazione</string>
-	<string name="orario">Orario</string>
+	<string name="orario">Da che ora ?</string>
 	
 	
 	<string name="datiNonValidi">Dati form non validi!</string>
