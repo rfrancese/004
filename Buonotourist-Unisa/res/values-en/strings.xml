@@ -40,4 +40,10 @@
 	<string name="risultatiRicerca">Results:</string>
 	<string name="andata">Round rides:</string>
 	<string name="ritorno">Return rides:</string>
+	
+	<string name="partenzaDa">From:</string>
+	<string name="arrivoA">Arrival in:</string>
+	
+	<string name="TariffaDa">Rate from:</string>
+	<string name="TariffaA">Rate in:</string>
 </resources>

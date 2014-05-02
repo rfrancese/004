@@ -168,7 +168,7 @@ public Dialog TariffaDa(){
 		
 		final String[] options = { "Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Tariffa Da:");
+		builder.setTitle(getString(R.string.TariffaDa));
 		builder.setSingleChoiceItems(options, 139, new DialogInterface.OnClickListener() {
 		@Override
 		
@@ -195,7 +195,7 @@ public Dialog TariffaDa(){
 		}
 		});
 		
-		builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+		builder.setNegativeButton(getString(R.string.annulla), new DialogInterface.OnClickListener() {
 		@SuppressWarnings("deprecation")
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
@@ -212,7 +212,7 @@ public Dialog TariffaA(){
 		
 		final String[] options = {"Fisciano","Lancusi"};
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setTitle("Tariffa A:");
+		builder.setTitle(getString(R.string.TariffaA));
 		builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
 		@Override
 		
@@ -240,7 +240,7 @@ public Dialog TariffaA(){
 			}
 		});
 		
-		builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+		builder.setNegativeButton(getString(R.string.annulla), new DialogInterface.OnClickListener() {
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
 			

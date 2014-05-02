@@ -22,7 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.activity.principali.CorseActivity" >
+            android:name="com.activity.principali.CorseActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
             android:name="com.activity.principali.TariffeActivity"

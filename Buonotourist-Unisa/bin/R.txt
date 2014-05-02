@@ -349,6 +349,8 @@ int layout corse_cercate 0x7f030019
 int layout support_simple_spinner_dropdown_item 0x7f03001a
 int layout tariffe 0x7f03001b
 int string RicevoDati 0x7f0a0025
+int string TariffaA 0x7f0a002d
+int string TariffaDa 0x7f0a002c
 int string a 0x7f0a0017
 int string abc_action_bar_home_description 0x7f0a0001
 int string abc_action_bar_up_description 0x7f0a0002
@@ -366,6 +368,7 @@ int string abc_shareactionprovider_share_with_application 0x7f0a000b
 int string andata 0x7f0a0028
 int string annulla 0x7f0a0015
 int string app_name 0x7f0a0013
+int string arrivoA 0x7f0a002b
 int string caricamento 0x7f0a0020
 int string caricamentoDatiRicevuti 0x7f0a0024
 int string cerca 0x7f0a0014
@@ -381,6 +384,7 @@ int string invioDati 0x7f0a0023
 int string orario 0x7f0a001d
 int string orarioL 0x7f0a0018
 int string partenza 0x7f0a001b
+int string partenzaDa 0x7f0a002a
 int string risultatiRicerca 0x7f0a0027
 int string ritorno 0x7f0a0029
 int string stoControllandoRete 0x7f0a001f

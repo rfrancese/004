@@ -39,4 +39,11 @@
 	
 	<string name="andata">Corse Andata:</string>
 	<string name="ritorno">Corse Ritorno:</string>
+	
+	
+	<string name="partenzaDa">Partenza Da:</string>
+	<string name="arrivoA">Arrivo A:</string>
+	
+	<string name="TariffaDa">Tariffa Da:</string>
+	<string name="TariffaA">Tariffa A:</string>
 </resources>

@@ -186,7 +186,7 @@ public class CercaActivity extends Activity  {
 			
 				final String[] options = { "Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
-				builder.setTitle("Partenza Da:");
+				builder.setTitle(getString(R.string.partenzaDa));
 				builder.setSingleChoiceItems(options, 190, new DialogInterface.OnClickListener() {
 				@Override
 				
@@ -214,7 +214,7 @@ public class CercaActivity extends Activity  {
 					}
 				});
 				
-				builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+				builder.setNegativeButton(getString(R.string.annulla), new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					
@@ -231,7 +231,7 @@ public class CercaActivity extends Activity  {
 				
 				final String[] options = {"Fisciano","Lancusi"};
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
-				builder.setTitle("Arrivo A:");
+				builder.setTitle(getString(R.string.arrivoA));
 				
 				builder.setSingleChoiceItems(options, 2, new DialogInterface.OnClickListener() {
 				@Override
@@ -259,7 +259,7 @@ public class CercaActivity extends Activity  {
 					}
 				});
 				
-				builder.setNegativeButton("Annulla", new DialogInterface.OnClickListener() {
+				builder.setNegativeButton(getString(R.string.annulla), new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					

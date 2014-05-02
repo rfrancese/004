@@ -211,6 +211,7 @@ public class CorseActivity extends Activity {
 									TableRow nuovaRiga = new TableRow(getApplicationContext());
 									TextView nomeCorsa = new TextView(getApplicationContext());
 									nomeCorsa.setTextColor(Color.BLACK);
+									
 									nomeCorsa.setTextSize(11);
 									nuovaRiga.addView(nomeCorsa);
 									nuovaRiga.setBackgroundResource(R.drawable.riga_corse);

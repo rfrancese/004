@@ -1127,6 +1127,8 @@ containing a value of this type.
     }
     public static final class string {
         public static final int RicevoDati=0x7f0a0025;
+        public static final int TariffaA=0x7f0a002d;
+        public static final int TariffaDa=0x7f0a002c;
         public static final int a=0x7f0a0017;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
@@ -1171,6 +1173,7 @@ containing a value of this type.
         public static final int andata=0x7f0a0028;
         public static final int annulla=0x7f0a0015;
         public static final int app_name=0x7f0a0013;
+        public static final int arrivoA=0x7f0a002b;
         public static final int caricamento=0x7f0a0020;
         public static final int caricamentoDatiRicevuti=0x7f0a0024;
         public static final int cerca=0x7f0a0014;
@@ -1186,6 +1189,7 @@ containing a value of this type.
         public static final int orario=0x7f0a001d;
         public static final int orarioL=0x7f0a0018;
         public static final int partenza=0x7f0a001b;
+        public static final int partenzaDa=0x7f0a002a;
         public static final int risultatiRicerca=0x7f0a0027;
         public static final int ritorno=0x7f0a0029;
         public static final int stoControllandoRete=0x7f0a001f;
