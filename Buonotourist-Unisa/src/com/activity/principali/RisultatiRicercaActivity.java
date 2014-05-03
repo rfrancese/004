@@ -216,7 +216,7 @@ public class RisultatiRicercaActivity extends Activity{
 											TableRow andataRitornoRiga = new TableRow(getApplicationContext());
 
 											TextView CORSA = new TextView(getApplicationContext());
-											CORSA.setText("Nome Corsa : ");  // IN INGLESE
+											CORSA.setText(getString(R.string.nomeCorsa));  
 											CORSA.setTextColor(Color.BLACK);
 											CORSA.setTextSize(15);
 											CORSA.setTypeface(null,Typeface.BOLD);
@@ -228,7 +228,7 @@ public class RisultatiRicercaActivity extends Activity{
 											nomeCorsaRiga.addView(nomeCorsaText);
 											
 											TextView ORAPARTENZA = new TextView(getApplicationContext());
-											ORAPARTENZA.setText("Ora Partenza : ");  // IN INGLESE
+											ORAPARTENZA.setText(getString(R.string.oraPartenza));  
 											ORAPARTENZA.setTextColor(Color.BLACK);
 											ORAPARTENZA.setTextSize(15);
 											ORAPARTENZA.setTypeface(null,Typeface.BOLD);
@@ -240,7 +240,7 @@ public class RisultatiRicercaActivity extends Activity{
 											oraPartenzaRiga.addView(oraPartenzaText);
 											
 											TextView ANDATARITORNO = new TextView(getApplicationContext());
-											ANDATARITORNO.setText("Andata \\ Ritorno : ");  // IN INGLESEEE
+											ANDATARITORNO.setText(getString(R.string.andataRitorno)); 
 											ANDATARITORNO.setTextColor(Color.BLACK);
 											ANDATARITORNO.setTextSize(15);
 											ANDATARITORNO.setTypeface(null,Typeface.BOLD);

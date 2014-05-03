@@ -51,4 +51,7 @@
 	<string name="Messaggio">Please fill in all text fields</string>
 	
 	<string name="zeroCorseTrovate">No bus rides found!</string>
+	<string name="nomeCorsa">Name of bus ride:</string>
+	<string name="oraPartenza">Bus departure time:</string>
+	<string name="andataRitorno">Race went // Running back</string>
 </resources>

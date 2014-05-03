@@ -368,6 +368,7 @@ int string abc_searchview_description_voice 0x7f0a0008
 int string abc_shareactionprovider_share_with 0x7f0a000c
 int string abc_shareactionprovider_share_with_application 0x7f0a000b
 int string andata 0x7f0a0028
+int string andataRitorno 0x7f0a0033
 int string annulla 0x7f0a0015
 int string app_name 0x7f0a0013
 int string arrivoA 0x7f0a002b
@@ -383,6 +384,8 @@ int string datiInviatiNonValidi 0x7f0a0026
 int string datiNonValidi 0x7f0a001e
 int string destinazione 0x7f0a001c
 int string invioDati 0x7f0a0023
+int string nomeCorsa 0x7f0a0031
+int string oraPartenza 0x7f0a0032
 int string orario 0x7f0a001d
 int string orarioL 0x7f0a0018
 int string partenza 0x7f0a001b

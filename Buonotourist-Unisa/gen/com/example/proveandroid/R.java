@@ -1173,6 +1173,7 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int andata=0x7f0a0028;
+        public static final int andataRitorno=0x7f0a0033;
         public static final int annulla=0x7f0a0015;
         public static final int app_name=0x7f0a0013;
         public static final int arrivoA=0x7f0a002b;
@@ -1188,6 +1189,8 @@ containing a value of this type.
         public static final int datiNonValidi=0x7f0a001e;
         public static final int destinazione=0x7f0a001c;
         public static final int invioDati=0x7f0a0023;
+        public static final int nomeCorsa=0x7f0a0031;
+        public static final int oraPartenza=0x7f0a0032;
         public static final int orario=0x7f0a001d;
         public static final int orarioL=0x7f0a0018;
         public static final int partenza=0x7f0a001b;

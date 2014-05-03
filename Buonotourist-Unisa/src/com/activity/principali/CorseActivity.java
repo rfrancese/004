@@ -211,15 +211,32 @@ public class CorseActivity extends Activity {
 					            for (int i = 0; i < json.length()-1; i++) {
 									json_riga= json.getJSONObject(""+i);
 									TableRow nuovaRiga = new TableRow(getApplicationContext());
+									
 									TextView nomeCorsa = new TextView(getApplicationContext());
 									nomeCorsa.setTextColor(Color.BLACK);
-								
 									nomeCorsa.setTextSize(13);
-									nuovaRiga.addView(nomeCorsa);
+									nomeCorsa.setText(json_riga.getString("NomeCorsa"));
+									TableLayout righeDellaCella = new TableLayout(getApplicationContext());
+									TableRow nome = new TableRow(getApplicationContext());
+									
+									
+									
+									TextView CORSA = new TextView(getApplicationContext());
+									CORSA.setText(getString(R.string.nomeCorsa)); 
+									CORSA.setTextColor(Color.BLACK);
+									CORSA.setTextSize(15);
+									CORSA.setTypeface(null,Typeface.BOLD);
+									
+									nome.addView(CORSA);
+									nome.addView(nomeCorsa);
+									righeDellaCella.addView(nome);
+									
+									nuovaRiga.addView(righeDellaCella);
+									
 									nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
 									//nuovaRiga.setBackgroundDrawable(getResources().getDrawable(R.drawable.riga_corse));
 									//nuovaRiga.setBackground( getResources().getDrawable(R.drawable.riga_corse));
-									nomeCorsa.setText(json_riga.getString("NomeCorsa"));
+									
 									
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
 									scrollRiga.setFillViewport(true);
