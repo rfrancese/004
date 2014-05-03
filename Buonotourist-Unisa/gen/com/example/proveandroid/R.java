@@ -1193,8 +1193,11 @@ containing a value of this type.
         public static final int destinazione=0x7f0a001c;
         public static final int invioDati=0x7f0a0023;
         public static final int nomeCorsa=0x7f0a0031;
+        public static final int nomeFermataPaese=0x7f0a0035;
+        public static final int nomePaeseFermata=0x7f0a0034;
         public static final int oraPartenza=0x7f0a0032;
         public static final int orario=0x7f0a001d;
+        public static final int orarioFermataPaese=0x7f0a0036;
         public static final int orarioL=0x7f0a0018;
         public static final int partenza=0x7f0a001b;
         public static final int partenzaDa=0x7f0a002a;

@@ -388,8 +388,11 @@ int string datiNonValidi 0x7f0a001e
 int string destinazione 0x7f0a001c
 int string invioDati 0x7f0a0023
 int string nomeCorsa 0x7f0a0031
+int string nomeFermataPaese 0x7f0a0035
+int string nomePaeseFermata 0x7f0a0034
 int string oraPartenza 0x7f0a0032
 int string orario 0x7f0a001d
+int string orarioFermataPaese 0x7f0a0036
 int string orarioL 0x7f0a0018
 int string partenza 0x7f0a001b
 int string partenzaDa 0x7f0a002a

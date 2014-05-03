@@ -54,4 +54,9 @@
 	<string name="nomeCorsa">Name of bus ride:</string>
 	<string name="oraPartenza">Bus departure time:</string>
 	<string name="andataRitorno">Race went // Running back:</string>
+	
+	
+	<string name="nomePaeseFermata">City: </string>
+	<string name="nomeFermataPaese">Bus Stop: </string>
+	<string name="orarioFermataPaese">Time: </string>
 </resources>

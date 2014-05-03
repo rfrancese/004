@@ -226,7 +226,7 @@ public class DettaglioCorsaActivity extends Activity {
 									TableRow orarioFermata = new TableRow(getApplicationContext());
 
 									TextView NOMEPAESE = new TextView(getApplicationContext());
-									NOMEPAESE.setText("Nome Paese: "); // IN INGLESE  
+									NOMEPAESE.setText(getString(R.string.nomePaeseFermata));
 									NOMEPAESE.setTextColor(Color.BLACK);
 									NOMEPAESE.setTextSize(15);
 									NOMEPAESE.setTypeface(null,Typeface.BOLD);
@@ -242,7 +242,7 @@ public class DettaglioCorsaActivity extends Activity {
 									//
 									
 									TextView NOMEFERMATA = new TextView(getApplicationContext());
-									NOMEFERMATA.setText("Nome Fermata:");  
+									NOMEFERMATA.setText(getString(R.string.nomeFermataPaese));  
 									NOMEFERMATA.setTextColor(Color.BLACK);
 									NOMEFERMATA.setTextSize(15);
 									NOMEFERMATA.setTypeface(null,Typeface.BOLD);
@@ -256,7 +256,7 @@ public class DettaglioCorsaActivity extends Activity {
 									
 									//
 									TextView ORARIOFERMATA = new TextView(getApplicationContext());
-									ORARIOFERMATA.setText("Orario Fermata:"); 
+									ORARIOFERMATA.setText(getString(R.string.orarioFermataPaese)); 
 									ORARIOFERMATA.setTextColor(Color.BLACK);
 									ORARIOFERMATA.setTextSize(15);
 									ORARIOFERMATA.setTypeface(null,Typeface.BOLD);
