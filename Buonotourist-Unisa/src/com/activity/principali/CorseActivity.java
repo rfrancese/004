@@ -252,12 +252,12 @@ public class CorseActivity extends Activity {
 					            Toast.makeText(getApplicationContext(),getString(R.string.datiInviatiNonValidi), Toast.LENGTH_SHORT).show();            
 					         }
 					   }else{
-				            Toast.makeText(getApplicationContext(),"JSON NULL:", Toast.LENGTH_SHORT).show();            
+				            Toast.makeText(getApplicationContext(),"JSON SUCCESS NOT 1(IMPOSSIBILE)", Toast.LENGTH_SHORT).show();            
 					   }
 				} catch (NumberFormatException e) {
 		            Toast.makeText(getApplicationContext(),"ERROR NUMBER FORMAT", Toast.LENGTH_SHORT).show();            
 				} catch (JSONException e) {
-		            Toast.makeText(getApplicationContext(),"ERROR JSON SUCCESS", Toast.LENGTH_SHORT).show();            
+		            Toast.makeText(getApplicationContext(),"ERROR JSON SUCCESS O INTERNI(IMPOSSIBILE)", Toast.LENGTH_SHORT).show();            
 				}
         }
     }

@@ -20,7 +20,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -385,20 +384,19 @@ public Dialog Alert(){
 					            Toast.makeText(getApplicationContext(),getString(R.string.datiInviatiNonValidi), Toast.LENGTH_SHORT).show();            
 					         }
 					   }else{
-				            Toast.makeText(getApplicationContext(),"JSON NULL:", Toast.LENGTH_SHORT).show();            
+				            Toast.makeText(getApplicationContext(),"JSON SUCCESS NOT 1 (IMPOSSIBILE)", Toast.LENGTH_SHORT).show();            
 					   }
 				} catch (NumberFormatException e) {
 		            Toast.makeText(getApplicationContext(),"ERROR NUMBER FORMAT", Toast.LENGTH_SHORT).show();            
 				} catch (JSONException e) {
-		            Toast.makeText(getApplicationContext(),"ERROR JSON SUCCESS", Toast.LENGTH_SHORT).show();            
+		            Toast.makeText(getApplicationContext(),"ERROR JSON SUCCESS O INTERNI(IMPOSSIBILE)", Toast.LENGTH_SHORT).show();            
 				}
         }
     }
     
     //gestione rotazione metodo che si attiva ogni volta che tuoto il dispositivo
     public void onConfigurationChanged(Configuration newConfig){
-    	super.onConfigurationChanged(newConfig);    
-    
+    	super.onConfigurationChanged(newConfig);     
     }
     
 	

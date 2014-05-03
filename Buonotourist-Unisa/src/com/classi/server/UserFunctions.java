@@ -28,6 +28,9 @@ public class UserFunctions {
     private static String ricercaCorseURL = "http://buonotouristunisa.altervista.org/buonotourist_script/";
     private static String ricercaCorse_tag = "cercaCorse";
     
+    private static String dettaglioCorsaURL = "http://buonotouristunisa.altervista.org/buonotourist_script/";
+    private static String dettaglioCorsa_tag = "dettaglioCorsa";
+    
     // constructor
     public UserFunctions(){
         jsonParser = new JSONParser();
@@ -66,6 +69,18 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("andataRitorno",andataRitorno));
         params.add(new BasicNameValuePair("orario",orario));
         JSONObject json = jsonParser.getJSONFromUrl(ricercaCorseURL, params);
+        return json;
+	}
+	/**
+     * Funzione che carica le fermate di una singola corsa
+     **/
+	public JSONObject caricaDettaglioCorsa(String codiceCorsaReale,String oraPartenzaCorsaReale, String andataRitornoCorsaReale) {
+		List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("tag",dettaglioCorsa_tag));
+        params.add(new BasicNameValuePair("codiceCorsaReale",codiceCorsaReale));
+        params.add(new BasicNameValuePair("oraPartenzaCorsaReale",oraPartenzaCorsaReale));
+        params.add(new BasicNameValuePair("andataRitornoCorsaReale",andataRitornoCorsaReale));
+        JSONObject json = jsonParser.getJSONFromUrl(dettaglioCorsaURL, params);
         return json;
 	}
 	
