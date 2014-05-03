@@ -44,8 +44,7 @@
          			android:textColor="#000000"
             		android:layout_width="match_parent"
             		android:layout_height="wrap_content"
-                	android:text="@string/risultatiRicerca" 
-                	android:id="@+id/idTextViewCerca_CorseRicercate"
+                	android:id="@+id/idTextViewCerca_NomeCorsa"
                 	android:textStyle="bold"
                 	android:layout_marginBottom="10dp"  />
                 				<TableLayout
@@ -53,7 +52,7 @@
            							android:layout_height="wrap_content"
           		 					android:background="@color/body"
            							android:gravity="top"
-           							android:id="@+id/idTableLayoutCerca_CorseRicercate">		
+           							android:id="@+id/idTableLayoutCerca_DettagliCorsa">		
            						</TableLayout>
 	</LinearLayout>
 	</ScrollView> 

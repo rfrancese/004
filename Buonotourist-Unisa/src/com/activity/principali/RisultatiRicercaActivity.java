@@ -204,11 +204,30 @@ public class RisultatiRicercaActivity extends Activity{
 						        if(Integer.parseInt(number) == 1){
 							            pDialog.setMessage(getString(R.string.caricamentoDatiRicevuti));
 							            pDialog.setTitle(getString(R.string.RicevoDati));          
-							            TableLayout tableLayoutCorse = (TableLayout) findViewById(R.id.idTableLayoutCorse_CorseRicercate);
+							            TableLayout tableLayoutCorse = (TableLayout) findViewById(R.id.idTableLayoutCerca_CorseRicercate);
 							            JSONObject json_riga = null;
 							            for (int i = 0; i < json.length()-1; i++) {
 											json_riga= json.getJSONObject(""+i);	
-											TableRow nuovaRiga = new TableRow(getApplicationContext());
+											final TableRow nuovaRiga = new TableRow(getApplicationContext());
+											nuovaRiga.setOnClickListener(new OnClickListener() {
+												
+												@Override
+												public void onClick(View v) {
+													//$corse["$i"]["NomeCorsa"]=$arrayValori["NomeCorsa"];
+													//$corse["$i"]["CodiceCorsaReale"]=$arrayValori["CodiceCorsaR"];
+													//$corse["$i"]["OraPartenzaCorsaReale"]=$arrayValori["OraPartenza"];
+													//$corse["$i"]["AndataRitornoCorsaReale"]=$arrayValori["AndataRitorno"];
+													String nomeCorsa= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(0)).getChildAt(1)).getText().toString();
+													String codiceCorsaReale= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(0)).getChildAt(2)).getText().toString();
+													String oraPartenzaCorsaReale= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(1)).getChildAt(1)).getText().toString();
+													String andataRitornoCorsaReale= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(2)).getChildAt(1)).getText().toString();
+													apriAttivitaDettaglio(nomeCorsa,codiceCorsaReale,oraPartenzaCorsaReale,andataRitornoCorsaReale);
+												}
+
+												
+											});
+											
+											
 											TableLayout righeDellaCella = new TableLayout(getApplicationContext());
 									
 											TableRow nomeCorsaRiga = new TableRow(getApplicationContext());
@@ -224,8 +243,14 @@ public class RisultatiRicercaActivity extends Activity{
 											nomeCorsaText.setTextColor(Color.BLACK);
 											nomeCorsaText.setTextSize(13);
 											nomeCorsaText.setText(json_riga.getString("NomeCorsa"));
+											TextView IDCORSA = new TextView(getApplicationContext());
+											IDCORSA.setText(json_riga.getString("CodiceCorsaReale"));  
+											IDCORSA.setTextColor(Color.WHITE);
+											IDCORSA.setTextSize(13);
+											
 											nomeCorsaRiga.addView(CORSA);
 											nomeCorsaRiga.addView(nomeCorsaText);
+											nomeCorsaRiga.addView(IDCORSA);
 											
 											TextView ORAPARTENZA = new TextView(getApplicationContext());
 											ORAPARTENZA.setText(getString(R.string.oraPartenza));  
@@ -235,7 +260,7 @@ public class RisultatiRicercaActivity extends Activity{
 											TextView oraPartenzaText = new TextView(getApplicationContext());
 											oraPartenzaText.setTextColor(Color.BLACK);
 											oraPartenzaText.setTextSize(13);
-											oraPartenzaText.setText(json_riga.getString("OraPartenzaCorsaReale") + "  ("+"Da Capolinea"+")");  // DA CAPOLINEA IN INGLESE
+											oraPartenzaText.setText(json_riga.getString("OraPartenzaCorsaReale"));
 											oraPartenzaRiga.addView(ORAPARTENZA);
 											oraPartenzaRiga.addView(oraPartenzaText);
 											
@@ -282,7 +307,17 @@ public class RisultatiRicercaActivity extends Activity{
         }
     }
     
-    
-
-
+    private void apriAttivitaDettaglio(String nomeCorsa,String codiceCorsaReale,String oraPartenzaCorsaReale,String andataRitornoCorsaReale) {
+    	try{
+			Intent newIntent = new Intent(this,DettaglioCorsaActivity.class);
+			newIntent.putExtra("nomeCorsa",nomeCorsa );
+			newIntent.putExtra("codiceCorsaReale",codiceCorsaReale);
+			newIntent.putExtra("oraPartenzaCorsaReale", oraPartenzaCorsaReale);
+			newIntent.putExtra("andataRitornoCorsaReale",andataRitornoCorsaReale);
+			startActivity(newIntent);
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+		}finally{
+			finish();
+		};	
+	}
 }

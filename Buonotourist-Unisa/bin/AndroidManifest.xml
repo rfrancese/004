@@ -30,13 +30,13 @@
             android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
-            android:name="com.activity.principali.LinguaActivity" >
+            android:name="com.activity.principali.RisultatiRicercaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
-            android:name="com.activity.principali.RisultatiRicercaActivity"
-              android:configChanges="keyboardHidden|orientation|screenSize" >
+            android:name="com.activity.principali.DettaglioCorsaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
-        
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />   

@@ -1019,22 +1019,24 @@ containing a value of this type.
         public static final int idBottone_navbar_imageButton=0x7f050045;
         public static final int idBottoniFormCerca_Annulla=0x7f050044;
         public static final int idBottoniFormCerca_Cerca=0x7f050043;
-        public static final int idBottoniFormTariffe_Annulla=0x7f05004d;
-        public static final int idBottoniFormTariffe_Cerca=0x7f05004c;
+        public static final int idBottoniFormTariffe_Annulla=0x7f05004f;
+        public static final int idBottoniFormTariffe_Cerca=0x7f05004e;
         public static final int idBottoniNavbar_Cerca=0x7f05003c;
         public static final int idBottoniNavbar_Corse=0x7f05003d;
         public static final int idBottoniNavbar_Tariffe=0x7f05003e;
         public static final int idBottoni_Destinazione=0x7f050041;
         public static final int idBottoni_Orario=0x7f050042;
         public static final int idBottoni_Provenienza=0x7f050040;
-        public static final int idBottoni_TariffaA=0x7f05004b;
-        public static final int idBottoni_TariffaDa=0x7f05004a;
+        public static final int idBottoni_TariffaA=0x7f05004d;
+        public static final int idBottoni_TariffaDa=0x7f05004c;
+        public static final int idTableLayoutCerca_CorseRicercate=0x7f050049;
+        public static final int idTableLayoutCerca_DettagliCorsa=0x7f05004b;
         public static final int idTableLayoutCorse_AndataRitorno=0x7f050047;
-        public static final int idTableLayoutCorse_CorseRicercate=0x7f050049;
+        public static final int idTextViewCerca_CorseRicercate=0x7f050048;
+        public static final int idTextViewCerca_NomeCorsa=0x7f05004a;
         public static final int idTextViewCorse_AndataRitorno=0x7f050046;
-        public static final int idTextViewCorse_CorseRicercate=0x7f050048;
-        public static final int idTextViewFormTariffe_Abbonamento=0x7f05004e;
-        public static final int idTextViewFormTariffe_Biglietto=0x7f05004f;
+        public static final int idTextViewFormTariffe_Abbonamento=0x7f050050;
+        public static final int idTextViewFormTariffe_Biglietto=0x7f050051;
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int listMode=0x7f050001;
@@ -1122,8 +1124,9 @@ containing a value of this type.
         public static final int cerca=0x7f030017;
         public static final int corse=0x7f030018;
         public static final int corse_cercate=0x7f030019;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001a;
-        public static final int tariffe=0x7f03001b;
+        public static final int dettaglio_corsa=0x7f03001a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
+        public static final int tariffe=0x7f03001c;
     }
     public static final class string {
         public static final int Attenzione=0x7f0a002e;
