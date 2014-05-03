@@ -214,9 +214,10 @@ public class CorseActivity extends Activity {
 									
 									TextView nomeCorsa = new TextView(getApplicationContext());
 									nomeCorsa.setTextColor(Color.BLACK);
-									nomeCorsa.setTextSize(13);
+									nomeCorsa.setTextSize(15);
 									nomeCorsa.setText(json_riga.getString("NomeCorsa"));
 									TableLayout righeDellaCella = new TableLayout(getApplicationContext());
+									TableRow  nome1= new TableRow(getApplicationContext());
 									TableRow nome = new TableRow(getApplicationContext());
 									
 									
@@ -227,10 +228,10 @@ public class CorseActivity extends Activity {
 									CORSA.setTextSize(15);
 									CORSA.setTypeface(null,Typeface.BOLD);
 									
-									nome.addView(CORSA);
+									nome1.addView(CORSA);
 									nome.addView(nomeCorsa);
+									righeDellaCella.addView(nome1);
 									righeDellaCella.addView(nome);
-									
 									nuovaRiga.addView(righeDellaCella);
 									
 									nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
