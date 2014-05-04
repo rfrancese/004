@@ -35,6 +35,7 @@ public class DettaglioCorsaActivity extends Activity {
 	String codiceCorsaReale;
 	String oraPartenzaCorsaReale;
 	String andataRitornoCorsaReale;
+	String paeseFermata;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -48,6 +49,7 @@ public class DettaglioCorsaActivity extends Activity {
 		codiceCorsaReale= intentApplicazione.getStringExtra("codiceCorsaReale");
 		oraPartenzaCorsaReale= intentApplicazione.getStringExtra("oraPartenzaCorsaReale");
 		andataRitornoCorsaReale= intentApplicazione.getStringExtra("andataRitornoCorsaReale");
+		paeseFermata =  intentApplicazione.getStringExtra("paeseFermata");
         //Toast.makeText(getApplicationContext(),nomeCorsa, Toast.LENGTH_SHORT).show();  
         //Toast.makeText(getApplicationContext(),codiceCorsaReale, Toast.LENGTH_SHORT).show();  
         //Toast.makeText(getApplicationContext(),oraPartenzaCorsaReale, Toast.LENGTH_SHORT).show();  
@@ -232,7 +234,11 @@ public class DettaglioCorsaActivity extends Activity {
 									NOMEPAESE.setTypeface(null,Typeface.BOLD);
 									
 									TextView nomePaeseText = new TextView(getApplicationContext());
-									nomePaeseText.setTextColor(Color.BLACK);
+									if(paeseFermata.compareTo(json_riga.getString("NomePaeseCorsa"))== 0){
+										nomePaeseText.setTextColor(getResources().getColor(R.color.costiAbbonamentoBiglietto));
+									}else{
+										nomePaeseText.setTextColor(Color.BLACK);
+									}
 									nomePaeseText.setTextSize(13);
 									nomePaeseText.setText(json_riga.getString("NomePaeseCorsa"));
 							

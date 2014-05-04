@@ -1183,11 +1183,13 @@ containing a value of this type.
         public static final int caricamento=0x7f0a0020;
         public static final int caricamentoDatiRicevuti=0x7f0a0024;
         public static final int cerca=0x7f0a0014;
+        public static final int cliccaQuiFermate=0x7f0a0037;
         public static final int connessioneAssente=0x7f0a0021;
         public static final int contattoServer=0x7f0a0022;
         public static final int costoA=0x7f0a0019;
         public static final int costoB=0x7f0a001a;
         public static final int da=0x7f0a0016;
+        public static final int daCapolinea=0x7f0a0038;
         public static final int datiInviatiNonValidi=0x7f0a0026;
         public static final int datiNonValidi=0x7f0a001e;
         public static final int destinazione=0x7f0a001c;

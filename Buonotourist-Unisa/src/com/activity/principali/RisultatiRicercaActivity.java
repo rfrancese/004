@@ -233,6 +233,7 @@ public class RisultatiRicercaActivity extends Activity{
 											TableRow nomeCorsaRiga = new TableRow(getApplicationContext());
 											TableRow oraPartenzaRiga = new TableRow(getApplicationContext());
 											TableRow andataRitornoRiga = new TableRow(getApplicationContext());
+											TableRow cliccaQuiPerIDettagli= new TableRow(getApplicationContext());
 
 											TextView CORSA = new TextView(getApplicationContext());
 											CORSA.setText(getString(R.string.nomeCorsa));  
@@ -257,10 +258,11 @@ public class RisultatiRicercaActivity extends Activity{
 											ORAPARTENZA.setTextColor(Color.BLACK);
 											ORAPARTENZA.setTextSize(15);
 											ORAPARTENZA.setTypeface(null,Typeface.BOLD);
+											String capolineaPartenza="("+getString(R.string.daCapolinea)+" "+json_riga.getString("NomeCorsa").substring(0,json_riga.getString("NomeCorsa").indexOf("-"))+")";
 											TextView oraPartenzaText = new TextView(getApplicationContext());
 											oraPartenzaText.setTextColor(Color.BLACK);
 											oraPartenzaText.setTextSize(13);
-											oraPartenzaText.setText(json_riga.getString("OraPartenzaCorsaReale"));
+											oraPartenzaText.setText(json_riga.getString("OraPartenzaCorsaReale")+capolineaPartenza);			
 											oraPartenzaRiga.addView(ORAPARTENZA);
 											oraPartenzaRiga.addView(oraPartenzaText);
 											
@@ -275,10 +277,18 @@ public class RisultatiRicercaActivity extends Activity{
 											andataRitornoText.setText(json_riga.getString("AndataRitornoCorsaReale"));
 											andataRitornoRiga.addView(ANDATARITORNO);
 											andataRitornoRiga.addView(andataRitornoText);
+											
+											TextView scrittaDettagli = new TextView(getApplicationContext());
+											scrittaDettagli.setText(getString(R.string.cliccaQuiFermate));
+											scrittaDettagli.setTextColor(Color.GRAY);
+											scrittaDettagli.setTextSize(13);
+											cliccaQuiPerIDettagli.addView(new TableRow(getApplicationContext()));
+											cliccaQuiPerIDettagli.addView(scrittaDettagli);
 										
 											righeDellaCella.addView(nomeCorsaRiga);
 											righeDellaCella.addView(oraPartenzaRiga);
 											righeDellaCella.addView(andataRitornoRiga);
+											righeDellaCella.addView(cliccaQuiPerIDettagli);
 											
 											nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
 											nuovaRiga.addView(righeDellaCella);
@@ -312,8 +322,9 @@ public class RisultatiRicercaActivity extends Activity{
 			Intent newIntent = new Intent(this,DettaglioCorsaActivity.class);
 			newIntent.putExtra("nomeCorsa",nomeCorsa );
 			newIntent.putExtra("codiceCorsaReale",codiceCorsaReale);
-			newIntent.putExtra("oraPartenzaCorsaReale", oraPartenzaCorsaReale);
+			newIntent.putExtra("oraPartenzaCorsaReale", oraPartenzaCorsaReale.substring(0,oraPartenzaCorsaReale.indexOf("(")));
 			newIntent.putExtra("andataRitornoCorsaReale",andataRitornoCorsaReale);
+			newIntent.putExtra("paeseFermata", partenza);
 			startActivity(newIntent);
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{

@@ -59,4 +59,8 @@
 	<string name="nomePaeseFermata">City: </string>
 	<string name="nomeFermataPaese">Bus Stop: </string>
 	<string name="orarioFermataPaese">Time: </string>
+	
+	
+	<string name="cliccaQuiFermate">Click here for details</string>
+	<string name="daCapolinea">From </string>
 </resources>

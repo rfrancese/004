@@ -61,5 +61,6 @@
 	<string name="orarioFermataPaese">Orario : </string>
 	
 		
-		
+	<string name="cliccaQuiFermate">Clicca qui per i dettagli</string>
+	<string name="daCapolinea">Da </string>
 </resources>
