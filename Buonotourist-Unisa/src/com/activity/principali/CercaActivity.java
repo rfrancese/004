@@ -1,22 +1,29 @@
 package com.activity.principali;
 
 
+import java.util.ArrayList;
+
 import com.example.proveandroid.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
-public class CercaActivity extends Activity  {    
+public class CercaActivity extends Activity  { 
+	private MioDbHelper mMioDbHelper = null;
 	private static final int PartenzaDa = 1;
 	private static final int ArrivoA = 2;
 	private static final int TimePiker = 3;
@@ -30,7 +37,9 @@ public class CercaActivity extends Activity  {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cerca);
 		
-		
+		mMioDbHelper = new MioDbHelper(getApplicationContext());
+		 delete();
+		 riempiDB();
 		
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
@@ -199,9 +208,17 @@ public class CercaActivity extends Activity  {
 		 
 		    };
 		 // finestra di dialogo del primo bottone
-			public Dialog createDa(){
-			
-				final String[] options = { "Fisciano","Lancusi","Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
+		    public Dialog createDa(){
+		    	
+				 ArrayList<String> options1=tuttiPaesi();
+					
+					final String options[]=new String[options1.size()];
+					int lunghezza=options1.size();
+					
+					for(int i=0;i<lunghezza;i++){
+						options[i]=options1.get(i);
+					}
+				//final String[] options = { "Fisciano","Lancusi","Nola", "Sarno", "Caserta", "Palma Campania", "San Paolo Bel Sito" };
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				builder.setTitle(getString(R.string.partenzaDa));
 				builder.setSingleChoiceItems(options, 99999, new DialogInterface.OnClickListener() {
@@ -221,12 +238,25 @@ public class CercaActivity extends Activity  {
 					if(sceltaPartenzaDa=="")
 					{
 						widgetPartenza.setText(getString(R.string.partenza));
+						
 						dismissDialog(PartenzaDa);
+						removeDialog(PartenzaDa);
 					}
 					else
 					{
+						Button widgetDestinazione=(Button)findViewById(R.id.idBottoni_Destinazione);
+						if((sceltaPartenzaDa.compareTo("Fisciano")==0)||(sceltaPartenzaDa.compareTo("Lancusi")==0)){
+							
+					    	widgetDestinazione.setText(getString(R.string.destinazione));
+							}
+						else if((sceltaPartenzaDa.compareTo(sceltaArrivoA)==0))
+						    {
+							  widgetDestinazione.setText(getString(R.string.destinazione));
+							}
 				    	widgetPartenza.setText(sceltaPartenzaDa);
+				    	
 				    	dismissDialog(PartenzaDa);
+				    	removeDialog(PartenzaDa);
 					}	
 					}
 				});
@@ -234,8 +264,8 @@ public class CercaActivity extends Activity  {
 				builder.setNegativeButton(getString(R.string.annulla), new DialogInterface.OnClickListener() {
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
-					
-				       dismissDialog(PartenzaDa);
+					dismissDialog(PartenzaDa);
+					removeDialog(PartenzaDa);
 				}
 				});
 				AlertDialog alert = builder.create();
@@ -244,13 +274,32 @@ public class CercaActivity extends Activity  {
 			
 			
 			//finestra dialogo del secondo bottone
-			public Dialog createA(){
+public Dialog createA(){
 				
-				final String[] options = {"Fisciano","Lancusi","Nola","Sarno"};
+				final String[] options;
+				Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
+				
+				if((widgetPartenza.getText().toString().compareTo("Fisciano")==0) || (widgetPartenza.getText().toString().compareTo("Lancusi")==0)){
+					    
+				          ArrayList<String> options1=tuttoTranneFiscianoLancusi();
+				          options=new String[options1.size()];
+				          int lunghezza=options1.size();
+				
+				     for(int i=0;i<lunghezza;i++){
+					        options[i]=options1.get(i);
+				      }
+			     }
+				else
+				{
+				     options=soloUniversita();
+				}
+					
+				
+				//Toast.makeText(getApplicationContext(),options[0], Toast.LENGTH_SHORT).show();
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				builder.setTitle(getString(R.string.arrivoA));
 				
-				builder.setSingleChoiceItems(options, 99999, new DialogInterface.OnClickListener() {
+				builder.setSingleChoiceItems(options, 999999, new DialogInterface.OnClickListener() {
 				@Override
 				
 					public void onClick(DialogInterface dialog, int which) {
@@ -260,6 +309,7 @@ public class CercaActivity extends Activity  {
 				
 				builder.setCancelable(false);
 				builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+				@SuppressWarnings("deprecation")
 				@Override
 					public void onClick(DialogInterface dialog, int which) {
 					Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Destinazione);
@@ -267,20 +317,24 @@ public class CercaActivity extends Activity  {
 					{
 						widgetPartenza.setText(getString(R.string.destinazione));
 						dismissDialog(ArrivoA);
+						removeDialog(ArrivoA);
 					}
 					else
 					{
 				    	widgetPartenza.setText(sceltaArrivoA);
 				    	dismissDialog(ArrivoA);
+				    	removeDialog(ArrivoA);
 					}	
 					}
 				});
 				
 				builder.setNegativeButton(getString(R.string.annulla), new DialogInterface.OnClickListener() {
+				@SuppressWarnings("deprecation")
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					
 				       dismissDialog(ArrivoA);
+				       removeDialog(ArrivoA);
 				}
 				});
 				AlertDialog alert = builder.create();
@@ -429,6 +483,105 @@ public class CercaActivity extends Activity  {
 		    	AlertDialog alert = builder.create();
 		    	return alert;
 		    }
-	
+		    
+		    
+		    
+		    //riempo la tabella con tutti i paesi
+		    public void riempiDB(){
+		    	SQLiteDatabase db = mMioDbHelper.getWritableDatabase();
+		    	ContentValues values= new ContentValues();
+		    	values.put("nome", "Fisciano");
+		    	long id=db.insert("rubrica", null, values);
+		    	values.put("nome", "Lancusi");
+		    	long id2=db.insert("rubrica", null, values);
+		    	values.put("nome", "Sicignano Scalo");
+		    	long id31=db.insert("rubrica", null, values);
+		    	values.put("nome", "Perrazze");
+		    	long id21=db.insert("rubrica", null, values);
+		    	values.put("nome", "Contursi");
+		    	long id1=db.insert("rubrica", null, values);
+		    	values.put("nome", "Eboli");
+		    	long id3=db.insert("rubrica", null, values);
+		    	values.put("nome", "Caserta");
+		    	long id4=db.insert("rubrica", null, values);
+		    	values.put("nome", "Castel Cisterna");
+		    	long id5=db.insert("rubrica", null, values);
+		    	values.put("nome", "S.Gennaro Vesuviano");
+		    	long id6=db.insert("rubrica", null, values);
+		    	values.put("nome", "Sarno");
+		    	long id7=db.insert("rubrica", null, values);
+		    	values.put("nome", "Pomigliano");
+		    	long id8=db.insert("rubrica", null, values);
+		    	values.put("nome", "Nola");
+		    	long id9=db.insert("rubrica", null, values);
+		    	values.put("nome", "Lauro");
+		    	long id10=db.insert("rubrica", null, values);
+		    	values.put("nome", "Boscoreale");
+		    	long id11=db.insert("rubrica", null, values);
+		    	values.put("nome", "Pompei");
+		    	long id12=db.insert("rubrica", null, values);
+		    	values.put("nome", "Nocera");
+		    	long id13=db.insert("rubrica", null, values);
+		    	values.put("nome", "Roccarainola");
+		    	long id14=db.insert("rubrica", null, values);
+		    }
+		    
+		    
+		    
+		    //mi faccio dare tutti i record
+		    private ArrayList<String> tuttiPaesi() {
+		    
+		    	SQLiteDatabase db = mMioDbHelper.getReadableDatabase();
+		    	ArrayList<String> paesi =new ArrayList<String>();
+		    	
+		        final String sql = "SELECT * FROM rubrica order by nome";
+		    	
+		    	Cursor c = db.rawQuery(sql, null);
+		    	
+		    	while(c.moveToNext()) { 
+		    		
+		    		paesi.add(c.getString(1));
+		    		
+		    	}
+		    	Toast.makeText(getApplicationContext(),""+paesi.size(), Toast.LENGTH_SHORT).show();
+		    	return paesi;
+		    }
+		    
+		    //mi faccio dare solo Fisciano e Lancusi
+		    private String[] soloUniversita() {
+		        SQLiteDatabase db = mMioDbHelper.getReadableDatabase();
+                String[] universita=new String[2];
+		    	
+		    	final String sql = "SELECT * FROM rubrica where _id=1 or _id=2 order by nome";
+		    	int i=0;
+		    	Cursor c = db.rawQuery(sql, null);
+		    	
+		    	while(c.moveToNext()) { 
+		    		universita[i]=c.getString(1);
+		    		i++;
+		    	}
+		    	return universita;
+		    }
+		    
+		    private ArrayList<String> tuttoTranneFiscianoLancusi() {
+		    
+		    	SQLiteDatabase db = mMioDbHelper.getReadableDatabase();
+		    	ArrayList<String> paesi =new ArrayList<String>();
+		    	
+		    	final String sql = "SELECT * FROM rubrica where _id!=1 and _id!=2 order by nome";
+		    	
+		    	Cursor c = db.rawQuery(sql, null);
+		    	
+		    	while(c.moveToNext()) { 
+		    		paesi.add(c.getString(1));
+		    		}
+		    	return paesi;
+		    }
+		    
+		    //elimino tutti i record della tabella
+		    public void delete(){
+			   	SQLiteDatabase db = mMioDbHelper.getWritableDatabase();
+				int r=db.delete("rubrica", null, null);
+			}
 	
 }
