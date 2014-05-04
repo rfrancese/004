@@ -36,6 +36,10 @@
         <activity
             android:name="com.activity.principali.DettaglioCorsaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>     
+        <activity
+            android:name="com.activity.principali.CorseAndataRitornoDettagliActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />

@@ -32,7 +32,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CorseActivity extends Activity {
-
+	private String andataRitornoCarattere;
 	private boolean flag=false;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +44,11 @@ public class CorseActivity extends Activity {
 		if(flag){
 			TextView andataRitorno = (TextView) findViewById(R.id.idTextViewCorse_AndataRitorno);
 			andataRitorno.setText(getString(R.string.ritorno));
+			andataRitornoCarattere="R";
 		}else{
 			TextView andataRitorno = (TextView) findViewById(R.id.idTextViewCorse_AndataRitorno);
 			andataRitorno.setText(getString(R.string.andata));
+			andataRitornoCarattere="A";
 		}
 		NetAsync();  //CARICA LE CORSE DAL DATABASE
 		
@@ -210,17 +212,19 @@ public class CorseActivity extends Activity {
 					            JSONObject json_riga = null;
 					            for (int i = 0; i < json.length()-1; i++) {
 									json_riga= json.getJSONObject(""+i);
-									TableRow nuovaRiga = new TableRow(getApplicationContext());
+									final TableRow nuovaRiga = new TableRow(getApplicationContext());
+									nuovaRiga.setOnClickListener(new OnClickListener() {
+										@Override
+										public void onClick(View v) {
+											String nomeCorsa= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(1)).getChildAt(0)).getText().toString();
+											String codiceCorsaReale= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(1)).getChildAt(1)).getText().toString();
+											apriAttivitaCorseAndataRitorno(nomeCorsa,codiceCorsaReale);
+										}		
+									});	
 									
-									TextView nomeCorsa = new TextView(getApplicationContext());
-									nomeCorsa.setTextColor(Color.BLACK);
-									nomeCorsa.setTextSize(15);
-									nomeCorsa.setText(json_riga.getString("NomeCorsa"));
 									TableLayout righeDellaCella = new TableLayout(getApplicationContext());
-									TableRow  nome1= new TableRow(getApplicationContext());
-									TableRow nome = new TableRow(getApplicationContext());
-									
-									
+									TableRow  riga1= new TableRow(getApplicationContext());
+									TableRow  riga2 = new TableRow(getApplicationContext());
 									
 									TextView CORSA = new TextView(getApplicationContext());
 									CORSA.setText(getString(R.string.nomeCorsa)); 
@@ -228,16 +232,27 @@ public class CorseActivity extends Activity {
 									CORSA.setTextSize(15);
 									CORSA.setTypeface(null,Typeface.BOLD);
 									
-									nome1.addView(CORSA);
-									nome.addView(nomeCorsa);
-									righeDellaCella.addView(nome1);
-									righeDellaCella.addView(nome);
+									
+									TextView nomeCorsa = new TextView(getApplicationContext());
+									nomeCorsa.setTextColor(Color.BLACK);
+									nomeCorsa.setTextSize(15);
+									nomeCorsa.setText(json_riga.getString("NomeCorsa"));
+
+									TextView IDCORSA = new TextView(getApplicationContext());
+									IDCORSA.setText(json_riga.getString("CodiceCorsa")); 
+									IDCORSA.setTextColor(Color.WHITE);
+									IDCORSA.setTextSize(15);
+									
+									
+									riga1.addView(CORSA);
+									riga2.addView(nomeCorsa);
+									riga2.addView(IDCORSA);
+									
+									righeDellaCella.addView(riga1);
+									righeDellaCella.addView(riga2);
+									
 									nuovaRiga.addView(righeDellaCella);
-									
 									nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
-									//nuovaRiga.setBackgroundDrawable(getResources().getDrawable(R.drawable.riga_corse));
-									//nuovaRiga.setBackground( getResources().getDrawable(R.drawable.riga_corse));
-									
 									
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
 									scrollRiga.setFillViewport(true);
@@ -262,5 +277,16 @@ public class CorseActivity extends Activity {
         }
     }
     
-    
+    private void apriAttivitaCorseAndataRitorno(String nomeCorsa,String codiceCorsaReale) {
+    	try{
+			Intent newIntent = new Intent(this,CorseAndataRitornoDettagliActivity.class);
+			newIntent.putExtra("nomeCorsa",nomeCorsa );
+			newIntent.putExtra("codiceCorsaReale",codiceCorsaReale);
+			newIntent.putExtra("andataRitornoCorsaReale",andataRitornoCarattere);
+			startActivity(newIntent);
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+		}finally{
+			finish();
+		};	
+	}
 }

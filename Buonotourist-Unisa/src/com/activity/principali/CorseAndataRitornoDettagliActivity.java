@@ -30,29 +30,30 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RisultatiRicercaActivity extends Activity{
-	String partenza;
-	String destinazione;
-	String orario;
-	String andataRitorno;
+public class CorseAndataRitornoDettagliActivity extends Activity{
+	String nomeCorsa;
+	String codiceCorsaReale;
+	String andataRitornoCorsaReale;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.corse_cercate);
-		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML(SOLO NAVBAR)
+		setContentView(R.layout.corse_andataritorno_dettagli);
+		
+		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
+		
+		
 		Intent intentApplicazione=getIntent();
-		partenza= intentApplicazione.getStringExtra("partenza");
-		destinazione= intentApplicazione.getStringExtra("destinazione");
-		orario= intentApplicazione.getStringExtra("orario");
-		andataRitorno= intentApplicazione.getStringExtra("andataRitorno");
-        //Toast.makeText(getApplicationContext(),partenza, Toast.LENGTH_SHORT).show();  
-        //Toast.makeText(getApplicationContext(),destinazione, Toast.LENGTH_SHORT).show();  
-        //Toast.makeText(getApplicationContext(),orario, Toast.LENGTH_SHORT).show();  
-        //Toast.makeText(getApplicationContext(),andataRitorno, Toast.LENGTH_SHORT).show();  
+		nomeCorsa= intentApplicazione.getStringExtra("nomeCorsa");
+		codiceCorsaReale= intentApplicazione.getStringExtra("codiceCorsaReale");
+		andataRitornoCorsaReale= intentApplicazione.getStringExtra("andataRitornoCorsaReale");
+	
+        //Toast.makeText(getApplicationContext(),nomeCorsa, Toast.LENGTH_SHORT).show();  
+        //Toast.makeText(getApplicationContext(),codiceCorsaReale, Toast.LENGTH_SHORT).show();  
+        //Toast.makeText(getApplicationContext(),andataRitornoCorsaReale, Toast.LENGTH_SHORT).show();  
 
-        //AVVIO LA CONNESSIO AD INTERNET
-        NetAsync();
+		NetAsync();  //CARICA LE CORSE DAL DATABASE
+		
 	}
 	private void settaListenerBottoniNavbar(final Bundle savedInstanceState) {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
@@ -73,12 +74,19 @@ public class RisultatiRicercaActivity extends Activity{
 		buttonTariffeNavbar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				createTariffeeActivity();
+				createTariffeActivity();
 			}
 		});
 	}
-	
-	
+
+	protected void createTariffeActivity() {
+		try{
+			startActivity(new Intent(this,TariffeActivity.class));
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+		}finally{
+			finish();
+		}
+	}
 	protected void createCercaActivity() {
 		try{
 			startActivity(new Intent(this,CercaActivity.class));
@@ -87,20 +95,9 @@ public class RisultatiRicercaActivity extends Activity{
 			finish();
 		}
 	}
-	
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
-			}finally{
-			finish();
-		}
-	}
-
-
-	protected void createTariffeeActivity() {
-		try{
-			startActivity(new Intent(this,TariffeActivity.class));
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
@@ -122,7 +119,7 @@ public class RisultatiRicercaActivity extends Activity{
         @Override
         protected void onPreExecute(){
             super.onPreExecute();
-            nDialog = new ProgressDialog(RisultatiRicercaActivity.this);
+            nDialog = new ProgressDialog(CorseAndataRitornoDettagliActivity.this);
             nDialog.setTitle(getString(R.string.stoControllandoRete));
             nDialog.setMessage(getString(R.string.caricamento));
             nDialog.setIndeterminate(false);
@@ -178,7 +175,7 @@ public class RisultatiRicercaActivity extends Activity{
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(RisultatiRicercaActivity.this);
+            pDialog = new ProgressDialog(CorseAndataRitornoDettagliActivity.this);
             pDialog.setTitle(getString(R.string.contattoServer));
             pDialog.setMessage(getString(R.string.invioDati));
             pDialog.setIndeterminate(false);
@@ -189,7 +186,7 @@ public class RisultatiRicercaActivity extends Activity{
         @Override
         protected JSONObject doInBackground(String... args) {
             UserFunctions userFunction = new UserFunctions();
-            JSONObject json = userFunction.caricaCorseRicercate(partenza,destinazione,orario,andataRitorno);
+            JSONObject json = userFunction.caricaCorseAndataRitornoDettagli(nomeCorsa,codiceCorsaReale,andataRitornoCorsaReale);
             return json;
         }
 
@@ -204,7 +201,7 @@ public class RisultatiRicercaActivity extends Activity{
 						        if(Integer.parseInt(number) == 1){
 							            pDialog.setMessage(getString(R.string.caricamentoDatiRicevuti));
 							            pDialog.setTitle(getString(R.string.RicevoDati));          
-							            TableLayout tableLayoutCorse = (TableLayout) findViewById(R.id.idTableLayoutCerca_CorseRicercate);
+							            TableLayout tableLayoutCorse = (TableLayout) findViewById(R.id.idTableLayoutCorse_AndataRitorno);
 							            JSONObject json_riga = null;
 							            for (int i = 0; i < json.length()-1; i++) {
 											json_riga= json.getJSONObject(""+i);	
@@ -324,12 +321,13 @@ public class RisultatiRicercaActivity extends Activity{
 			newIntent.putExtra("codiceCorsaReale",codiceCorsaReale);
 			newIntent.putExtra("oraPartenzaCorsaReale", oraPartenzaCorsaReale.substring(0,oraPartenzaCorsaReale.indexOf("(")));
 			newIntent.putExtra("andataRitornoCorsaReale",andataRitornoCorsaReale);
-			newIntent.putExtra("paeseFermata", partenza);
-			newIntent.putExtra("navbarSelect", "CERCA");
+			newIntent.putExtra("navbarSelect", "CORSE");
 			startActivity(newIntent);
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
 		};	
 	}
+	
+	
 }

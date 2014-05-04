@@ -31,6 +31,9 @@ public class UserFunctions {
     private static String dettaglioCorsaURL = "http://buonotouristunisa.altervista.org/buonotourist_script/";
     private static String dettaglioCorsa_tag = "dettaglioCorsa";
     
+    private static String corseAndataRitornoDettagliURL = "http://buonotouristunisa.altervista.org/buonotourist_script/";
+    private static String corseAndataRitornoDettagli_tag = "ARDettagli";
+    
     // constructor
     public UserFunctions(){
         jsonParser = new JSONParser();
@@ -83,10 +86,18 @@ public class UserFunctions {
         JSONObject json = jsonParser.getJSONFromUrl(dettaglioCorsaURL, params);
         return json;
 	}
+	/**
+     * Funzione che carica le corse di Andata o Ritorno di una specifica corsa
+     **/
+	public JSONObject caricaCorseAndataRitornoDettagli(String nomeCorsa,String codiceCorsaReale, String andataRitornoCorsaReale) {
+		List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("tag",corseAndataRitornoDettagli_tag));
+        params.add(new BasicNameValuePair("nomeCorsa",nomeCorsa));
+        params.add(new BasicNameValuePair("codiceCorsaReale",codiceCorsaReale));
+        params.add(new BasicNameValuePair("andataRitornoCorsaReale",andataRitornoCorsaReale));
+        JSONObject json = jsonParser.getJSONFromUrl(corseAndataRitornoDettagliURL, params);
+        return json;
+	}
 	
-	
-
-  
-
 }
 

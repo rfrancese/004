@@ -35,26 +35,40 @@ public class DettaglioCorsaActivity extends Activity {
 	String codiceCorsaReale;
 	String oraPartenzaCorsaReale;
 	String andataRitornoCorsaReale;
-	String paeseFermata;
+	String paeseFermata=null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dettaglio_corsa);
 		
+	
+		
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML(SOLO NAVBAR)
 		settaListenerBottoniNavbar(savedInstanceState);
 		
+		// VALORI ACTIVITY CHIAMANTE
 		Intent intentApplicazione=getIntent();
 		nomeCorsa= intentApplicazione.getStringExtra("nomeCorsa");
 		codiceCorsaReale= intentApplicazione.getStringExtra("codiceCorsaReale");
 		oraPartenzaCorsaReale= intentApplicazione.getStringExtra("oraPartenzaCorsaReale");
 		andataRitornoCorsaReale= intentApplicazione.getStringExtra("andataRitornoCorsaReale");
+		if(intentApplicazione.getStringExtra("paeseFermata") != null)
 		paeseFermata =  intentApplicazione.getStringExtra("paeseFermata");
         //Toast.makeText(getApplicationContext(),nomeCorsa, Toast.LENGTH_SHORT).show();  
         //Toast.makeText(getApplicationContext(),codiceCorsaReale, Toast.LENGTH_SHORT).show();  
         //Toast.makeText(getApplicationContext(),oraPartenzaCorsaReale, Toast.LENGTH_SHORT).show();  
         //Toast.makeText(getApplicationContext(),andataRitornoCorsaReale, Toast.LENGTH_SHORT).show();  
 
+		// SETTO IL BOTTONE SELEZIONATO
+		if(intentApplicazione.getStringExtra("navbarSelect").compareTo("CERCA")== 0){
+			Button bottoneSelezione = (Button)findViewById(R.id.idBottoniNavbar_Cerca);
+			bottoneSelezione.setText(R.string.tab1Selected);
+			bottoneSelezione.setTextColor(getResources().getColor(R.color.button_navbar_selected_text));
+		}else{  // E' CORSE
+			Button bottoneSelezione = (Button)findViewById(R.id.idBottoniNavbar_Corse);
+			bottoneSelezione.setText(R.string.tab2Selected);
+			bottoneSelezione.setTextColor(getResources().getColor(R.color.button_navbar_selected_text));
+		}	
         //METTO IL NOME ALLA TEXT VIEW SOPRA
 		TextView nomeCentrale = (TextView) findViewById(R.id.idTextViewCerca_NomeCorsa);
 		nomeCentrale.setText(nomeCorsa);
@@ -234,11 +248,16 @@ public class DettaglioCorsaActivity extends Activity {
 									NOMEPAESE.setTypeface(null,Typeface.BOLD);
 									
 									TextView nomePaeseText = new TextView(getApplicationContext());
-									if(paeseFermata.compareTo(json_riga.getString("NomePaeseCorsa"))== 0){
-										nomePaeseText.setTextColor(getResources().getColor(R.color.costiAbbonamentoBiglietto));
+									if(paeseFermata != null){
+										if(paeseFermata.compareTo(json_riga.getString("NomePaeseCorsa"))== 0){
+											nomePaeseText.setTextColor(getResources().getColor(R.color.costiAbbonamentoBiglietto));
+										}else{
+											nomePaeseText.setTextColor(Color.BLACK);
+										}
 									}else{
 										nomePaeseText.setTextColor(Color.BLACK);
 									}
+									
 									nomePaeseText.setTextSize(13);
 									nomePaeseText.setText(json_riga.getString("NomePaeseCorsa"));
 							
