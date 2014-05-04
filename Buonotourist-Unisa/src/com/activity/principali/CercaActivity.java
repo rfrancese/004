@@ -543,7 +543,7 @@ public Dialog createA(){
 		    		paesi.add(c.getString(1));
 		    		
 		    	}
-		    	Toast.makeText(getApplicationContext(),""+paesi.size(), Toast.LENGTH_SHORT).show();
+		    	//Toast.makeText(getApplicationContext(),""+paesi.size(), Toast.LENGTH_SHORT).show();
 		    	return paesi;
 		    }
 		    
