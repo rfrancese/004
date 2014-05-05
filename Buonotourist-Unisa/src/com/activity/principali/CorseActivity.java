@@ -123,7 +123,7 @@ public class CorseActivity extends Activity {
             nDialog.setTitle(getString(R.string.stoControllandoRete));
             nDialog.setMessage(getString(R.string.caricamento));
             nDialog.setIndeterminate(false);
-            nDialog.setCancelable(true);
+            nDialog.setCancelable(false);
             nDialog.show();
         }
         /**
@@ -187,7 +187,7 @@ public class CorseActivity extends Activity {
             pDialog.setTitle(getString(R.string.contattoServer));
             pDialog.setMessage(getString(R.string.invioDati));
             pDialog.setIndeterminate(false);
-            pDialog.setCancelable(true);
+            pDialog.setCancelable(false);
             pDialog.show();
         }
 
