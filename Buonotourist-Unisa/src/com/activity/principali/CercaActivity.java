@@ -3,6 +3,7 @@ package com.activity.principali;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import com.example.proveandroid.R;
 
@@ -202,7 +203,11 @@ public class CercaActivity extends Activity  {
 						dialog = Alert();
 						break; 
 					case TimePiker:
-				            return new TimePickerDialog(this, timePickerListener, hour, minute,false);
+					    Calendar cal = Calendar.getInstance(); 
+			            int minute = cal.get(Calendar.MINUTE);
+			            int hourofday = cal.get(Calendar.HOUR_OF_DAY);
+			            
+				            return new TimePickerDialog(this, timePickerListener, hourofday, minute,false);
 				    default:
 						dialog = null;
 						break;
@@ -215,6 +220,7 @@ public class CercaActivity extends Activity  {
 		        @Override
 		        public void onTimeSet(TimePicker view, int hourOfDay, int minutes) {
 		            // TODO Auto-generated method stub
+		        	
 		            hour   = hourOfDay;
 		            minute = minutes;
 		 
