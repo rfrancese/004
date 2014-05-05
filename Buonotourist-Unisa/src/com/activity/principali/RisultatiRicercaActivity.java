@@ -285,6 +285,10 @@ public class RisultatiRicercaActivity extends Activity{
 											cliccaQuiPerIDettagli.addView(new TableRow(getApplicationContext()));
 											cliccaQuiPerIDettagli.addView(scrittaDettagli);
 										
+											nomeCorsaRiga.setPadding(10, 0, 0, 0);
+											oraPartenzaRiga.setPadding(10, 0, 0, 0);
+											andataRitornoRiga.setPadding(10, 0, 0, 0);
+											cliccaQuiPerIDettagli.setPadding(10, 0, 0, 0);
 											righeDellaCella.addView(nomeCorsaRiga);
 											righeDellaCella.addView(oraPartenzaRiga);
 											righeDellaCella.addView(andataRitornoRiga);

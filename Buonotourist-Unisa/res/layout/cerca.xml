@@ -146,6 +146,21 @@ android:fillViewport="true">
             		android:id="@+id/idBottoniFormCerca_Annulla"
             		/>
       </LinearLayout>
+      <LinearLayout
+     			android:layout_marginTop="10dp"
+     			android:orientation="horizontal"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content" 
+        		android:background="@color/body"
+        		android:gravity="center">
+      <TextView
+         			android:gravity="center"
+          			android:textColor="#AEB5B5"
+            		android:layout_width="match_parent"
+            		android:layout_height="match_parent"
+            		android:id="@+id/idTextViewCerca_Email"
+                	android:text="@string/contactMail" />
+      </LinearLayout>
 </LinearLayout>
 </ScrollView> 
 </LinearLayout>

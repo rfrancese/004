@@ -292,6 +292,9 @@ public class DettaglioCorsaActivity extends Activity {
 									orarioFermata.addView(ORARIOFERMATA);
 									orarioFermata.addView(orarioFermataText);
 								
+									nomePaese.setPadding(10, 0, 0, 0);
+									nomeFermata.setPadding(10, 0, 0, 0);
+									orarioFermata.setPadding(10, 0, 0, 0);
 									righeDellaCella.addView(nomePaese);
 									righeDellaCella.addView(nomeFermata);
 									righeDellaCella.addView(orarioFermata);

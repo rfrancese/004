@@ -282,6 +282,9 @@ public class CorseAndataRitornoDettagliActivity extends Activity{
 											cliccaQuiPerIDettagli.addView(new TableRow(getApplicationContext()));
 											cliccaQuiPerIDettagli.addView(scrittaDettagli);
 										
+											nomeCorsaRiga.setPadding(10, 0, 0, 0);
+											oraPartenzaRiga.setPadding(10, 0, 0, 0);
+											andataRitornoRiga.setPadding(10, 0, 0, 0);
 											righeDellaCella.addView(nomeCorsaRiga);
 											righeDellaCella.addView(oraPartenzaRiga);
 											righeDellaCella.addView(andataRitornoRiga);

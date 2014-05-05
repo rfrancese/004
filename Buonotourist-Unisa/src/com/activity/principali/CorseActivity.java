@@ -17,6 +17,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.hardware.Camera.Size;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -224,8 +225,10 @@ public class CorseActivity extends Activity {
 									
 									TableLayout righeDellaCella = new TableLayout(getApplicationContext());
 									TableRow  riga1= new TableRow(getApplicationContext());
+									riga1.setPadding(10, 0, 0, 0);
 									TableRow  riga2 = new TableRow(getApplicationContext());
-									
+									riga2.setPadding(10, 0, 0, 0);
+
 									TextView CORSA = new TextView(getApplicationContext());
 									CORSA.setText(getString(R.string.nomeCorsa)); 
 									CORSA.setTextColor(Color.BLACK);

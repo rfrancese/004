@@ -1,6 +1,7 @@
 package com.activity.principali;
 
 
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 import com.example.proveandroid.R;
@@ -19,6 +20,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -44,6 +46,7 @@ public class CercaActivity extends Activity  {
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListenerBottoniForm(savedInstanceState);
+		settaContattoEmail(savedInstanceState);
 		
 		View widgetPartenza=findViewById(R.id.idBottoni_Provenienza);
 		View widgetArrivo=findViewById(R.id.idBottoni_Destinazione);
@@ -76,7 +79,20 @@ public class CercaActivity extends Activity  {
 		
 }
 
-
+	private void settaContattoEmail(final Bundle savedInstanceState){
+		TextView contattaci = (TextView) findViewById(R.id.idTextViewCerca_Email);
+		contattaci.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				try {
+					Intent intentM = Intent.parseUri("mailto:francesco.genio@gmail.com", Intent.URI_INTENT_SCHEME);
+					startActivity(intentM);
+				} catch (URISyntaxException e) {
+		            Toast.makeText(getApplicationContext(),"Error mail", Toast.LENGTH_SHORT).show();            }
+				}
+		});
+	}
 	private void settaListenerBottoniNavbar(final Bundle savedInstanceState) {
 		Button buttonCercaNavbar =(Button)findViewById(R.id.idBottoniNavbar_Cerca);
 		Button buttonCorseNavbar =(Button)findViewById(R.id.idBottoniNavbar_Corse);
