@@ -985,8 +985,9 @@ containing a value of this type.
         public static final int bottoni_body_sfondo=0x7f020059;
         public static final int bottoni_select_body_sfondo=0x7f02005a;
         public static final int icon_buonotourist=0x7f02005b;
-        public static final int reverse_icon=0x7f02005c;
-        public static final int riga_corse=0x7f02005d;
+        public static final int icona_app=0x7f02005c;
+        public static final int reverse_icon=0x7f02005d;
+        public static final int riga_corse=0x7f02005e;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;
