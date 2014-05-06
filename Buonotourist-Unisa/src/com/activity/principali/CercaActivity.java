@@ -169,7 +169,6 @@ public class CercaActivity extends Activity  {
 	}
 	
 	protected void createRisultatiRicercaActivity() {
-		try{
 			Intent newIntent = new Intent(this,RisultatiRicercaActivity.class);
 			Button partenza = (Button)findViewById(R.id.idBottoni_Provenienza);
 			Button destinazione = (Button)findViewById(R.id.idBottoni_Destinazione);
@@ -183,10 +182,7 @@ public class CercaActivity extends Activity  {
 				newIntent.putExtra("andataRitorno", "A");
 			}
 			startActivity(newIntent);
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
-		}finally{
-			finish();
-		};		
+			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);			
 	}
 	
 	//sovrascrivo il metodo di activity ,e viene richiamato quando viene creata la prima volta la finestra di dialogo per associargli un id

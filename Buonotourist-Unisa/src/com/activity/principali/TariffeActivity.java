@@ -142,10 +142,8 @@ public class TariffeActivity extends Activity {
 	            if( partenza.compareTo(getString(R.string.partenza)) !=0 && destinazione.compareTo(getString(R.string.destinazione))!= 0 ){
 	            	 NetAsync();
 	            }else{
-	            	
-	            
-	        				showDialog(Alert);
-	        		 }
+	            	showDialog(Alert);
+	        	}
                
 			}
 		});

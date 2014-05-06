@@ -81,7 +81,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity{
 
 	protected void createTariffeActivity() {
 		try{
-			startActivity(new Intent(this,TariffeActivity.class));
+			startActivity(new Intent(this,TariffeActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
@@ -89,7 +89,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity{
 	}
 	protected void createCercaActivity() {
 		try{
-			startActivity(new Intent(this,CercaActivity.class));
+			startActivity(new Intent(this,CercaActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
@@ -97,7 +97,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity{
 	}
 	protected void createCorseActivity() {
 		try{
-			startActivity(new Intent(this,CorseActivity.class));
+			startActivity(new Intent(this,CorseActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
@@ -318,7 +318,6 @@ public class CorseAndataRitornoDettagliActivity extends Activity{
     }
     
     private void apriAttivitaDettaglio(String nomeCorsa,String codiceCorsaReale,String oraPartenzaCorsaReale,String andataRitornoCorsaReale) {
-    	try{
 			Intent newIntent = new Intent(this,DettaglioCorsaActivity.class);
 			newIntent.putExtra("nomeCorsa",nomeCorsa );
 			newIntent.putExtra("codiceCorsaReale",codiceCorsaReale);
@@ -327,9 +326,6 @@ public class CorseAndataRitornoDettagliActivity extends Activity{
 			newIntent.putExtra("navbarSelect", "CORSE");
 			startActivity(newIntent);
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
-		}finally{
-			finish();
-		};	
 	}
 	
 	

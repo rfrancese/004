@@ -104,7 +104,7 @@ public class DettaglioCorsaActivity extends Activity {
 	
 	protected void createCercaActivity() {
 		try{
-			startActivity(new Intent(this,CercaActivity.class));
+			startActivity(new Intent(this,CercaActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();
@@ -113,7 +113,7 @@ public class DettaglioCorsaActivity extends Activity {
 	
 	protected void createCorseActivity() {
 		try{
-			startActivity(new Intent(this,CorseActivity.class));
+			startActivity(new Intent(this,CorseActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 			}finally{
 			finish();
@@ -123,7 +123,7 @@ public class DettaglioCorsaActivity extends Activity {
 
 	protected void createTariffeeActivity() {
 		try{
-			startActivity(new Intent(this,TariffeActivity.class));
+			startActivity(new Intent(this,TariffeActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 		}finally{
 			finish();

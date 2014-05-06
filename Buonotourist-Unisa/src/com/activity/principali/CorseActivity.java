@@ -281,15 +281,11 @@ public class CorseActivity extends Activity {
     }
     
     private void apriAttivitaCorseAndataRitorno(String nomeCorsa,String codiceCorsaReale) {
-    	try{
 			Intent newIntent = new Intent(this,CorseAndataRitornoDettagliActivity.class);
 			newIntent.putExtra("nomeCorsa",nomeCorsa );
 			newIntent.putExtra("codiceCorsaReale",codiceCorsaReale);
 			newIntent.putExtra("andataRitornoCorsaReale",andataRitornoCarattere);
 			startActivity(newIntent);
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
-		}finally{
-			finish();
-		};	
 	}
 }
