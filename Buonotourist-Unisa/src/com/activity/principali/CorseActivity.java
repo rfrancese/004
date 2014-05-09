@@ -8,6 +8,7 @@ import java.net.URL;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.classi.server.UserFunctions;
 import com.example.proveandroid.R;
 
@@ -17,11 +18,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.hardware.Camera.Size;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -32,7 +33,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CorseActivity extends Activity {
+public class CorseActivity extends Activity implements SimpleGestureListener {
+    private SimpleGestureFilter detector;
 	private String andataRitornoCarattere;
 	private boolean flag=false;
 	@Override
@@ -51,6 +53,7 @@ public class CorseActivity extends Activity {
 			andataRitorno.setText(getString(R.string.andata));
 			andataRitornoCarattere="A";
 		}
+		detector = new SimpleGestureFilter(this,this); // GESTORE SWIPE
 		NetAsync();  //CARICA LE CORSE DAL DATABASE
 		
 	}
@@ -288,4 +291,27 @@ public class CorseActivity extends Activity {
 			startActivity(newIntent);
 			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
 	}
+    
+    // -------------------->  ************** SWIPE
+    
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent me){
+        // Call onTouchEvent of SimpleGestureFilter class
+         this.detector.onTouchEvent(me);
+       return super.dispatchTouchEvent(me);
+    }
+    @Override
+     public void onSwipe(int direction) {
+      switch (direction) {
+      
+      case SimpleGestureFilter.SWIPE_RIGHT : createCercaActivity();
+                                             break;
+      case SimpleGestureFilter.SWIPE_LEFT :  createTariffeActivity();
+                                             break;   
+      }
+     }
+     @Override
+     public void onDoubleTap() {
+        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
+     }
 }

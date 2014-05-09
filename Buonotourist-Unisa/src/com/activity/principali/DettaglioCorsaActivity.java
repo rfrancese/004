@@ -8,6 +8,7 @@ import java.net.URL;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.classi.server.UserFunctions;
 import com.example.proveandroid.R;
 
@@ -21,6 +22,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -30,12 +32,14 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class DettaglioCorsaActivity extends Activity {
+public class DettaglioCorsaActivity extends Activity  implements SimpleGestureListener {
+    private SimpleGestureFilter detector;
 	String nomeCorsa;
 	String codiceCorsaReale;
 	String oraPartenzaCorsaReale;
 	String andataRitornoCorsaReale;
 	String paeseFermata=null;
+	String navbarSelect;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,7 +64,8 @@ public class DettaglioCorsaActivity extends Activity {
         //Toast.makeText(getApplicationContext(),andataRitornoCorsaReale, Toast.LENGTH_SHORT).show();  
 
 		// SETTO IL BOTTONE SELEZIONATO
-		if(intentApplicazione.getStringExtra("navbarSelect").compareTo("CERCA")== 0){
+		navbarSelect=intentApplicazione.getStringExtra("navbarSelect");
+		if(navbarSelect.compareTo("CERCA")== 0){
 			Button bottoneSelezione = (Button)findViewById(R.id.idBottoniNavbar_Cerca);
 			bottoneSelezione.setText(R.string.tab1Selected);
 			bottoneSelezione.setTextColor(getResources().getColor(R.color.button_navbar_selected_text));
@@ -72,6 +77,9 @@ public class DettaglioCorsaActivity extends Activity {
         //METTO IL NOME ALLA TEXT VIEW SOPRA
 		TextView nomeCentrale = (TextView) findViewById(R.id.idTextViewCerca_NomeCorsa);
 		nomeCentrale.setText(nomeCorsa);
+		
+		detector = new SimpleGestureFilter(this,this); // GESTORE SWIPE
+
 		
 		// CONNESSIONE AT INTERNET
 		NetAsync();
@@ -322,4 +330,39 @@ public class DettaglioCorsaActivity extends Activity {
 				}
         }
     }
+    
+    
+    // -------------------->  ************** SWIPE
+    
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent me){
+        // Call onTouchEvent of SimpleGestureFilter class
+         this.detector.onTouchEvent(me);
+       return super.dispatchTouchEvent(me);
+    }
+    @Override
+     public void onSwipe(int direction) {
+    	
+    	if(navbarSelect.compareTo("CERCA")== 0){
+    		 switch (direction) {
+		      
+		      case SimpleGestureFilter.SWIPE_RIGHT : createTariffeeActivity();
+		                                             break;
+		      case SimpleGestureFilter.SWIPE_LEFT :  createCorseActivity();
+		                                             break;   
+		      }		
+		}else{  // E' CORSE
+		      switch (direction) {
+		      
+		      case SimpleGestureFilter.SWIPE_RIGHT : createCercaActivity();
+		                                             break;
+		      case SimpleGestureFilter.SWIPE_LEFT :  createTariffeeActivity();
+		                                             break;   
+		      }	
+		}	
+     }
+     @Override
+     public void onDoubleTap() {
+        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
+     }
 }

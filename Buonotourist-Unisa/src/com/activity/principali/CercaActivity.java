@@ -5,6 +5,7 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.example.proveandroid.R;
 
 import android.app.Activity;
@@ -18,6 +19,7 @@ import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -25,7 +27,8 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-public class CercaActivity extends Activity  { 
+public class CercaActivity extends Activity implements SimpleGestureListener {
+    private SimpleGestureFilter detector; 
 	private MioDbHelper mMioDbHelper = null;
 	private static final int PartenzaDa = 1;
 	private static final int ArrivoA = 2;
@@ -77,7 +80,8 @@ public class CercaActivity extends Activity  {
 			}
 		});
 		
-		
+		detector = new SimpleGestureFilter(this,this); // GESTORE SWIPE
+
 }
 
 	private void settaContattoEmail(final Bundle savedInstanceState){
@@ -601,5 +605,26 @@ public Dialog createA(){
 			   	SQLiteDatabase db = mMioDbHelper.getWritableDatabase();
 				int r=db.delete("rubrica", null, null);
 			}
-	
+		    // -------------------->  ************** SWIPE
+		    
+		    @Override
+		    public boolean dispatchTouchEvent(MotionEvent me){
+		        // Call onTouchEvent of SimpleGestureFilter class
+		         this.detector.onTouchEvent(me);
+		       return super.dispatchTouchEvent(me);
+		    }
+		    @Override
+		     public void onSwipe(int direction) {
+		      switch (direction) {
+		      
+		      case SimpleGestureFilter.SWIPE_RIGHT : createTariffeeActivity();
+		                                             break;
+		      case SimpleGestureFilter.SWIPE_LEFT :  createCorseActivity();
+		                                             break;   
+		      }
+		     }
+		     @Override
+		     public void onDoubleTap() {
+		        //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
+		     }
 }
