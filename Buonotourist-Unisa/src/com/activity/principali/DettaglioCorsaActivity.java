@@ -10,7 +10,7 @@ import org.json.JSONObject;
 
 import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.classi.server.UserFunctions;
-import com.example.proveandroid.R;
+import com.example.buonotouristunisa.R;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -307,7 +307,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									righeDellaCella.addView(nomeFermata);
 									righeDellaCella.addView(orarioFermata);
 									
-									nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
+									nuovaRiga.setBackgroundResource(R.drawable.riga_risultaticorse_fermatecorse);
 									nuovaRiga.addView(righeDellaCella);
 									
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());

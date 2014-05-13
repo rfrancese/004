@@ -10,7 +10,7 @@ import org.json.JSONObject;
 
 import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.classi.server.UserFunctions;
-import com.example.proveandroid.R;
+import com.example.buonotouristunisa.R;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -299,7 +299,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 											righeDellaCella.addView(andataRitornoRiga);
 											righeDellaCella.addView(cliccaQuiPerIDettagli);
 											
-											nuovaRiga.setBackgroundResource(R.drawable.riga_corse);
+											nuovaRiga.setBackgroundResource(R.drawable.riga_corsear_risultatiricerca);
 											nuovaRiga.addView(righeDellaCella);
 											
 											HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
