@@ -25,6 +25,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -398,6 +399,8 @@ public Dialog Alert(){
 					            TextView biglietto = (TextView)findViewById(R.id.idTextViewFormTariffe_Biglietto);
 					            biglietto.setText(getString(R.string.costoB)+" "+json_costi.getString("costoBiglietto") + "€");
 					            biglietto.setTextColor(getResources().getColor(R.color.costiAbbonamentoBiglietto));
+					            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.notification_sound);
+					            mp.start();
 					            pDialog.dismiss();
 					        }else{
 					            pDialog.dismiss();

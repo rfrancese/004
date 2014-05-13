@@ -18,6 +18,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -315,6 +316,8 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									scrollRiga.addView(nuovaRiga);
 									tableLayoutCorse.addView(scrollRiga);
 								}
+					            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.notification_sound);
+					            mp.start();
 					            pDialog.dismiss();   
 					        }else{
 					            pDialog.dismiss();
