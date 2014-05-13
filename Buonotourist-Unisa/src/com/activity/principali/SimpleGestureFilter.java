@@ -17,9 +17,10 @@ public class SimpleGestureFilter extends SimpleOnGestureListener{
     public final static int MODE_DYNAMIC     = 2;
      
     private final static int ACTION_FAKE = -13; //just an unlikely number
-    private int swipe_Min_Distance = 300;
-    private int swipe_Max_Distance = 1500;
-    private int swipe_Min_Velocity = 200;
+    private int swipe_Min_DistanceX = 200;
+    private int swipe_Min_DistanceY = 250;
+    private int swipe_Max_DistanceXY = 1500;
+    private int swipe_Min_Velocity = 400;
  
 private int mode             = MODE_DYNAMIC;
 private boolean running      = true;
@@ -73,11 +74,11 @@ public void setEnabled(boolean status){
 }
  
 public void setSwipeMaxDistance(int distance){
- this.swipe_Max_Distance = distance;
+ this.swipe_Max_DistanceXY = distance;
 }
  
 public void setSwipeMinDistance(int distance){
- this.swipe_Min_Distance = distance;
+ this.swipe_Min_DistanceX = distance;
 }
  
 public void setSwipeMinVelocity(int distance){
@@ -85,11 +86,11 @@ public void setSwipeMinVelocity(int distance){
 }
  
 public int getSwipeMaxDistance(){
- return this.swipe_Max_Distance;
+ return this.swipe_Max_DistanceXY;
 }
  
 public int getSwipeMinDistance(){
- return this.swipe_Min_Distance;
+ return this.swipe_Min_DistanceX;
 }
  
 public int getSwipeMinVelocity(){
@@ -103,14 +104,14 @@ public int getSwipeMinVelocity(){
      final float xDistance = Math.abs(e1.getX() - e2.getX());
      final float yDistance = Math.abs(e1.getY() - e2.getY());
      
-     if(xDistance > this.swipe_Max_Distance || yDistance > this.swipe_Max_Distance)
+     if(xDistance > this.swipe_Max_DistanceXY || yDistance > this.swipe_Max_DistanceXY)
       return false;
      
      velocityX = Math.abs(velocityX);
      velocityY = Math.abs(velocityY);
            boolean result = false;
      
-     if(velocityX > this.swipe_Min_Velocity && xDistance > this.swipe_Min_Distance){
+     if(velocityX > this.swipe_Min_Velocity && xDistance > this.swipe_Min_DistanceX && yDistance > this.swipe_Min_DistanceY){
       if(e1.getX() > e2.getX()) // right to left
        this.listener.onSwipe(SWIPE_LEFT);
       else
@@ -118,7 +119,7 @@ public int getSwipeMinVelocity(){
      
       result = true;
      }
-     else if(velocityY > this.swipe_Min_Velocity && yDistance > this.swipe_Min_Distance){
+     else if(velocityY > this.swipe_Min_Velocity && yDistance > this.swipe_Min_DistanceY){
       if(e1.getY() > e2.getY()) // bottom to up
        this.listener.onSwipe(SWIPE_UP);
       else
