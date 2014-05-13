@@ -987,7 +987,8 @@ containing a value of this type.
         public static final int icon_buonotourist=0x7f02005b;
         public static final int icona_app=0x7f02005c;
         public static final int reverse_icon=0x7f02005d;
-        public static final int riga_corse=0x7f02005e;
+        public static final int riga_corsear_risultatiricerca=0x7f02005e;
+        public static final int riga_risultaticorse_fermatecorse=0x7f02005f;
     }
     public static final class id {
         public static final int action_bar=0x7f05001c;

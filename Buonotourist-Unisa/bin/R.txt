@@ -239,7 +239,8 @@ int drawable bottoni_select_body_sfondo 0x7f02005a
 int drawable icon_buonotourist 0x7f02005b
 int drawable icona_app 0x7f02005c
 int drawable reverse_icon 0x7f02005d
-int drawable riga_corse 0x7f02005e
+int drawable riga_corsear_risultatiricerca 0x7f02005e
+int drawable riga_risultaticorse_fermatecorse 0x7f02005f
 int id action_bar 0x7f05001c
 int id action_bar_activity_content 0x7f050015
 int id action_bar_container 0x7f05001b
