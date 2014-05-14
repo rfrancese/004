@@ -58,6 +58,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		
 		
 		widgetPartenza.setOnClickListener(new OnClickListener() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 				showDialog(PartenzaDa);
@@ -66,6 +67,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		
 		
 		widgetArrivo.setOnClickListener(new OnClickListener() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 				showDialog(ArrivoA);
@@ -74,6 +76,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		
 		
 		widgetOrario.setOnClickListener(new OnClickListener() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 				showDialog(TimePiker);
@@ -153,6 +156,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		});
 		buttonCercaForm.setOnClickListener(new OnClickListener() {
 		
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 				Button Partenza=(Button)findViewById(R.id.idBottoni_Provenienza);
@@ -253,6 +257,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 				
 				builder.setCancelable(false);
 				builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+				@SuppressWarnings("deprecation")
 				@Override
 					public void onClick(DialogInterface dialog, int which) {
 					Button widgetPartenza=(Button)findViewById(R.id.idBottoni_Provenienza);
@@ -260,8 +265,8 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 					if(sceltaPartenzaDa=="")
 					{
 						widgetPartenza.setText(getString(R.string.partenza));
-						
-						dismissDialog(PartenzaDa);
+						  
+						dialog.dismiss();
 						removeDialog(PartenzaDa);
 					}
 					else
@@ -271,22 +276,23 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 							
 					    	widgetDestinazione.setText(getString(R.string.destinazione));
 							}
-						else if((sceltaPartenzaDa.compareTo(sceltaArrivoA)==0))
+						else if((sceltaPartenzaDa.compareTo(sceltaArrivoA)==0) || (sceltaPartenzaDa.compareTo("Fisciano")!=0) || sceltaPartenzaDa.compareTo("Lancusi")!=0)
 						    {
 							  widgetDestinazione.setText(getString(R.string.destinazione));
 							}
 				    	widgetPartenza.setText(sceltaPartenzaDa);
-				    	
-				    	dismissDialog(PartenzaDa);
+				    	 
+				    	dialog.dismiss();
 				    	removeDialog(PartenzaDa);
 					}	
 					}
 				});
 				
 				builder.setNegativeButton(getString(R.string.annulla), new DialogInterface.OnClickListener() {
+				@SuppressWarnings("deprecation")
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
-					dismissDialog(PartenzaDa);
+					dialog.dismiss();
 					removeDialog(PartenzaDa);
 				}
 				});
@@ -338,13 +344,15 @@ public Dialog createA(){
 					if(sceltaArrivoA=="")
 					{
 						widgetPartenza.setText(getString(R.string.destinazione));
-						dismissDialog(ArrivoA);
+						dialog.dismiss();
+						 
 						removeDialog(ArrivoA);
 					}
 					else
 					{
 				    	widgetPartenza.setText(sceltaArrivoA);
-				    	dismissDialog(ArrivoA);
+				    
+				    	dialog.dismiss();
 				    	removeDialog(ArrivoA);
 					}	
 					}
@@ -355,7 +363,7 @@ public Dialog createA(){
 				@Override
 				public void onClick(DialogInterface dialog, int which) {
 					
-				       dismissDialog(ArrivoA);
+					dialog.dismiss();
 				       removeDialog(ArrivoA);
 				}
 				});
@@ -496,7 +504,8 @@ public Dialog createA(){
 		    	builder.setCancelable(false);
 		    	
 		    	builder.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-		    	@Override
+		    	@SuppressWarnings("deprecation")
+				@Override
 		    		public void onClick(DialogInterface dialog, int which) {
 		    	// Annullato!
 		    		dismissDialog(Alert);
@@ -513,39 +522,39 @@ public Dialog createA(){
 		    	SQLiteDatabase db = mMioDbHelper.getWritableDatabase();
 		    	ContentValues values= new ContentValues();
 		    	values.put("nome", "Fisciano");
-		    	long id=db.insert("rubrica", null, values);
+                db.insert("rubrica", null, values);
 		    	values.put("nome", "Lancusi");
-		    	long id2=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Sicignano Scalo");
-		    	long id31=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Perrazze");
-		    	long id21=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Contursi");
-		    	long id1=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Eboli");
-		    	long id3=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Caserta");
-		    	long id4=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Castel Cisterna");
-		    	long id5=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "S.Gennaro Vesuviano");
-		    	long id6=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Sarno");
-		    	long id7=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Pomigliano");
-		    	long id8=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Nola");
-		    	long id9=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Lauro");
-		    	long id10=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Boscoreale");
-		    	long id11=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Pompei");
-		    	long id12=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Nocera");
-		    	long id13=db.insert("rubrica", null, values);
+		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Roccarainola");
-		    	long id14=db.insert("rubrica", null, values);
+		        db.insert("rubrica", null, values);
 		    }
 		    
 		    
@@ -603,7 +612,7 @@ public Dialog createA(){
 		    //elimino tutti i record della tabella
 		    public void delete(){
 			   	SQLiteDatabase db = mMioDbHelper.getWritableDatabase();
-				int r=db.delete("rubrica", null, null);
+				db.delete("rubrica", null, null);
 			}
 		    // -------------------->  ************** SWIPE
 		    

@@ -58,6 +58,7 @@ public class TariffeActivity extends Activity implements SimpleGestureListener {
 		View widgetTariffaA=findViewById(R.id.idBottoni_TariffaA);
 		
 		widgetTariffaDa.setOnClickListener(new OnClickListener() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 				showDialog(TariffaDa);
@@ -66,6 +67,7 @@ public class TariffeActivity extends Activity implements SimpleGestureListener {
 		
 		
 		widgetTariffaA.setOnClickListener(new OnClickListener() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 				showDialog(TariffaA);
@@ -73,6 +75,7 @@ public class TariffeActivity extends Activity implements SimpleGestureListener {
 		});
 		
 		widgetTariffaA.setOnClickListener(new OnClickListener() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 				showDialog(TariffaA);
@@ -138,6 +141,7 @@ public class TariffeActivity extends Activity implements SimpleGestureListener {
 			}
 		});
 		buttonCercaForm.setOnClickListener(new OnClickListener() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void onClick(View v) {
 				Button inputPartenza = (Button) findViewById(R.id.idBottoni_TariffaDa);
@@ -204,22 +208,22 @@ public Dialog TariffaDa(){
 			if(sceltaTariffaDa=="")
 			{
 				widgetPartenza.setText(getString(R.string.partenza));
-				dismissDialog(TariffaDa);
+				dialog.dismiss();
 			}
 			else
 			{
 			widgetPartenza.setText(sceltaTariffaDa);
-				dismissDialog(TariffaDa);
+			dialog.dismiss();
 			}
 		}
 		});
 		
 		builder.setNegativeButton(getString(R.string.annulla), new DialogInterface.OnClickListener() {
-		@SuppressWarnings("deprecation")
+	
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
 			
-		       dismissDialog(TariffaDa);
+			dialog.dismiss();
 		}
 		});
 		AlertDialog alert = builder.create();
@@ -250,12 +254,12 @@ public Dialog TariffaA(){
 			if(sceltaTariffaA=="")
 			{
 				widgetPartenza.setText(getString(R.string.destinazione));
-				dismissDialog(TariffaA);
+				dialog.dismiss();
 			}
 			else
 			{
 			    widgetPartenza.setText(sceltaTariffaA);
-				dismissDialog(TariffaA);
+			    dialog.dismiss();
 			}
 			}
 		});
@@ -264,7 +268,7 @@ public Dialog TariffaA(){
 		@Override
 		public void onClick(DialogInterface dialog, int which) {
 			
-		       dismissDialog(TariffaA);
+			dialog.dismiss();
 		}
 		});
 		AlertDialog alert = builder.create();
@@ -281,7 +285,7 @@ public Dialog Alert(){
 	@Override
 	public void onClick(DialogInterface dialog, int which) {
 	// Annullato!
-	dismissDialog(Alert);
+		dialog.dismiss();
 	}
 	});
 	AlertDialog alert = builder.create();
@@ -355,7 +359,7 @@ public Dialog Alert(){
     private class ProcessLogin extends AsyncTask<String, String, JSONObject> {
 
 
-        private static final String KEY_SUCCESS = "success";
+        
 
 		private ProgressDialog pDialog;
 
@@ -427,47 +431,47 @@ public Dialog Alert(){
     	ContentValues values= new ContentValues();
     	
     	values.put("nome", "Fisciano");
-    	long id1=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Lancusi");
-    	long id2=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Cimitile");
-    	long id22=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "San Paolo Bel Sito");
-    	long id23=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Sicignano Scalo");
-    	long id31=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Perrazze");
-    	long id21=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Contursi");
-    	long id112=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Eboli");
-    	long id3=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Caserta");
-    	long id4=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Castel Cisterna");
-    	long id5=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "S.Gennaro Vesuviano");
-    	long id6=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Sarno");
-    	long id7=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Pomigliano");
-    	long id8=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Nola");
-    	long id9=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Lauro");
-    	long id10=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Boscoreale");
-    	long id11=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Pompei");
-    	long id12=db.insert("rubrica", null, values);
+        db.insert("rubrica", null, values);
     	values.put("nome", "Nocera");
-    	long id13=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Roccarainola");
-    	long id14=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Cicciano");
-    	long id15=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     	values.put("nome", "Palma Campania");
-    	long id16=db.insert("rubrica", null, values);
+    	db.insert("rubrica", null, values);
     }
     
     
@@ -507,7 +511,7 @@ public Dialog Alert(){
     
     public void delete(){
 	   	SQLiteDatabase db = mMioDbHelper.getWritableDatabase();
-		int r=db.delete("rubrica", null, null);
+		db.delete("rubrica", null, null);
 	}
     
    // -------------------->  ************** SWIPE
