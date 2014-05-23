@@ -41,7 +41,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.corse_andataritorno_dettagli);
+		setContentView(R.layout.layout_corse_andataritorno_dettagli);
 		
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
@@ -89,7 +89,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 	protected void createTariffeActivity() {
 		try{
 			startActivity(new Intent(this,TariffeActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -97,7 +97,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 	protected void createCercaActivity() {
 		try{
 			startActivity(new Intent(this,CercaActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -105,7 +105,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -297,7 +297,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 											righeDellaCella.addView(andataRitornoRiga);
 											righeDellaCella.addView(cliccaQuiPerIDettagli);
 											
-											nuovaRiga.setBackgroundResource(R.drawable.riga_risultaticorse_fermatecorse);
+											nuovaRiga.setBackgroundResource(R.drawable.drawable_riga_risultaticorse_fermatecorse);
 											nuovaRiga.addView(righeDellaCella);
 											
 											HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
@@ -334,7 +334,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 			newIntent.putExtra("andataRitornoCorsaReale",andataRitornoCorsaReale);
 			newIntent.putExtra("navbarSelect", "CORSE");
 			startActivity(newIntent);
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 	}
  // -------------------->  ************** SWIPE
     

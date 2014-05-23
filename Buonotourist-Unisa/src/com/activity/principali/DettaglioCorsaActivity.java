@@ -44,7 +44,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.dettaglio_corsa);
+		setContentView(R.layout.layout_dettaglio_corsa);
 		
 	
 		
@@ -69,11 +69,11 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 		if(navbarSelect.compareTo("CERCA")== 0){
 			Button bottoneSelezione = (Button)findViewById(R.id.idBottoniNavbar_Cerca);
 			bottoneSelezione.setText(R.string.tab1Selected);
-			bottoneSelezione.setTextColor(getResources().getColor(R.color.button_navbar_selected_text));
+			bottoneSelezione.setTextColor(getResources().getColor(R.color.col_button_navbar_selected_text));
 		}else{  // E' CORSE
 			Button bottoneSelezione = (Button)findViewById(R.id.idBottoniNavbar_Corse);
 			bottoneSelezione.setText(R.string.tab2Selected);
-			bottoneSelezione.setTextColor(getResources().getColor(R.color.button_navbar_selected_text));
+			bottoneSelezione.setTextColor(getResources().getColor(R.color.col_button_navbar_selected_text));
 		}	
         //METTO IL NOME ALLA TEXT VIEW SOPRA
 		TextView nomeCentrale = (TextView) findViewById(R.id.idTextViewCerca_NomeCorsa);
@@ -114,7 +114,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 	protected void createCercaActivity() {
 		try{
 			startActivity(new Intent(this,CercaActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -123,7 +123,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 			}finally{
 			finish();
 		}
@@ -133,7 +133,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 	protected void createTariffeeActivity() {
 		try{
 			startActivity(new Intent(this,TariffeActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -308,7 +308,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									righeDellaCella.addView(nomeFermata);
 									righeDellaCella.addView(orarioFermata);
 									
-									nuovaRiga.setBackgroundResource(R.drawable.riga_risultaticorse_fermatecorse);
+									nuovaRiga.setBackgroundResource(R.drawable.drawable_riga_risultaticorse_fermatecorse);
 									nuovaRiga.addView(righeDellaCella);
 									
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());

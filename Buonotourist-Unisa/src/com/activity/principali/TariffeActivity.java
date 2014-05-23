@@ -48,7 +48,7 @@ public class TariffeActivity extends Activity implements SimpleGestureListener {
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.tariffe);
+		setContentView(R.layout.layout_tariffe);
 		
 		mMioDbHelper = new MioDbHelper(getApplicationContext());
 		 delete();
@@ -116,7 +116,7 @@ public class TariffeActivity extends Activity implements SimpleGestureListener {
 	protected void createCercaActivity() {
 		try{
 			startActivity(new Intent(this,CercaActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -124,7 +124,7 @@ public class TariffeActivity extends Activity implements SimpleGestureListener {
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}

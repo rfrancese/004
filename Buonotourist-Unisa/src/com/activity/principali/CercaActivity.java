@@ -41,7 +41,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.cerca);
+		setContentView(R.layout.layout_cerca);
 		
 		mMioDbHelper = new MioDbHelper(getApplicationContext());
 		 delete();
@@ -128,7 +128,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 			}finally{
 			finish();
 		}
@@ -138,7 +138,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 	protected void createTariffeeActivity() {
 		try{
 			startActivity(new Intent(this,TariffeActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -190,7 +190,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 				newIntent.putExtra("andataRitorno", "A");
 			}
 			startActivity(newIntent);
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);			
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);			
 	}
 	
 	//sovrascrivo il metodo di activity ,e viene richiamato quando viene creata la prima volta la finestra di dialogo per associargli un id

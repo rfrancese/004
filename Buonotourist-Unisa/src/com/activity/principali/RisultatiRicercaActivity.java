@@ -42,7 +42,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.corse_cercate);
+		setContentView(R.layout.layout_corse_cercate);
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML(SOLO NAVBAR)
 		settaListenerBottoniNavbar(savedInstanceState);
 		Intent intentApplicazione=getIntent();
@@ -88,7 +88,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 	protected void createCercaActivity() {
 		try{
 			startActivity(new Intent(this,CercaActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -97,7 +97,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 	protected void createCorseActivity() {
 		try{
 			startActivity(new Intent(this,CorseActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 			}finally{
 			finish();
 		}
@@ -107,7 +107,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 	protected void createTariffeeActivity() {
 		try{
 			startActivity(new Intent(this,TariffeActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -300,7 +300,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 											righeDellaCella.addView(andataRitornoRiga);
 											righeDellaCella.addView(cliccaQuiPerIDettagli);
 											
-											nuovaRiga.setBackgroundResource(R.drawable.riga_corsear_risultatiricerca);
+											nuovaRiga.setBackgroundResource(R.drawable.drawable_riga_corsear_risultatiricerca);
 											nuovaRiga.addView(righeDellaCella);
 											
 											HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
@@ -338,7 +338,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 			newIntent.putExtra("paeseFermata", partenza);
 			newIntent.putExtra("navbarSelect", "CERCA");
 			startActivity(newIntent);
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);			
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);			
 	}
     
     

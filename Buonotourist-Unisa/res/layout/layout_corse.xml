@@ -9,25 +9,31 @@
           android:layout_height="wrap_content"
           android:gravity="center"
           android:orientation="horizontal"
-          android:background="@drawable/border_navbar_sfondo"
+          android:background="@drawable/drawable_border_navbar_sfondo"
           android:padding="2dp" >
       <Button     
-          android:textColor="@color/button_navbar_text"
+          android:textColor="@color/col_button_navbar_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Cerca"
           android:text="@string/tab1" />
       <Button
-          android:textColor="@color/button_navbar_selected_text"
+          android:textColor="@color/col_button_navbar_selected_text"
           style="@style/bottoniNavbar"
           android:id="@+id/idBottoniNavbar_Corse"
           android:text="@string/tab2Selected" />
       <Button
-		  android:textColor="@color/button_navbar_text"
+		  android:textColor="@color/col_button_navbar_text"
           style="@style/bottoniNavbar"
           android:text="@string/tab3"
           android:id="@+id/idBottoniNavbar_Tariffe"
            />
-      
+      <ImageButton
+       	  android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+      	  android:id="@+id/idBottone_navbar_imageButton"
+          android:src="@drawable/reverse_icon"
+          style="style/bottoneReverse"
+      />
 	
 	</LinearLayout>
 	<ScrollView   
@@ -46,7 +52,7 @@
          			android:textColor="#000000"
             		android:layout_width="match_parent"
             		android:layout_height="wrap_content"
-                	android:text="@string/risultatiRicerca" 
+                	android:text="@string/andata" 
                 	android:id="@+id/idTextViewCorse_AndataRitorno"
                 	android:textStyle="bold"
                 	android:layout_marginBottom="10dp"  />

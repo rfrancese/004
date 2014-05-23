@@ -41,7 +41,7 @@ public class CorseActivity extends Activity implements SimpleGestureListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.corse);
+		setContentView(R.layout.layout_corse);
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListnerBottoneAndataRitorno(savedInstanceState);
@@ -95,7 +95,7 @@ public class CorseActivity extends Activity implements SimpleGestureListener {
 	protected void createTariffeActivity() {
 		try{
 			startActivity(new Intent(this,TariffeActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -103,7 +103,7 @@ public class CorseActivity extends Activity implements SimpleGestureListener {
 	protected void createCercaActivity() {
 		try{
 			startActivity(new Intent(this,CercaActivity.class));
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 		}finally{
 			finish();
 		}
@@ -259,7 +259,7 @@ public class CorseActivity extends Activity implements SimpleGestureListener {
 									righeDellaCella.addView(riga2);
 									
 									nuovaRiga.addView(righeDellaCella);
-									nuovaRiga.setBackgroundResource(R.drawable.riga_corsear_risultatiricerca);
+									nuovaRiga.setBackgroundResource(R.drawable.drawable_riga_corsear_risultatiricerca);
 									
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
 									scrollRiga.setFillViewport(true);
@@ -293,7 +293,7 @@ public class CorseActivity extends Activity implements SimpleGestureListener {
 			newIntent.putExtra("codiceCorsaReale",codiceCorsaReale);
 			newIntent.putExtra("andataRitornoCorsaReale",andataRitornoCarattere);
 			startActivity(newIntent);
-			this.overridePendingTransition(R.anim.late_in_left, R.anim.zero);		
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 	}
     
     // -------------------->  ************** SWIPE

@@ -15,8 +15,8 @@ public final class R {
         public static final int abc_slide_in_top=0x7f040003;
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
-        public static final int late_in_left=0x7f040006;
-        public static final int zero=0x7f040007;
+        public static final int anim_late_in_left=0x7f040006;
+        public static final int anim_zero=0x7f040007;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -801,9 +801,9 @@ containing a value of this type.
         public static final int abc_search_url_text_pressed=0x7f080002;
         public static final int abc_search_url_text_selected=0x7f080001;
         public static final int body=0x7f080004;
-        public static final int button_confirm_text=0x7f080007;
-        public static final int button_navbar_selected_text=0x7f080008;
-        public static final int button_navbar_text=0x7f080009;
+        public static final int col_button_confirm_text=0x7f080007;
+        public static final int col_button_navbar_selected_text=0x7f080008;
+        public static final int col_button_navbar_text=0x7f080009;
         public static final int costiAbbonamentoBiglietto=0x7f080005;
         public static final int navBar=0x7f080003;
     }
@@ -980,15 +980,15 @@ containing a value of this type.
         public static final int abc_textfield_searchview_holo_light=0x7f020054;
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
-        public static final int border_navbar_sfondo=0x7f020057;
-        public static final int bottone_navbar_reverse=0x7f020058;
-        public static final int bottoni_body_sfondo=0x7f020059;
-        public static final int bottoni_select_body_sfondo=0x7f02005a;
-        public static final int icon_buonotourist=0x7f02005b;
-        public static final int icona_app=0x7f02005c;
-        public static final int reverse_icon=0x7f02005d;
-        public static final int riga_corsear_risultatiricerca=0x7f02005e;
-        public static final int riga_risultaticorse_fermatecorse=0x7f02005f;
+        public static final int drawable_border_navbar_sfondo=0x7f020057;
+        public static final int drawable_bottone_navbar_reverse=0x7f020058;
+        public static final int drawable_bottoni_body_sfondo=0x7f020059;
+        public static final int drawable_bottoni_select_body_sfondo=0x7f02005a;
+        public static final int drawable_riga_corsear_risultatiricerca=0x7f02005b;
+        public static final int drawable_riga_risultaticorse_fermatecorse=0x7f02005c;
+        public static final int icon_buonotourist=0x7f02005d;
+        public static final int icona_app=0x7f02005e;
+        public static final int reverse_icon=0x7f02005f;
     }
     public static final class id {
         public static final int action_bar=0x7f06001c;
@@ -1124,13 +1124,13 @@ containing a value of this type.
         public static final int abc_popup_menu_item_layout=0x7f030014;
         public static final int abc_search_dropdown_item_icons_2line=0x7f030015;
         public static final int abc_search_view=0x7f030016;
-        public static final int cerca=0x7f030017;
-        public static final int corse=0x7f030018;
-        public static final int corse_andataritorno_dettagli=0x7f030019;
-        public static final int corse_cercate=0x7f03001a;
-        public static final int dettaglio_corsa=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
-        public static final int tariffe=0x7f03001d;
+        public static final int layout_cerca=0x7f030017;
+        public static final int layout_corse=0x7f030018;
+        public static final int layout_corse_andataritorno_dettagli=0x7f030019;
+        public static final int layout_corse_cercate=0x7f03001a;
+        public static final int layout_dettaglio_corsa=0x7f03001b;
+        public static final int layout_tariffe=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class raw {
         public static final int notification_sound=0x7f050000;
