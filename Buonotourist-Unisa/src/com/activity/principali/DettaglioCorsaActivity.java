@@ -308,7 +308,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									righeDellaCella.addView(nomeFermata);
 									righeDellaCella.addView(orarioFermata);
 									
-									nuovaRiga.setBackgroundResource(R.drawable.drawable_riga_risultaticorse_fermatecorse);
+									nuovaRiga.setBackgroundResource(R.drawable.drawable_statelist_row_table_fermatecorse_corse_a_r_dettagli);
 									nuovaRiga.addView(righeDellaCella);
 									
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());

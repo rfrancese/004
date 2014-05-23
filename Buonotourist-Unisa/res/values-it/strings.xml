@@ -54,7 +54,7 @@
 	
 	<string name="nomeCorsa">Nome Corsa: </string>
 	<string name="oraPartenza">Ora partenza: </string>
-	<string name="andataRitorno">Andata // Ritorno: </string>
+	<string name="andataRitorno">Andata / Ritorno: </string>
 	
 	<string name="nomePaeseFermata">Paese: </string>
 	<string name="nomeFermataPaese">Fermata: </string>

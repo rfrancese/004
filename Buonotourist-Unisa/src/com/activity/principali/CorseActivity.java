@@ -247,8 +247,9 @@ public class CorseActivity extends Activity implements SimpleGestureListener {
 
 									TextView IDCORSA = new TextView(getApplicationContext());
 									IDCORSA.setText(json_riga.getString("CodiceCorsa")); 
-									IDCORSA.setTextColor(Color.WHITE);
+									IDCORSA.setTextColor(Color.TRANSPARENT);
 									IDCORSA.setTextSize(15);
+								
 									
 									
 									riga1.addView(CORSA);
@@ -259,7 +260,7 @@ public class CorseActivity extends Activity implements SimpleGestureListener {
 									righeDellaCella.addView(riga2);
 									
 									nuovaRiga.addView(righeDellaCella);
-									nuovaRiga.setBackgroundResource(R.drawable.drawable_riga_corsear_risultatiricerca);
+									nuovaRiga.setBackgroundResource(R.drawable.drawable_statelist_row_table_risultatiricerca_corse);
 									
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
 									scrollRiga.setFillViewport(true);

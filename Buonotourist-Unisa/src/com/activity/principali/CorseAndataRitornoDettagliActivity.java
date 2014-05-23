@@ -250,7 +250,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 											nomeCorsaText.setText(json_riga.getString("NomeCorsa"));
 											TextView IDCORSA = new TextView(getApplicationContext());
 											IDCORSA.setText(json_riga.getString("CodiceCorsaReale"));  
-											IDCORSA.setTextColor(Color.WHITE);
+											IDCORSA.setTextColor(Color.TRANSPARENT);
 											IDCORSA.setTextSize(13);
 											
 											nomeCorsaRiga.addView(CORSA);
@@ -297,7 +297,7 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 											righeDellaCella.addView(andataRitornoRiga);
 											righeDellaCella.addView(cliccaQuiPerIDettagli);
 											
-											nuovaRiga.setBackgroundResource(R.drawable.drawable_riga_risultaticorse_fermatecorse);
+											nuovaRiga.setBackgroundResource(R.drawable.drawable_statelist_row_table_fermatecorse_corse_a_r_dettagli);
 											nuovaRiga.addView(righeDellaCella);
 											
 											HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());

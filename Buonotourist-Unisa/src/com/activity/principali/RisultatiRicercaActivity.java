@@ -252,7 +252,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 											nomeCorsaText.setText(json_riga.getString("NomeCorsa"));
 											TextView IDCORSA = new TextView(getApplicationContext());
 											IDCORSA.setText(json_riga.getString("CodiceCorsaReale"));  
-											IDCORSA.setTextColor(Color.WHITE);
+											IDCORSA.setTextColor(Color.TRANSPARENT);
 											IDCORSA.setTextSize(13);
 											
 											nomeCorsaRiga.addView(CORSA);
@@ -300,7 +300,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 											righeDellaCella.addView(andataRitornoRiga);
 											righeDellaCella.addView(cliccaQuiPerIDettagli);
 											
-											nuovaRiga.setBackgroundResource(R.drawable.drawable_riga_corsear_risultatiricerca);
+											nuovaRiga.setBackgroundResource(R.drawable.drawable_statelist_row_table_risultatiricerca_corse);
 											nuovaRiga.addView(righeDellaCella);
 											
 											HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());

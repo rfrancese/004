@@ -155,7 +155,7 @@ android:fillViewport="true">
         		android:gravity="center">
       <TextView
          			android:gravity="center"
-          			android:textColor="#AEB5B5"
+          			android:textColor="@color/col_button_navbar_text"
             		android:layout_width="match_parent"
             		android:layout_height="match_parent"
             		android:id="@+id/idTextViewCerca_Email"

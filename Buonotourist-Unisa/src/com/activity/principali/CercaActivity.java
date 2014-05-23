@@ -94,7 +94,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 			@Override
 			public void onClick(View v) {
 				try {
-					Intent intentM = Intent.parseUri("mailto:francesco.genio@gmail.com", Intent.URI_INTENT_SCHEME);
+					Intent intentM = Intent.parseUri("mailto:info@buonotouristunisa.com", Intent.URI_INTENT_SCHEME);
 					startActivity(intentM);
 				} catch (URISyntaxException e) {
 		            Toast.makeText(getApplicationContext(),"Error mail", Toast.LENGTH_SHORT).show();            }
