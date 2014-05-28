@@ -23,6 +23,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -51,6 +52,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListenerBottoniForm(savedInstanceState);
 		settaContattoEmail(savedInstanceState);
+		settaListenerImageButtonLocalize();
 		
 		View widgetPartenza=findViewById(R.id.idBottoni_Provenienza);
 		View widgetArrivo=findViewById(R.id.idBottoni_Destinazione);
@@ -86,7 +88,15 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		detector = new SimpleGestureFilter(this,this); // GESTORE SWIPE
 
 }
-
+	private void settaListenerImageButtonLocalize(){
+		ImageButton localizeButton = (ImageButton)findViewById(R.id.idBottone_navbar_geoLocalizeButton);
+		localizeButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				createMapActivity();
+			}
+		});
+	}
 	private void settaContattoEmail(final Bundle savedInstanceState){
 		TextView contattaci = (TextView) findViewById(R.id.idTextViewCerca_Email);
 		contattaci.setOnClickListener(new OnClickListener() {
@@ -94,7 +104,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 			@Override
 			public void onClick(View v) {
 				try {
-					Intent intentM = Intent.parseUri("mailto:info@buonotouristunisa.com", Intent.URI_INTENT_SCHEME);
+					Intent intentM = Intent.parseUri("mailto:buonotouristunisa@altervista.org", Intent.URI_INTENT_SCHEME);
 					startActivity(intentM);
 				} catch (URISyntaxException e) {
 		            Toast.makeText(getApplicationContext(),"Error mail", Toast.LENGTH_SHORT).show();            }
@@ -151,7 +161,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		buttonAnnullaForm.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-					 onCreate(savedInstanceState);
+					onCreate(savedInstanceState);
 			}
 		});
 		buttonCercaForm.setOnClickListener(new OnClickListener() {
@@ -175,7 +185,10 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 			}
 		});
 	}
-	
+	protected void createMapActivity() {
+			startActivity(new Intent(this,WhereIAmMapFragment.class));
+			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
+	}
 	protected void createRisultatiRicercaActivity() {
 			Intent newIntent = new Intent(this,RisultatiRicercaActivity.class);
 			Button partenza = (Button)findViewById(R.id.idBottoni_Provenienza);

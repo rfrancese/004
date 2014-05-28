@@ -30,6 +30,13 @@ android:orientation="vertical"
           android:text="@string/tab3"
           android:id="@+id/idBottoniNavbar_Tariffe"
            />
+      <ImageButton
+       	  android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+      	  android:id="@+id/idBottone_navbar_geoLocalizeButton"
+          android:src="@drawable/icon_map"
+          style="style/bottoneReverse"
+      />
 </LinearLayout>
 <ScrollView  
 android:id="@+id/scroll" 
