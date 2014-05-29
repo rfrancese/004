@@ -57,7 +57,11 @@
             android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
         <activity
-            android:name="com.activity.principali.WhereIAmMapFragment"
+            android:name="com.activity.principali.MapFragmentNearBusStop"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="com.activity.principali.MapFragmentBusStopDettagli"
             android:configChanges="keyboardHidden|orientation|screenSize" >
         </activity>
            <meta-data

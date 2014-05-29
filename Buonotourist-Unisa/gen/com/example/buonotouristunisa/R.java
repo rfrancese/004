@@ -1417,16 +1417,16 @@ containing a value of this type.
         public static final int idBottone_navbar_imageButton=0x7f080059;
         public static final int idBottoniFormCerca_Annulla=0x7f080057;
         public static final int idBottoniFormCerca_Cerca=0x7f080056;
-        public static final int idBottoniFormTariffe_Annulla=0x7f080063;
-        public static final int idBottoniFormTariffe_Cerca=0x7f080062;
+        public static final int idBottoniFormTariffe_Annulla=0x7f080066;
+        public static final int idBottoniFormTariffe_Cerca=0x7f080065;
         public static final int idBottoniNavbar_Cerca=0x7f08004e;
         public static final int idBottoniNavbar_Corse=0x7f08004f;
         public static final int idBottoniNavbar_Tariffe=0x7f080050;
         public static final int idBottoni_Destinazione=0x7f080054;
         public static final int idBottoni_Orario=0x7f080055;
         public static final int idBottoni_Provenienza=0x7f080053;
-        public static final int idBottoni_TariffaA=0x7f080061;
-        public static final int idBottoni_TariffaDa=0x7f080060;
+        public static final int idBottoni_TariffaA=0x7f080064;
+        public static final int idBottoni_TariffaDa=0x7f080063;
         public static final int idTableLayoutCerca_CorseRicercate=0x7f08005d;
         public static final int idTableLayoutCerca_DettagliCorsa=0x7f08005f;
         public static final int idTableLayoutCorse_AndataRitorno=0x7f08005b;
@@ -1434,14 +1434,15 @@ containing a value of this type.
         public static final int idTextViewCerca_Email=0x7f080058;
         public static final int idTextViewCerca_NomeCorsa=0x7f08005e;
         public static final int idTextViewCorse_AndataRitorno=0x7f08005a;
-        public static final int idTextViewFormTariffe_Abbonamento=0x7f080064;
-        public static final int idTextViewFormTariffe_Biglietto=0x7f080065;
-        public static final int idTextViewMappa_fermataVicina=0x7f080066;
+        public static final int idTextViewFormTariffe_Abbonamento=0x7f080067;
+        public static final int idTextViewFormTariffe_Biglietto=0x7f080068;
+        public static final int idTextViewMappa_fermataVicina=0x7f080062;
+        public static final int idTextViewMappa_nomeFermata=0x7f080060;
         public static final int ifRoom=0x7f08001d;
         public static final int image=0x7f080039;
         public static final int listMode=0x7f080014;
         public static final int list_item=0x7f08003b;
-        public static final int map=0x7f080067;
+        public static final int map=0x7f080061;
         public static final int match_parent=0x7f08000c;
         public static final int middle=0x7f080024;
         public static final int monochrome=0x7f080013;
@@ -1537,9 +1538,11 @@ containing a value of this type.
         public static final int layout_corse_andataritorno_dettagli=0x7f030019;
         public static final int layout_corse_cercate=0x7f03001a;
         public static final int layout_dettaglio_corsa=0x7f03001b;
-        public static final int layout_tariffe=0x7f03001c;
-        public static final int layout_whereiamapfragment=0x7f03001d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
+        public static final int layout_mapfragmenbusstopdettagli_cerca=0x7f03001c;
+        public static final int layout_mapfragmenbusstopdettagli_corse=0x7f03001d;
+        public static final int layout_mapfragmentnearbusstop=0x7f03001e;
+        public static final int layout_tariffe=0x7f03001f;
+        public static final int support_simple_spinner_dropdown_item=0x7f030020;
     }
     public static final class raw {
         public static final int notification_sound=0x7f050000;

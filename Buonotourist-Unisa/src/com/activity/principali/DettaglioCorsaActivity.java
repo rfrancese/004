@@ -242,13 +242,14 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 					            JSONObject json_riga = null;
 					            for (int i = 0; i < json.length()-1; i++) {
 									json_riga= json.getJSONObject(""+i);	
-									TableRow nuovaRiga = new TableRow(getApplicationContext());
+									final TableRow nuovaRiga = new TableRow(getApplicationContext());
 									
 									TableLayout righeDellaCella = new TableLayout(getApplicationContext());
 							
 									TableRow nomePaese = new TableRow(getApplicationContext());
 									TableRow nomeFermata = new TableRow(getApplicationContext());
 									TableRow orarioFermata = new TableRow(getApplicationContext());
+									TableRow latitutineLongitudineFermata= new TableRow(getApplicationContext());
 
 									TextView NOMEPAESE = new TextView(getApplicationContext());
 									NOMEPAESE.setText(getString(R.string.nomePaeseFermata));
@@ -301,15 +302,40 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									orarioFermata.addView(ORARIOFERMATA);
 									orarioFermata.addView(orarioFermataText);
 								
+									//
+									TextView LATITUDINEFERMATA= new TextView(getApplicationContext());
+									LATITUDINEFERMATA.setText(json_riga.getString("FermataLatitudineCorsa"));
+									LATITUDINEFERMATA.setTextColor(Color.TRANSPARENT);
+									TextView LONGITUDINEFERMATA= new TextView(getApplicationContext());
+									LONGITUDINEFERMATA.setText(json_riga.getString("FermataLongitudineCorsa"));
+									LONGITUDINEFERMATA.setTextColor(Color.TRANSPARENT);
+									latitutineLongitudineFermata.addView(LATITUDINEFERMATA);
+									latitutineLongitudineFermata.addView(LONGITUDINEFERMATA);
+				
 									nomePaese.setPadding(10, 0, 0, 0);
 									nomeFermata.setPadding(10, 0, 0, 0);
 									orarioFermata.setPadding(10, 0, 0, 0);
+									latitutineLongitudineFermata.setPadding(10, 0, 0, 0);
+									
 									righeDellaCella.addView(nomePaese);
 									righeDellaCella.addView(nomeFermata);
 									righeDellaCella.addView(orarioFermata);
+									righeDellaCella.addView(latitutineLongitudineFermata);
 									
 									nuovaRiga.setBackgroundResource(R.drawable.drawable_statelist_row_table_fermatecorse_corse_a_r_dettagli);
 									nuovaRiga.addView(righeDellaCella);
+									
+									nuovaRiga.setOnClickListener(new OnClickListener() {
+										@Override
+										public void onClick(View v) {
+											String nomePaese= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(0)).getChildAt(1)).getText().toString();
+											String nomeFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(1)).getChildAt(1)).getText().toString();
+											String latitudineFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(3)).getChildAt(0)).getText().toString();
+											String longitudineFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(3)).getChildAt(1)).getText().toString();
+											
+											apriMappaFermata(nomePaese, nomeFermata, latitudineFermata, longitudineFermata);
+										}
+									});
 									
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
 									scrollRiga.setFillViewport(true);
@@ -367,5 +393,25 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
      @Override
      public void onDoubleTap() {
         //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
+     }
+     
+     public void apriMappaFermata(String nomePaese,String nomeFermata,String latitudineFermata,String longitudineFermata){
+    	 Intent newIntent = new Intent(this,MapFragmentBusStopDettagli.class);
+         //Toast.makeText(this, navbarSelect, Toast.LENGTH_SHORT).show();
+    	 newIntent.putExtra("navbarSelect", navbarSelect);
+         //Toast.makeText(this, nomePaese, Toast.LENGTH_SHORT).show();
+		 newIntent.putExtra("nomePaese",nomePaese);
+        // Toast.makeText(this, nomeFermata, Toast.LENGTH_SHORT).show();
+
+		 newIntent.putExtra("nomeFermata",nomeFermata);
+        // Toast.makeText(this,latitudineFermata, Toast.LENGTH_SHORT).show();
+
+		 newIntent.putExtra("latitudineFermata", latitudineFermata);
+		 
+        // Toast.makeText(this, longitudineFermata, Toast.LENGTH_SHORT).show();
+
+		 newIntent.putExtra("longitudineFermata",longitudineFermata);
+		 startActivity(newIntent);
+		 this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);	
      }
 }

@@ -43,18 +43,27 @@ import android.widget.Toast;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 
-public class WhereIAmMapFragment extends  FragmentActivity{
+public class MapFragmentNearBusStop extends  FragmentActivity{
 	LocationListener myLocationListener= new LocationListener() {
 		@Override
 		public void onStatusChanged(String provider, int status, Bundle extras) {
+			if(status == LocationProvider.AVAILABLE){
+                Toast.makeText(getApplicationContext(),"GPS DISPONIBILE", Toast.LENGTH_SHORT).show();                        
+			}else if(status == LocationProvider.TEMPORARILY_UNAVAILABLE){
+                Toast.makeText(getApplicationContext(),"GPS TEMPORANEAMENTE NON DISPONIBILE", Toast.LENGTH_SHORT).show();                        
+			}else{
+                Toast.makeText(getApplicationContext(),"GPS FUORI SERVIZIO", Toast.LENGTH_SHORT).show();                        
+			}
 		}
 		@Override
 		public void onProviderEnabled(String provider) {
-			settaPosizioneLocalizzazioneRete();
+            Toast.makeText(getApplicationContext(),"GPS ABILITATO", Toast.LENGTH_SHORT).show();    
+            settaPosizioneLocalizzazioneReteGPS();
 		}
 		@Override
 		public void onProviderDisabled(String provider) {
-			locationManager.removeUpdates(myLocationListener);
+            Toast.makeText(getApplicationContext(),"GPS DISABILITATO", Toast.LENGTH_SHORT).show(); 
+    		locationManager.removeUpdates(myLocationListener);      
 		}	
 		@Override
 		public void onLocationChanged(Location location) {
@@ -70,7 +79,7 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	double latitudinePosition;
 	double longitudinePosition;
 	LocationManager locationManager;
-	LocationProvider networkProvider;
+	LocationProvider gpsProvider;
 	private LatLng PROVENIENCE_POINT ;
 	private LatLng DESTINATION_POINT ;	 
 	GoogleMap googleMap;
@@ -80,17 +89,14 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_whereiamapfragment);
+		setContentView(R.layout.layout_mapfragmentnearbusstop);
 		googleMap= ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
 		textViewFermataVicina=(TextView)findViewById(R.id.idTextViewMappa_fermataVicina);
 		// SETTO I LISTNER PER CAMBIARE LE ATTIVITA !
 		settaListenerBottoniNavbar(savedInstanceState);
-
-		// CONNESSIONE CON IL SERVER CON PHP
-		
 		
 		// METODI DELLA MAPPA (( SI CONNETTE SOLO LE E' DISPONIBILE LA RETE ))
-		NetAsyncMap();  
+		settaPosizioneLocalizzazioneReteGPS();  
 	}
 	@Override
 	protected void onPause(){
@@ -101,7 +107,7 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	protected void onResume(){
 		super.onResume();
 		if(firstTime){
-			settaPosizioneLocalizzazioneRete();
+			settaPosizioneLocalizzazioneReteGPS();
 		}else{
 			firstTime=!firstTime;
 		}
@@ -164,76 +170,29 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	// METODI DI MAPPA CHE SETTANO IL PERCORSO
 	
 
-	public void NetAsyncMap(){
-	    new NetCheckMap().execute();
-	}
-	
-/**
- * Async Task che controlla se la rete è disponibile
- **/
 
-    private class NetCheckMap extends AsyncTask<String,String,Boolean>
-    {
-        private ProgressDialog nDialog;
-        @Override
-        protected void onPreExecute(){
-            super.onPreExecute();
-            nDialog = new ProgressDialog(WhereIAmMapFragment.this);
-            nDialog.setTitle(getString(R.string.stoControllandoRete));
-            nDialog.setMessage(getString(R.string.caricamento));
-            nDialog.setIndeterminate(false);
-            nDialog.setCancelable(false);
-            nDialog.show();
-        }
-        /**
-         * Gets current device state and checks for working internet connection by trying Google.
-        **/
-        @Override
-        protected Boolean doInBackground(String... args){
-            ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-            NetworkInfo netInfo = cm.getActiveNetworkInfo();
-            if (netInfo != null && netInfo.isConnected()) {
-                try {
-                    URL url = new URL("http://www.google.com");
-                    HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
-                    urlc.setConnectTimeout(3000);
-                    urlc.connect();
-                    if (urlc.getResponseCode() == 200) {
-                        return true;
-                    }
-                } catch (MalformedURLException e1) {
-                    // TODO Auto-generated catch block
-                    e1.printStackTrace();
-                } catch (IOException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-            return false;
-        }
-        @Override
-        protected void onPostExecute(Boolean th){
-            if(th == true){
-            	nDialog.dismiss();
-            	settaPosizioneLocalizzazioneRete();   
-            }
-            else{
-                nDialog.dismiss();
-                Toast.makeText(getApplicationContext(),getString(R.string.connessioneAssente), Toast.LENGTH_SHORT).show();            }
-        	}
-    }
-    public void settaPosizioneLocalizzazioneRete(){
+    public void settaPosizioneLocalizzazioneReteGPS(){
 		locationManager=(LocationManager) getSystemService(LOCATION_SERVICE);
-		networkProvider= locationManager.getProvider(LocationManager.NETWORK_PROVIDER);
-		if(networkProvider == null){
-	        Toast.makeText(getApplicationContext(),"Provider Rete Assente Sul dispositivo", Toast.LENGTH_LONG).show();            
+		gpsProvider= locationManager.getProvider(LocationManager.GPS_PROVIDER);
+		if(gpsProvider == null){
+	        Toast.makeText(getApplicationContext(),"Provider GPS Assente Sul dispositivo", Toast.LENGTH_LONG).show();            
 		}else{
-			if(locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
-				locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 30, 500,myLocationListener);
+			if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || !isNetworkAvailable()){
+		        Toast.makeText(getApplicationContext(),"Tale funzionalità richiede : \n GPS ATTIVO ,Accesso alla rete", Toast.LENGTH_LONG).show();            
+		        createCercaActivity();
+			}else{
+				locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30, 200,myLocationListener);
 			}
 		}
 		
 	}
+    
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager 
+              = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
 	private void settaPercorsoMappa(){
 		//map.moveCamera(CameraUpdateFactory.newLatLngZoom(start,5));
 		googleMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
@@ -374,7 +333,7 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	        @Override
 	        protected void onPreExecute(){
 	            super.onPreExecute();
-	            nDialog = new ProgressDialog(WhereIAmMapFragment.this);
+	            nDialog = new ProgressDialog(MapFragmentNearBusStop.this);
 	            nDialog.setTitle(getString(R.string.stoControllandoRete));
 	            nDialog.setMessage(getString(R.string.caricamento));
 	            nDialog.setIndeterminate(false);
@@ -430,7 +389,7 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	        @Override
 	        protected void onPreExecute() {
 	            super.onPreExecute();
-	            pDialog = new ProgressDialog(WhereIAmMapFragment.this);
+	            pDialog = new ProgressDialog(MapFragmentNearBusStop.this);
 	            pDialog.setTitle(getString(R.string.contattoServer));
 	            pDialog.setMessage(getString(R.string.invioDati));
 	            pDialog.setIndeterminate(false);
@@ -472,14 +431,11 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 							         }
 						   }else{
 					            Toast.makeText(getApplicationContext(),"SUCCESS NULL ERROR", Toast.LENGTH_SHORT).show();
-					            //pDialog.dismiss();
 						   }
 					} catch (NumberFormatException e) {
 			            Toast.makeText(getApplicationContext(),"ERROR SUCCESS NUMBER FORMAT", Toast.LENGTH_SHORT).show();  
-			            //pDialog.dismiss();
 					} catch (JSONException e) {
-			            Toast.makeText(getApplicationContext(),getString(R.string.zeroCorseTrovate), Toast.LENGTH_SHORT).show();  
-			            //pDialog.dismiss();
+			            Toast.makeText(getApplicationContext(),"Fermata vicina non trovata", Toast.LENGTH_SHORT).show();  
 					}
 	        }
 	    }

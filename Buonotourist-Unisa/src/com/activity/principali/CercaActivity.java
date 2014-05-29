@@ -187,7 +187,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		});
 	}
 	protected void createMapActivity() {
-			startActivity(new Intent(this,WhereIAmMapFragment.class));
+			startActivity(new Intent(this,MapFragmentNearBusStop.class));
 			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);		
 	}
 	protected void createRisultatiRicercaActivity() {
