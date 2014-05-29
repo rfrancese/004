@@ -34,6 +34,8 @@ public class UserFunctions {
     private static String corseAndataRitornoDettagliURL = "http://buonotouristunisa.altervista.org/buonotourist_script/";
     private static String corseAndataRitornoDettagli_tag = "ARDettagli";
     
+    private static String fermataVicinaURL = "http://buonotouristunisa.altervista.org/buonotourist_script/";
+    private static String fermataVicina_tag = "fermataVicina";
     // constructor
     public UserFunctions(){
         jsonParser = new JSONParser();
@@ -96,6 +98,17 @@ public class UserFunctions {
         params.add(new BasicNameValuePair("codiceCorsaReale",codiceCorsaReale));
         params.add(new BasicNameValuePair("andataRitornoCorsaReale",andataRitornoCorsaReale));
         JSONObject json = jsonParser.getJSONFromUrl(corseAndataRitornoDettagliURL, params);
+        return json;
+	}
+	/**
+     * Funzione che ritorna la fermata piu' vicina in base alla latitudine e longitudine dati(CALCOLATA IN LINEA D'ARIA)
+     **/
+	public JSONObject trovaFermataPiuVicina(double latitudinePosition,double longitudinePosition) {
+		List<NameValuePair> params = new ArrayList<NameValuePair>();
+        params.add(new BasicNameValuePair("tag",fermataVicina_tag));
+        params.add(new BasicNameValuePair("latitudine",Double.toString(latitudinePosition)));
+        params.add(new BasicNameValuePair("longitudine",Double.toString(longitudinePosition)));
+        JSONObject json = jsonParser.getJSONFromUrl(fermataVicinaURL, params);
         return json;
 	}
 	

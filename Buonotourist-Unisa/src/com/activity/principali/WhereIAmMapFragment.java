@@ -1,5 +1,6 @@
 package com.activity.principali;
 
+import com.classi.server.UserFunctions;
 import com.example.buonotouristunisa.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
  
+import org.json.JSONException;
 import org.json.JSONObject;
  
 import android.app.ProgressDialog;
@@ -34,6 +36,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.TextView;
+
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -46,23 +50,29 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 		}
 		@Override
 		public void onProviderEnabled(String provider) {
+			settaPosizioneLocalizzazioneRete();
 		}
 		@Override
 		public void onProviderDisabled(String provider) {
+			locationManager.removeUpdates(myLocationListener);
 		}	
 		@Override
 		public void onLocationChanged(Location location) {
 			latitudinePosition=location.getLatitude();
 			longitudinePosition=location.getLongitude();
-			settaPercorsoMappa();
+		    NetAsyncNearBusStop();
 		}
 	};
+	TextView textViewFermataVicina;
+	String nomeFermataVicina;
+   	String fermataVicinaLatitudine;
+   	String fermataVicinaLongitudine;
 	double latitudinePosition;
 	double longitudinePosition;
 	LocationManager locationManager;
 	LocationProvider networkProvider;
 	private LatLng PROVENIENCE_POINT ;
-	private LatLng DESTINATION_POINT = new LatLng(40.7721084,14.7993696);	 
+	private LatLng DESTINATION_POINT ;	 
 	GoogleMap googleMap;
 	final String TAG = "PathGoogleMapActivity";
 	ComputeDistanceBetween calcolatoreDistanze = new ComputeDistanceBetween();
@@ -72,7 +82,7 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_whereiamapfragment);
 		googleMap= ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
-
+		textViewFermataVicina=(TextView)findViewById(R.id.idTextViewMappa_fermataVicina);
 		// SETTO I LISTNER PER CAMBIARE LE ATTIVITA !
 		settaListenerBottoniNavbar(savedInstanceState);
 
@@ -155,14 +165,14 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	
 
 	public void NetAsyncMap(){
-	    new NetCheck().execute();
+	    new NetCheckMap().execute();
 	}
 	
 /**
  * Async Task che controlla se la rete è disponibile
  **/
 
-    private class NetCheck extends AsyncTask<String,String,Boolean>
+    private class NetCheckMap extends AsyncTask<String,String,Boolean>
     {
         private ProgressDialog nDialog;
         @Override
@@ -204,15 +214,26 @@ public class WhereIAmMapFragment extends  FragmentActivity{
         @Override
         protected void onPostExecute(Boolean th){
             if(th == true){
-            	settaPosizioneLocalizzazioneRete();
-                nDialog.dismiss();
+            	nDialog.dismiss();
+            	settaPosizioneLocalizzazioneRete();   
             }
             else{
                 nDialog.dismiss();
                 Toast.makeText(getApplicationContext(),getString(R.string.connessioneAssente), Toast.LENGTH_SHORT).show();            }
         	}
     }
-    
+    public void settaPosizioneLocalizzazioneRete(){
+		locationManager=(LocationManager) getSystemService(LOCATION_SERVICE);
+		networkProvider= locationManager.getProvider(LocationManager.NETWORK_PROVIDER);
+		if(networkProvider == null){
+	        Toast.makeText(getApplicationContext(),"Provider Rete Assente Sul dispositivo", Toast.LENGTH_LONG).show();            
+		}else{
+			if(locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
+				locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 30, 500,myLocationListener);
+			}
+		}
+		
+	}
 	private void settaPercorsoMappa(){
 		//map.moveCamera(CameraUpdateFactory.newLatLngZoom(start,5));
 		googleMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
@@ -225,6 +246,7 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 		MarkerOptions options = new MarkerOptions();
 		PROVENIENCE_POINT= new LatLng(latitudinePosition,longitudinePosition);
 	    options.position(PROVENIENCE_POINT);
+	    DESTINATION_POINT = new LatLng(Double.parseDouble(fermataVicinaLatitudine),Double.parseDouble(fermataVicinaLongitudine));
 	    options.position(DESTINATION_POINT);
 	    googleMap.clear(); // LO USO PER RIMUOVERE TUTTI I MARKER
 	    googleMap.addMarker(options);
@@ -234,20 +256,9 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(PROVENIENCE_POINT,10));
 	    addMarkers();
 	    String distanza=""+Math.floor(calcolatoreDistanze.distance(PROVENIENCE_POINT.latitude,DESTINATION_POINT.latitude,PROVENIENCE_POINT.longitude,DESTINATION_POINT.longitude));
-        Toast.makeText(getApplicationContext(),distanza+" Km(as the crow flies)", Toast.LENGTH_SHORT).show();            
+	    textViewFermataVicina.setText("La fermata più vicina:\n"+nomeFermataVicina+" - "+"("+distanza+"Km)");
 	}
-	public void settaPosizioneLocalizzazioneRete(){
-		locationManager=(LocationManager) getSystemService(LOCATION_SERVICE);
-		networkProvider= locationManager.getProvider(LocationManager.NETWORK_PROVIDER);
-		if(networkProvider == null){
-	        Toast.makeText(getApplicationContext(),"Provider Rete Assente Sul dispositivo", Toast.LENGTH_LONG).show();            
-		}else{
-			if(locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
-				locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 30, 500,myLocationListener);
-			}
-		}
-		
-	}
+	
 	private String getMapsApiDirectionsUrl() {
 	    String waypoints = "waypoints=optimize:true|"
 	        + PROVENIENCE_POINT.latitude + "," + PROVENIENCE_POINT.longitude
@@ -265,7 +276,7 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	  private void addMarkers() {
 	    if (googleMap != null) {
 	      googleMap.addMarker(new MarkerOptions().position(DESTINATION_POINT)
-	          .title("Punto di destinazione"));
+	          .title(nomeFermataVicina));
 	      googleMap.addMarker(new MarkerOptions().position(PROVENIENCE_POINT)
 	          .title("Punto di provenienza"));
 	    }
@@ -340,5 +351,137 @@ public class WhereIAmMapFragment extends  FragmentActivity{
 	      googleMap.addPolyline(polyLineOptions);
 	    }
 	  }
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  // **********************+   METODI PER PRENDERE DA PHP LA FERMATA PIU VICINA!!
+	  public void NetAsyncNearBusStop(){
+		    new NetCheckBusStop().execute();
+	  }
+		
+	/**
+	 * Async Task che controlla se la rete è disponibile
+	 **/
+
+	    private class NetCheckBusStop extends AsyncTask<String,String,Boolean>
+	    {
+	        private ProgressDialog nDialog;
+
+	        @Override
+	        protected void onPreExecute(){
+	            super.onPreExecute();
+	            nDialog = new ProgressDialog(WhereIAmMapFragment.this);
+	            nDialog.setTitle(getString(R.string.stoControllandoRete));
+	            nDialog.setMessage(getString(R.string.caricamento));
+	            nDialog.setIndeterminate(false);
+	            nDialog.setCancelable(false);
+	            nDialog.show();
+	        }
+	        /**
+	         * Gets current device state and checks for working internet connection by trying Google.
+	        **/
+	        @Override
+	        protected Boolean doInBackground(String... args){
+	            ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+	            NetworkInfo netInfo = cm.getActiveNetworkInfo();
+	            if (netInfo != null && netInfo.isConnected()) {
+	                try {
+	                    URL url = new URL("http://www.google.com");
+	                    HttpURLConnection urlc = (HttpURLConnection) url.openConnection();
+	                    urlc.setConnectTimeout(3000);
+	                    urlc.connect();
+	                    if (urlc.getResponseCode() == 200) {
+	                        return true;
+	                    }
+	                } catch (MalformedURLException e1) {
+	                    // TODO Auto-generated catch block
+	                    e1.printStackTrace();
+	                } catch (IOException e) {
+	                    // TODO Auto-generated catch block
+	                    e.printStackTrace();
+	                }
+	            }
+	            return false;
+	        }
+	        @Override
+	        protected void onPostExecute(Boolean th){
+
+	            if(th == true){
+	                nDialog.dismiss();
+	                new ProcessFermataVicina().execute();
+	            }
+	            else{
+	                nDialog.dismiss();
+	                Toast.makeText(getApplicationContext(),getString(R.string.connessioneAssente), Toast.LENGTH_SHORT).show();            }
+	        }
+	    }
+
+	    /**
+	     * Async Task che invia dati al My Sql database
+	     **/
+	    private class ProcessFermataVicina extends AsyncTask<String, String, JSONObject> {
+
+			private ProgressDialog pDialog;
+
+	        @Override
+	        protected void onPreExecute() {
+	            super.onPreExecute();
+	            pDialog = new ProgressDialog(WhereIAmMapFragment.this);
+	            pDialog.setTitle(getString(R.string.contattoServer));
+	            pDialog.setMessage(getString(R.string.invioDati));
+	            pDialog.setIndeterminate(false);
+	            pDialog.setCancelable(false);
+	            pDialog.show();
+	        }
+
+	        @Override
+	        protected JSONObject doInBackground(String... args) {
+	            UserFunctions userFunction = new UserFunctions();
+	            JSONObject json = userFunction.trovaFermataPiuVicina(latitudinePosition,longitudinePosition);
+	            return json;
+	        }
+
+
+			@Override
+	        protected void onPostExecute(JSONObject json) {
+					try {
+						   String successo= json.getString("success");
+						   if (successo != null) {
+								    String number = json.getString("success");
+							        if(Integer.parseInt(number) == 1){
+							        	
+								            pDialog.setMessage(getString(R.string.caricamentoDatiRicevuti));
+								            pDialog.setTitle(getString(R.string.RicevoDati));
+
+
+								           	nomeFermataVicina=json.getString("NomeFermata");
+								           	fermataVicinaLatitudine=json.getString("FermataLatitudine");
+								           	fermataVicinaLongitudine=json.getString("FermataLongitudine");
+								           	
+								            //MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.notification_sound);
+								            //mp.start();
+								            pDialog.dismiss();
+											settaPercorsoMappa();
+							         }else{
+							            pDialog.dismiss();
+							            Toast.makeText(getApplicationContext(),getString(R.string.datiInviatiNonValidi), Toast.LENGTH_SHORT).show();            
+							         }
+						   }else{
+					            Toast.makeText(getApplicationContext(),"SUCCESS NULL ERROR", Toast.LENGTH_SHORT).show();
+					            //pDialog.dismiss();
+						   }
+					} catch (NumberFormatException e) {
+			            Toast.makeText(getApplicationContext(),"ERROR SUCCESS NUMBER FORMAT", Toast.LENGTH_SHORT).show();  
+			            //pDialog.dismiss();
+					} catch (JSONException e) {
+			            Toast.makeText(getApplicationContext(),getString(R.string.zeroCorseTrovate), Toast.LENGTH_SHORT).show();  
+			            //pDialog.dismiss();
+					}
+	        }
+	    }
 
 }
