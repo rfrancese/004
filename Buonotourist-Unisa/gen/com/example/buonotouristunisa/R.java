@@ -1708,6 +1708,7 @@ containing a value of this type.
         public static final int datiInviatiNonValidi=0x7f060046;
         public static final int datiNonValidi=0x7f06003e;
         public static final int destinazione=0x7f06003c;
+        public static final int fermataNonDisponibile=0x7f06005a;
         public static final int invioDati=0x7f060043;
         public static final int nomeCorsa=0x7f060051;
         public static final int nomeFermataPaese=0x7f060055;

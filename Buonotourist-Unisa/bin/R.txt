@@ -546,6 +546,7 @@ int string daCapolinea 0x7f060058
 int string datiInviatiNonValidi 0x7f060046
 int string datiNonValidi 0x7f06003e
 int string destinazione 0x7f06003c
+int string fermataNonDisponibile 0x7f06005a
 int string invioDati 0x7f060043
 int string nomeCorsa 0x7f060051
 int string nomeFermataPaese 0x7f060055

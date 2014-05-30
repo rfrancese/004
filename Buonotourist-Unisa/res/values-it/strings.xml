@@ -65,4 +65,5 @@
 	<string name="daCapolinea">Da </string>
 	
 	<string name="contactMail">Problemi? Idee ? Contattaci</string>
+	<string name="fermataNonDisponibile">Spiacenti!Fermata non disponibile!\nInviaci un email con le coordinate!"</string>
 </resources>

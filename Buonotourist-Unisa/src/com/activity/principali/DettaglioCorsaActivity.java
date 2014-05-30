@@ -325,18 +325,27 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									nuovaRiga.setBackgroundResource(R.drawable.drawable_statelist_row_table_fermatecorse_corse_a_r_dettagli);
 									nuovaRiga.addView(righeDellaCella);
 									
-									nuovaRiga.setOnClickListener(new OnClickListener() {
-										@Override
-										public void onClick(View v) {
-											String nomePaese= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(0)).getChildAt(1)).getText().toString();
-											String nomeFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(1)).getChildAt(1)).getText().toString();
-											String latitudineFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(3)).getChildAt(0)).getText().toString();
-											String longitudineFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(3)).getChildAt(1)).getText().toString();
-											
-											apriMappaFermata(nomePaese, nomeFermata, latitudineFermata, longitudineFermata);
-										}
-									});
-									
+									// SETTO LA FERMATA VISUALIZZABILE SU MAPPA SE ABBIAMO A DISPOSIZIONE LATITUDINE E LONGITUDINE
+									if(json_riga.getString("FermataLatitudineCorsa").compareTo("null")!= 0 && json_riga.getString("FermataLongitudineCorsa").compareTo("null") != 0 ){
+										nuovaRiga.setOnClickListener(new OnClickListener() {
+											@Override
+											public void onClick(View v) {
+												String nomePaese= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(0)).getChildAt(1)).getText().toString();
+												String nomeFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(1)).getChildAt(1)).getText().toString();
+												String latitudineFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(3)).getChildAt(0)).getText().toString();
+												String longitudineFermata= ((TextView)((TableRow)((TableLayout)nuovaRiga.getChildAt(0)).getChildAt(3)).getChildAt(1)).getText().toString();
+												
+												apriMappaFermata(nomePaese, nomeFermata, latitudineFermata, longitudineFermata);
+											}
+										});
+									}else{
+										nuovaRiga.setOnClickListener(new OnClickListener() {
+											@Override
+											public void onClick(View v) {
+									            Toast.makeText(getApplicationContext(),getString(R.string.fermataNonDisponibile), Toast.LENGTH_SHORT).show();            
+											}
+										});
+									}
 									HorizontalScrollView scrollRiga = new HorizontalScrollView(getApplicationContext());
 									scrollRiga.setFillViewport(true);
 									scrollRiga.addView(nuovaRiga);
