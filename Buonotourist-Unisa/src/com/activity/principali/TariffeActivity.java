@@ -11,6 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
+import com.classi.server.MioDbHelper;
 import com.classi.server.UserFunctions;
 import com.example.buonotouristunisa.R;
 

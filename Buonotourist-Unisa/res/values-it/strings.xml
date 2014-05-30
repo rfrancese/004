@@ -25,14 +25,14 @@
 	
 	
 	<string name="stoControllandoRete">Sto controllando la rete</string>
-	<string name="caricamento">Caricamento ...</string>
+	<string name="caricamento">Caricamento.</string>
 	<string name="connessioneAssente">Connessione Assente </string>
 	
 	
 	<string name="contattoServer">Contatto il server</string>
-	<string name="invioDati">Invio i dati ...</string>
+	<string name="invioDati">Invio i dati.</string>
 	<string name="caricamentoDatiRicevuti">Caricamento dati ricevuti</string>
-	<string name="RicevoDati">Ricevo i dati ...</string>
+	<string name="RicevoDati">Ricevo i dati.</string>
 	
 	<string name="datiInviatiNonValidi">Dati inviati non validi!</string>
 	<string name="risultatiRicerca">Risultati:</string>
@@ -66,4 +66,18 @@
 	
 	<string name="contactMail">Problemi? Idee ? Contattaci</string>
 	<string name="fermataNonDisponibile">Spiacenti!Fermata non disponibile!\nInviaci un email con le coordinate!"</string>
+	
+	<string name="impossibileAggiornamePercorso">Impossibile aggiornare percorso!</string>
+	<string name="nessunaFermataTrovata">Nessuna fermata trovata!</string>
+	<string name="laFermataPiuVicina">La fermata più vicina:</string>
+	<string name="erroreFermataVicina1">Tale servizio richiede : \nGPS attivo,accesso alla rete</string>
+	<string name="erroreFermataVicina2">Tale servizio richiede : \nGPS attivo</string>
+	<string name="erroreFermataVicina3">Tale servizio richiede : \naccesso alla rete</string>
+	<string name="gpsAssenteDispositivo">Gps non presente sul dispositivo\n(Impossibile accedere al servizio)</string>
+	<string name="gpsDisponibile">GPS disponibile</string>
+	<string name="gpsTemporaneamenteNonDisponibile">GPS temporaneamente non disponibile</string>
+	<string name="gpsFuoriServizio">GPS fuori servizio</string>
+	<string name="gpsAbilitato">GPS abilitato</string>
+	<string name="gpsDisabilitato">GPS disabilitato</string>	
+	
 </resources>

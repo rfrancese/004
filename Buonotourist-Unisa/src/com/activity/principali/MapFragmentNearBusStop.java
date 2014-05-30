@@ -1,5 +1,7 @@
 package com.activity.principali;
 
+import com.classi.server.HttpConnection;
+import com.classi.server.PathJSONParser;
 import com.classi.server.UserFunctions;
 import com.example.buonotouristunisa.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -30,6 +32,7 @@ import org.json.JSONObject;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -48,22 +51,21 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 		@Override
 		public void onStatusChanged(String provider, int status, Bundle extras) {
 			if(status == LocationProvider.AVAILABLE){
-                Toast.makeText(getApplicationContext(),"GPS DISPONIBILE", Toast.LENGTH_SHORT).show();                        
+                Toast.makeText(getApplicationContext(),getString(R.string.gpsDisponibile), Toast.LENGTH_SHORT).show();                        
 			}else if(status == LocationProvider.TEMPORARILY_UNAVAILABLE){
-                Toast.makeText(getApplicationContext(),"GPS TEMPORANEAMENTE NON DISPONIBILE", Toast.LENGTH_SHORT).show();                        
+                Toast.makeText(getApplicationContext(),getString(R.string.gpsTemporaneamenteNonDisponibile), Toast.LENGTH_SHORT).show();                        
 			}else{
-                Toast.makeText(getApplicationContext(),"GPS FUORI SERVIZIO", Toast.LENGTH_SHORT).show();                        
+                Toast.makeText(getApplicationContext(),getString(R.string.gpsFuoriServizio), Toast.LENGTH_SHORT).show();                        
 			}
 		}
 		@Override
 		public void onProviderEnabled(String provider) {
-            Toast.makeText(getApplicationContext(),"GPS ABILITATO", Toast.LENGTH_SHORT).show();    
-            settaPosizioneLocalizzazioneReteGPS();
+            Toast.makeText(getApplicationContext(),getString(R.string.gpsAbilitato), Toast.LENGTH_SHORT).show();    
+			locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30, 200,myLocationListener);
 		}
 		@Override
 		public void onProviderDisabled(String provider) {
-            Toast.makeText(getApplicationContext(),"GPS DISABILITATO", Toast.LENGTH_SHORT).show(); 
-    		locationManager.removeUpdates(myLocationListener);      
+            Toast.makeText(getApplicationContext(),getString(R.string.gpsDisabilitato), Toast.LENGTH_SHORT).show(); 
 		}	
 		@Override
 		public void onLocationChanged(Location location) {
@@ -107,7 +109,7 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 	protected void onResume(){
 		super.onResume();
 		if(firstTime){
-			settaPosizioneLocalizzazioneReteGPS();
+			locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30, 200,myLocationListener);
 		}else{
 			firstTime=!firstTime;
 		}
@@ -169,30 +171,36 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 	
 	// METODI DI MAPPA CHE SETTANO IL PERCORSO
 	
-
-
     public void settaPosizioneLocalizzazioneReteGPS(){
 		locationManager=(LocationManager) getSystemService(LOCATION_SERVICE);
 		gpsProvider= locationManager.getProvider(LocationManager.GPS_PROVIDER);
-		if(gpsProvider == null){
-	        Toast.makeText(getApplicationContext(),"Provider GPS Assente Sul dispositivo", Toast.LENGTH_LONG).show();            
-		}else{
-			if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || !isNetworkAvailable()){
-		        Toast.makeText(getApplicationContext(),"Tale funzionalità richiede : \n GPS ATTIVO ,Accesso alla rete", Toast.LENGTH_LONG).show();            
+		PackageManager PM= this.getPackageManager();
+		boolean gps = PM.hasSystemFeature(PackageManager.FEATURE_LOCATION_GPS);
+		if(!gps){
+	        Toast.makeText(getApplicationContext(),getString(R.string.gpsAssenteDispositivo), Toast.LENGTH_LONG).show();
+	        createCercaActivity();
+		}else if(gpsProvider != null){
+			if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) && !isNetworkAvailable()){
+		        Toast.makeText(getApplicationContext(),getString(R.string.erroreFermataVicina1), Toast.LENGTH_LONG).show();            
+		        createCercaActivity();
+			}else if(!locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
+				Toast.makeText(getApplicationContext(),getString(R.string.erroreFermataVicina2), Toast.LENGTH_LONG).show();            
+		        createCercaActivity();
+			}else if(!isNetworkAvailable()){
+				Toast.makeText(getApplicationContext(),getString(R.string.erroreFermataVicina3), Toast.LENGTH_LONG).show();            
 		        createCercaActivity();
 			}else{
 				locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30, 200,myLocationListener);
 			}
 		}
-		
 	}
     
     private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager 
-              = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager= (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
 	private void settaPercorsoMappa(){
 		//map.moveCamera(CameraUpdateFactory.newLatLngZoom(start,5));
 		googleMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
@@ -215,7 +223,7 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 	    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(PROVENIENCE_POINT,10));
 	    addMarkers();
 	    String distanza=""+Math.floor(calcolatoreDistanze.distance(PROVENIENCE_POINT.latitude,DESTINATION_POINT.latitude,PROVENIENCE_POINT.longitude,DESTINATION_POINT.longitude));
-	    textViewFermataVicina.setText("La fermata più vicina:\n"+nomeFermataVicina+" - "+"("+distanza+"Km)");
+	    textViewFermataVicina.setText(getString(R.string.laFermataPiuVicina)+"\n"+nomeFermataVicina+" - "+"("+distanza+"Km)");
 	}
 	
 	private String getMapsApiDirectionsUrl() {
@@ -306,30 +314,20 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 	        polyLineOptions.width(5);
 	        polyLineOptions.color(Color.BLUE);
 	      }
-	 
 	      googleMap.addPolyline(polyLineOptions);
 	    }
 	  }
-	  
-	  
-	  
-	  
-	  
-	  
 	  
 	  // **********************+   METODI PER PRENDERE DA PHP LA FERMATA PIU VICINA!!
 	  public void NetAsyncNearBusStop(){
 		    new NetCheckBusStop().execute();
 	  }
-		
 	/**
 	 * Async Task che controlla se la rete è disponibile
 	 **/
-
 	    private class NetCheckBusStop extends AsyncTask<String,String,Boolean>
 	    {
 	        private ProgressDialog nDialog;
-
 	        @Override
 	        protected void onPreExecute(){
 	            super.onPreExecute();
@@ -375,7 +373,7 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 	            }
 	            else{
 	                nDialog.dismiss();
-	                Toast.makeText(getApplicationContext(),getString(R.string.connessioneAssente), Toast.LENGTH_SHORT).show();            }
+	                Toast.makeText(getApplicationContext(),getString(R.string.connessioneAssente)+"\n"+getString(R.string.impossibileAggiornamePercorso), Toast.LENGTH_SHORT).show();            }
 	        }
 	    }
 
@@ -412,15 +410,11 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 						   if (successo != null) {
 								    String number = json.getString("success");
 							        if(Integer.parseInt(number) == 1){
-							        	
 								            pDialog.setMessage(getString(R.string.caricamentoDatiRicevuti));
 								            pDialog.setTitle(getString(R.string.RicevoDati));
-
-
 								           	nomeFermataVicina=json.getString("NomeFermata");
 								           	fermataVicinaLatitudine=json.getString("FermataLatitudine");
 								           	fermataVicinaLongitudine=json.getString("FermataLongitudine");
-								           	
 								            //MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.notification_sound);
 								            //mp.start();
 								            pDialog.dismiss();
@@ -435,7 +429,7 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 					} catch (NumberFormatException e) {
 			            Toast.makeText(getApplicationContext(),"ERROR SUCCESS NUMBER FORMAT", Toast.LENGTH_SHORT).show();  
 					} catch (JSONException e) {
-			            Toast.makeText(getApplicationContext(),"Fermata vicina non trovata", Toast.LENGTH_SHORT).show();  
+			            Toast.makeText(getApplicationContext(),getString(R.string.nessunaFermataTrovata), Toast.LENGTH_SHORT).show();  
 					}
 	        }
 	    }

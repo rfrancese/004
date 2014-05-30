@@ -26,14 +26,14 @@
 	
 	
 	<string name="stoControllandoRete">I m checking the network</string>
-	<string name="caricamento">Loading ...</string>
+	<string name="caricamento">Loading.</string>
 	<string name="connessioneAssente">No connection </string>
 	
 	
 	<string name="contattoServer">Contact the Server</string>
-	<string name="invioDati">Send the data ...</string>
+	<string name="invioDati">Send the data.</string>
 	<string name="caricamentoDatiRicevuti">Loading data received</string>
-	<string name="RicevoDati">Get the data ...</string>
+	<string name="RicevoDati">Get the data.</string>
 	
 	<string name="datiInviatiNonValidi">Data sent invalid!</string>
 
@@ -66,5 +66,19 @@
 	
 	<string name="contactMail">Problems? Ideas ? Contact us</string>
 	<string name="fermataNonDisponibile">Sorry!Bus stop not available\nSend us an email with the coordinates! "</string>
+	
+	<string name="impossibileAggiornamePercorso">Could not update path!</string>
+	<string name="nessunaFermataTrovata">No bus stop found!</string>
+	<string name="laFermataPiuVicina">The nearest bus stop:</string>
+	<string name="erroreFermataVicina1">This service requires:\nGPS active and network access</string>
+	<string name="erroreFermataVicina2">This service requires:\nGPS active</string>
+	<string name="erroreFermataVicina3">This service requires:\nnetwork access</string>
+	<string name="gpsAssenteDispositivo">Gps not present on the device\n(Unable to access the service)</string>
+	<string name="gpsDisponibile">GPS available</string>
+	<string name="gpsTemporaneamenteNonDisponibile">GPS temporarily unavailable</string>
+	<string name="gpsFuoriServizio">GPS out of service</string>
+	<string name="gpsAbilitato">GPS enabled</string>
+	<string name="gpsDisabilitato">GPS disabled</string>	
+			
 	
 </resources>

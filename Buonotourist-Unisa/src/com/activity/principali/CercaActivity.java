@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
+import com.classi.server.MioDbHelper;
 import com.example.buonotouristunisa.R;
 
 import android.app.Activity;
