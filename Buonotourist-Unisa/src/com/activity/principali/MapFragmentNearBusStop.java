@@ -19,6 +19,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -222,7 +223,8 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 	    downloadTask.execute(url);
 	    googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(PROVENIENCE_POINT,10));
 	    addMarkers();
-	    String distanza=""+Math.floor(calcolatoreDistanze.distance(PROVENIENCE_POINT.latitude,DESTINATION_POINT.latitude,PROVENIENCE_POINT.longitude,DESTINATION_POINT.longitude));
+	    double distanzaValore=new BigDecimal(calcolatoreDistanze.distance(PROVENIENCE_POINT.latitude,DESTINATION_POINT.latitude,PROVENIENCE_POINT.longitude,DESTINATION_POINT.longitude)).setScale(2 , BigDecimal.ROUND_UP).doubleValue();
+	    String distanza=""+distanzaValore;
 	    textViewFermataVicina.setText(getString(R.string.laFermataPiuVicina)+"\n"+nomeFermataVicina+" - "+"("+distanza+"Km)");
 	}
 	
