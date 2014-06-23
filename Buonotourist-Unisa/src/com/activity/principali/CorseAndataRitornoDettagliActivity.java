@@ -11,11 +11,15 @@ import org.json.JSONObject;
 import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.classi.server.UserFunctions;
 import com.example.buonotouristunisa.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.MediaPlayer;
@@ -28,12 +32,19 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class CorseAndataRitornoDettagliActivity extends Activity implements SimpleGestureListener {
+	 /** AB BANNER CHE INSERISCO */
+	  private AdView adView;
+
+	  /* ID UNITA PUBBLICITARIO */
+	  private static final String AD_UNIT_ID = "ca-app-pub-9936535009091025/4159664194";
+
     private SimpleGestureFilter detector;
 	String nomeCorsa;
 	String codiceCorsaReale;
@@ -42,6 +53,9 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_corse_andataritorno_dettagli);
+		
+		createAdModBanner();
+
 		
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
@@ -358,5 +372,55 @@ public class CorseAndataRitornoDettagliActivity extends Activity implements Simp
      public void onDoubleTap() {
         //Toast.makeText(this, "Double Tap", Toast.LENGTH_SHORT).show();
      }
+     
+  // *************************** ADMOB METHOD
+     
+	 	private void createAdModBanner() {
+	 		 // Create an ad.
+		    adView = new AdView(this);
+		    adView.setAdSize(AdSize.BANNER);
+		    adView.setAdUnitId(AD_UNIT_ID);
+		    // Add the AdView to the view hierarchy. The view will have no size
+		    // until the ad is loaded.
+		    LinearLayout layout = (LinearLayout) findViewById(R.id.idLayout_BannerAdmob);
+		    layout.removeAllViews();
+		    layout.addView(adView);
+		    // Create an ad request. Check logcat output for the hashed device ID to
+		    // get test ads on a physical device.
+		    //final TelephonyManager tm =(TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
+		    //String deviceid = tm.getDeviceId();
+		    AdRequest adRequest = new AdRequest.Builder()
+		    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		    .build();
+		    // Start loading the ad in the background.
+		    adView.loadAd(adRequest);
+		}
+	    //gestione rotazione metodo che si attiva ogni volta che tuoto il dispositivo
+	    public void onConfigurationChanged(Configuration newConfig){
+	    	super.onConfigurationChanged(newConfig); 
+	    }	
+	     @Override
+	     public void onResume() {
+	       super.onResume();
+	       if (adView != null) {
+	         adView.resume();
+	       }
+	     }
+	     @Override
+	     public void onPause() {
+	       if (adView != null) {
+	         adView.pause();
+	       }
+	       super.onPause();
+	     }
+	     /** Called before the activity is destroyed. */
+	     @Override
+	     public void onDestroy() {
+	       // Destroy the AdView.
+	       if (adView != null) {
+	         adView.destroy();
+	       }
+	       super.onDestroy();
+	     }
 	
 }

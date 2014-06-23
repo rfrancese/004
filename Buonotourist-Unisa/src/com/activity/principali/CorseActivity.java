@@ -14,6 +14,7 @@ import com.example.buonotouristunisa.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.common.api.a.d;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -349,12 +350,11 @@ public class CorseActivity extends Activity implements SimpleGestureListener {
 		    layout.addView(adView);
 		    // Create an ad request. Check logcat output for the hashed device ID to
 		    // get test ads on a physical device.
-		    final TelephonyManager tm =(TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
-		    String deviceid = tm.getDeviceId();
+		    //final TelephonyManager tm =(TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
+		    //String deviceid = tm.getDeviceId();
 		    AdRequest adRequest = new AdRequest.Builder()
-		        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-		        .addTestDevice(deviceid)
-		        .build();
+		    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+		    .build();
 		    // Start loading the ad in the background.
 		    adView.loadAd(adRequest);
 	}

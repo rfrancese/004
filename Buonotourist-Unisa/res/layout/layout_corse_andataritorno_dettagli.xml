@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
-				android:orientation="vertical"
-			    android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/body" >
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+			   android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:background="@color/body"  >
 	<LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:gravity="center"
+          android:id="@+id/idNavbar_Top"
           android:orientation="horizontal"
           android:background="@drawable/drawable_border_navbar_sfondo"
           android:padding="2dp" >
@@ -34,7 +35,9 @@
 	android:id="@+id/scroll" 
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
-	android:fillViewport="true">
+	android:fillViewport="true"
+	android:layout_above="@+id/idLayout_BannerAdmob"
+    android:layout_below="@+id/idNavbar_Top">
 	<LinearLayout
     	android:layout_width="match_parent"
     	android:layout_height="wrap_content"
@@ -59,4 +62,13 @@
            			</TableLayout>
 	</LinearLayout>
 	</ScrollView> 
-</LinearLayout>
+		<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+  		android:layout_alignParentBottom="true"
+    	android:orientation="horizontal" 
+    	android:gravity="center"
+        android:background="@drawable/drawable_banneradmob"  	
+    	android:id="@+id/idLayout_BannerAdmob">
+	</LinearLayout>
+</RelativeLayout>

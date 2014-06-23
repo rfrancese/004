@@ -691,12 +691,11 @@ public Dialog createA(){
 			    layout.addView(adView);
 			    // Create an ad request. Check logcat output for the hashed device ID to
 			    // get test ads on a physical device.
-			    final TelephonyManager tm =(TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
-			    String deviceid = tm.getDeviceId();
+			    //final TelephonyManager tm =(TelephonyManager)getBaseContext().getSystemService(Context.TELEPHONY_SERVICE);
+			    //String deviceid = tm.getDeviceId();
 			    AdRequest adRequest = new AdRequest.Builder()
-			        .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-			        .addTestDevice(deviceid)
-			        .build();
+			    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+			    .build();
 			    // Start loading the ad in the background.
 			    adView.loadAd(adRequest);
 			}

@@ -3,18 +3,21 @@ package com.activity.principali;
 import com.example.buonotouristunisa.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.support.v4.app.FragmentActivity;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Locale;
 
  
 import android.app.ProgressDialog;
@@ -61,7 +64,16 @@ public class MapFragmentBusStopDettagli extends  FragmentActivity{
 			setContentView(R.layout.layout_mapfragmenbusstopdettagli_corse);
 		}
 		googleMap= ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
-		
+		googleMap.setOnMapClickListener(new OnMapClickListener() {
+			@Override
+			public void onMapClick(LatLng point) {
+				String geoCode = "geo:0,0?q=" + latitudineFermata + ","+ longitudineFermata + "(" + nomeFermata + ")";
+				Intent sendLocationToMap = new Intent(Intent.ACTION_VIEW,
+				Uri.parse(geoCode));
+				startActivity(sendLocationToMap);
+			}
+			
+		});
 		textViewFermataDettagliFermata=(TextView)findViewById(R.id.idTextViewMappa_nomeFermata);
 		textViewFermataDettagliFermata.setText(nomePaese+" - "+nomeFermata);
 		
