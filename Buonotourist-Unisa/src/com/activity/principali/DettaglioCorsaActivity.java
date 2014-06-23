@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,6 +44,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 	String andataRitornoCorsaReale;
 	String paeseFermata=null;
 	String navbarSelect;
+	String orarioFermataCercato=null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -58,7 +62,20 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 		oraPartenzaCorsaReale= intentApplicazione.getStringExtra("oraPartenzaCorsaReale");
 		andataRitornoCorsaReale= intentApplicazione.getStringExtra("andataRitornoCorsaReale");
 		if(intentApplicazione.getStringExtra("paeseFermata") != null)
-		paeseFermata =  intentApplicazione.getStringExtra("paeseFermata");
+			paeseFermata =  intentApplicazione.getStringExtra("paeseFermata");
+		
+		if(intentApplicazione.getStringExtra("orarioFermata") != null){
+			orarioFermataCercato =  intentApplicazione.getStringExtra("orarioFermata");
+			if(orarioFermataCercato.length() < 8){
+				orarioFermataCercato = "0"+orarioFermataCercato;
+			}
+		}
+			
+		
+       Toast.makeText(getApplicationContext(),orarioFermataCercato, Toast.LENGTH_SHORT).show();  
+
+		
+		
         //Toast.makeText(getApplicationContext(),nomeCorsa, Toast.LENGTH_SHORT).show();  
         //Toast.makeText(getApplicationContext(),codiceCorsaReale, Toast.LENGTH_SHORT).show();  
         //Toast.makeText(getApplicationContext(),oraPartenzaCorsaReale, Toast.LENGTH_SHORT).show();  
@@ -258,8 +275,11 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									NOMEPAESE.setTypeface(null,Typeface.BOLD);
 									
 									TextView nomePaeseText = new TextView(getApplicationContext());
-									if(paeseFermata != null){
-										if(paeseFermata.compareTo(json_riga.getString("NomePaeseCorsa"))== 0){
+									if(paeseFermata != null && orarioFermataCercato != null){
+										SimpleDateFormat format = new SimpleDateFormat("HH:MM:SS");										
+									    Date date1 = format.parse(orarioFermataCercato);
+									    Date date2 = format.parse(json_riga.getString("OrarioFermataCorsa"));
+										if(paeseFermata.compareTo(json_riga.getString("NomePaeseCorsa"))== 0 && date1.getTime()  <= date2.getTime()   ){
 											nomePaeseText.setTextColor(getResources().getColor(R.color.costiAbbonamentoBiglietto));
 										}else{
 											nomePaeseText.setTextColor(Color.BLACK);
@@ -365,6 +385,9 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 		            Toast.makeText(getApplicationContext(),"ERROR NUMBER FORMAT", Toast.LENGTH_SHORT).show();            
 				} catch (JSONException e) {
 		            Toast.makeText(getApplicationContext(),"ERROR JSON SUCCESS O INTERNI(IMPOSSIBILE)", Toast.LENGTH_SHORT).show();            
+				} catch (ParseException e) {
+		            Toast.makeText(getApplicationContext(),"ERROR PARSE ORARY", Toast.LENGTH_SHORT).show();            
+
 				}
         }
     }

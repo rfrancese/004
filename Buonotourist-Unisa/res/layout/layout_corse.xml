@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
 				android:orientation="vertical"
-			    android:layout_width="match_parent"
-                android:layout_height="match_parent"
+			    android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:background="@color/body" >
 	<LinearLayout
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:gravity="center"
           android:orientation="horizontal"
+          android:id="@+id/idNavbar_Top"
           android:background="@drawable/drawable_border_navbar_sfondo"
           android:padding="2dp" >
       <Button     
@@ -34,12 +35,13 @@
           android:src="@drawable/reverse_icon"
           style="style/bottoneReverse"
       />
-	
 	</LinearLayout>
 	<ScrollView   
 	android:id="@+id/scroll" 
 	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_above="@+id/idLayout_BannerAdmob"
+    android:layout_below="@+id/idNavbar_Top"
 	android:fillViewport="true">
 	<LinearLayout
     	android:layout_width="match_parent"
@@ -55,7 +57,8 @@
                 	android:text="@string/andata" 
                 	android:id="@+id/idTextViewCorse_AndataRitorno"
                 	android:textStyle="bold"
-                	android:layout_marginBottom="10dp"  />
+                	android:layout_marginBottom="10dp"
+                	 />
                 	<TableLayout
            				android:layout_width="match_parent"
            				android:layout_height="wrap_content"
@@ -65,4 +68,15 @@
            			</TableLayout>
 	</LinearLayout>
 	</ScrollView> 
+<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+  		android:layout_alignParentBottom="true"
+  		android:gravity="center"
+    	android:orientation="horizontal" 
+        android:background="@drawable/drawable_banneradmob"  	
+    	android:id="@+id/idLayout_BannerAdmob">
 </LinearLayout>
+                
+	
+</RelativeLayout>

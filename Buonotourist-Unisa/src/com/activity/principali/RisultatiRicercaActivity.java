@@ -336,6 +336,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 			newIntent.putExtra("oraPartenzaCorsaReale", oraPartenzaCorsaReale.substring(0,oraPartenzaCorsaReale.indexOf("(")));
 			newIntent.putExtra("andataRitornoCorsaReale",andataRitornoCorsaReale);
 			newIntent.putExtra("paeseFermata", partenza);
+			newIntent.putExtra("orarioFermata",orario);
 			newIntent.putExtra("navbarSelect", "CERCA");
 			startActivity(newIntent);
 			this.overridePendingTransition(R.anim.anim_late_in_left, R.anim.anim_zero);			
