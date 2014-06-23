@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.view.MotionEvent;
@@ -66,6 +67,7 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		// SETTO I LISTENER AGLI ELEMENTI CREATI CON XML
 		settaListenerBottoniNavbar(savedInstanceState);
 		settaListenerBottoniForm(savedInstanceState);
+		settaChiamataBuonotourist();
 		settaContattoEmail(savedInstanceState);
 		settaListenerImageButtonLocalize();
 		
@@ -102,6 +104,19 @@ public class CercaActivity extends Activity implements SimpleGestureListener {
 		
 		detector = new SimpleGestureFilter(this,this); // GESTORE SWIPE
 }
+
+	private void settaChiamataBuonotourist() {
+		TextView contattaBuono = (TextView) findViewById(R.id.idTextViewCerca_ChiamaBuonotourist);
+		contattaBuono.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent callIntent = new Intent(Intent.ACTION_CALL);
+				callIntent.setData(Uri.parse("tel:081951761"));
+				startActivity(callIntent);
+			}
+		});
+
+	}
 
 	private void settaListenerImageButtonLocalize(){
 		ImageButton localizeButton = (ImageButton)findViewById(R.id.idBottone_navbar_geoLocalizeButton);

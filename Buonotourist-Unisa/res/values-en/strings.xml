@@ -79,6 +79,9 @@
 	<string name="gpsFuoriServizio">GPS out of service</string>
 	<string name="gpsAbilitato">GPS enabled</string>
 	<string name="gpsDisabilitato">GPS disabled</string>	
+	
+	<string name="contactBuonotourist">Call Buonotourist!</string>	
+	
 			
 	
 </resources>

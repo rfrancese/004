@@ -157,7 +157,7 @@ android:orientation="vertical"
       </LinearLayout>
       <LinearLayout
      			android:layout_marginTop="10dp"
-     			android:orientation="horizontal"
+     			android:orientation="vertical"
         		android:layout_width="match_parent"
         		android:layout_height="wrap_content" 
         		android:background="@color/body"
@@ -166,9 +166,17 @@ android:orientation="vertical"
          			android:gravity="center"
           			android:textColor="@color/col_button_navbar_text"
             		android:layout_width="match_parent"
-            		android:layout_height="match_parent"
+            		android:layout_height="wrap_content"
             		android:id="@+id/idTextViewCerca_Email"
-                	android:text="@string/contactMail" />
+                	android:text="@string/contactMail" 
+                	android:layout_marginBottom="25dp"/>
+                <TextView
+         			android:gravity="center"
+          			android:textColor="@color/col_button_navbar_text"
+            		android:layout_width="match_parent"
+            		android:layout_height="wrap_content"
+            		android:id="@+id/idTextViewCerca_ChiamaBuonotourist"
+                	android:text="@string/contactBuonotourist" />
       </LinearLayout>
       
 </LinearLayout>
