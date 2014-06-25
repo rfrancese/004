@@ -517,7 +517,7 @@ public Dialog createA(){
 		        }
 		        if( hours==12)
 		        {
-		        	 aTime = new StringBuilder().append(24).append(':')
+		        	 aTime = new StringBuilder().append(00).append(':')
 			                .append(minutes).append(':').append('0').append('0').toString();
 			 
 		        	
@@ -566,17 +566,15 @@ public Dialog createA(){
 		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Sicignano Scalo");
 		    	db.insert("rubrica", null, values);
-		    	values.put("nome", "Perrazze");
-		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Contursi");
 		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Eboli");
 		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Caserta");
 		    	db.insert("rubrica", null, values);
-		    	values.put("nome", "Castel Cisterna");
+		    	values.put("nome", "Castello di Cisterna");
 		    	db.insert("rubrica", null, values);
-		    	values.put("nome", "S.Gennaro Vesuviano");
+		    	values.put("nome", "San Gennaro Vesuviano");
 		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Sarno");
 		    	db.insert("rubrica", null, values);
@@ -594,6 +592,22 @@ public Dialog createA(){
 		    	db.insert("rubrica", null, values);
 		    	values.put("nome", "Roccarainola");
 		        db.insert("rubrica", null, values);
+		        values.put("nome", "Marzano");
+		    	db.insert("rubrica", null, values);
+		    	values.put("nome", "Marigliano");
+		    	db.insert("rubrica", null, values);
+		    	values.put("nome", "Saviano");
+		    	db.insert("rubrica", null, values);
+		    	values.put("nome", "San Vitaliano");
+		    	db.insert("rubrica", null, values);
+		    	values.put("nome", "Striano");
+		    	db.insert("rubrica", null, values);
+		    	values.put("nome", "Mariglianella");
+		    	db.insert("rubrica", null, values);
+		    	values.put("nome", "Tufino");
+		    	db.insert("rubrica", null, values);
+		    	values.put("nome", "Napoli");
+		    	db.insert("rubrica", null, values);
 		    }
 		    
 		    
