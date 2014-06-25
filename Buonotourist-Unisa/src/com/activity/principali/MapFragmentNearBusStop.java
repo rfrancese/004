@@ -7,6 +7,7 @@ import com.example.buonotouristunisa.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.support.v4.app.FragmentActivity;
@@ -16,6 +17,7 @@ import android.location.LocationManager;
 import android.location.LocationProvider;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 
 import java.io.IOException;
@@ -226,6 +228,16 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 	    double distanzaValore=new BigDecimal(calcolatoreDistanze.distance(PROVENIENCE_POINT.latitude,DESTINATION_POINT.latitude,PROVENIENCE_POINT.longitude,DESTINATION_POINT.longitude)).setScale(2 , BigDecimal.ROUND_UP).doubleValue();
 	    String distanza=""+distanzaValore;
 	    textViewFermataVicina.setText(getString(R.string.laFermataPiuVicina)+"\n"+nomeFermataVicina+" - "+"("+distanza+"Km)");
+	    //SETTO LA NAVIGAZIONE DELLA MAPPA
+	    googleMap.setOnMapClickListener(new OnMapClickListener() {
+			@Override
+			public void onMapClick(LatLng point) {
+				Intent intent = new Intent(android.content.Intent.ACTION_VIEW, 
+				Uri.parse("http://maps.google.com/maps?saddr="+latitudinePosition+","+longitudinePosition+"&daddr="+fermataVicinaLatitudine+","+fermataVicinaLongitudine));
+				startActivity(intent);
+			}
+			
+		});
 	}
 	
 	private String getMapsApiDirectionsUrl() {
