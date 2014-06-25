@@ -64,7 +64,7 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 		@Override
 		public void onProviderEnabled(String provider) {
             Toast.makeText(getApplicationContext(),getString(R.string.gpsAbilitato), Toast.LENGTH_SHORT).show();    
-			locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30, 200,myLocationListener);
+			locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 60, 200,myLocationListener);
 		}
 		@Override
 		public void onProviderDisabled(String provider) {
