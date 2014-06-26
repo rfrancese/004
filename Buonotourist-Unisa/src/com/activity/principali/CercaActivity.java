@@ -419,6 +419,7 @@ public Dialog createA(){
 				 String aTime="";
 		        String timeSet = "";
 		        if (hours > 12) {
+		        	
 		            hours -= 12;
 		            timeSet = "AM";
 		        } else if (hours == 0) {
