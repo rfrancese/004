@@ -420,14 +420,14 @@ public Dialog createA(){
 		        String timeSet = "";
 		        if (hours > 12) {
 		            hours -= 12;
-		            timeSet = "PM";
+		            timeSet = "AM";
 		        } else if (hours == 0) {
 		            hours += 12;
-		            timeSet = "AM";
-		        } else if (hours == 12)
 		            timeSet = "PM";
-		        else
+		        } else if (hours == 12)
 		            timeSet = "AM";
+		        else
+		            timeSet = "PM";
 		 
 		         
 		        String minutes = "";
