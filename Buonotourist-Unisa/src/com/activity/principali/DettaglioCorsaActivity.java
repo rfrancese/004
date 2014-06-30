@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.Timestamp;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -36,6 +38,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -269,6 +272,8 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 					           
 					            TableLayout tableLayoutCorse = (TableLayout) findViewById(R.id.idTableLayoutCerca_DettagliCorsa);
 					            JSONObject json_riga = null;
+					            boolean flagPrimoPaese=true;
+					            int indicePaese = 0;
 					            for (int i = 0; i < json.length()-1; i++) {
 									json_riga= json.getJSONObject(""+i);	
 									final TableRow nuovaRiga = new TableRow(getApplicationContext());
@@ -288,10 +293,15 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									
 									TextView nomePaeseText = new TextView(getApplicationContext());
 									if(paeseFermata != null && orarioFermataCercato != null){
-										SimpleDateFormat format = new SimpleDateFormat("HH:MM:SS");										
-									    Date date1 = format.parse(orarioFermataCercato);
-									    Date date2 = format.parse(json_riga.getString("OrarioFermataCorsa"));
-										if(paeseFermata.compareTo(json_riga.getString("NomePaeseCorsa"))== 0 && date1.getTime()  <= date2.getTime()   ){
+										DateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");										
+									    Date date1 = format.parse("01/01/2011 "+orarioFermataCercato);
+									    Date date2 = format.parse("01/01/2011 "+json_riga.getString("OrarioFermataCorsa"));
+									    boolean result=date1.getTime() <= date2.getTime();
+										if(paeseFermata.compareTo(json_riga.getString("NomePaeseCorsa"))== 0 && result   ){
+											if(flagPrimoPaese){
+												indicePaese=i;
+												flagPrimoPaese=false;
+											}
 											nomePaeseText.setTextColor(getResources().getColor(R.color.costiAbbonamentoBiglietto));
 										}else{
 											nomePaeseText.setTextColor(Color.BLACK);
@@ -382,7 +392,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 									scrollRiga.setFillViewport(true);
 									scrollRiga.addView(nuovaRiga);
 									tableLayoutCorse.addView(scrollRiga);
-								}
+								}	
 					            MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.notification_sound);
 					            mp.start();
 					            pDialog.dismiss();   
@@ -399,7 +409,7 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 		            Toast.makeText(getApplicationContext(),"ERROR JSON SUCCESS O INTERNI(IMPOSSIBILE)", Toast.LENGTH_SHORT).show();            
 				} catch (ParseException e) {
 		            Toast.makeText(getApplicationContext(),"ERROR PARSE ORARY", Toast.LENGTH_SHORT).show();            
-
+;
 				}
         }
     }
