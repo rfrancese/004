@@ -14,7 +14,6 @@ import com.example.buonotouristunisa.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.common.api.a.d;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -28,7 +27,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.telephony.TelephonyManager;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;

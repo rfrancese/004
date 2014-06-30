@@ -79,11 +79,12 @@ public class DettaglioCorsaActivity extends Activity  implements SimpleGestureLi
 			orarioFermataCercato =  intentApplicazione.getStringExtra("orarioFermata");
 			if(orarioFermataCercato.length() < 8){
 				orarioFermataCercato = "0"+orarioFermataCercato;
-			}
+			}       
+			//Toast.makeText(getApplicationContext(),orarioFermataCercato, Toast.LENGTH_SHORT).show();  
+
 		}
 			
 		
-       Toast.makeText(getApplicationContext(),orarioFermataCercato, Toast.LENGTH_SHORT).show();  
 
 		
 		
