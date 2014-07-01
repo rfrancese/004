@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>
+	<string name="tab1Selected"><u>Cerca</u></string>
+	<string name="tab2Selected"><u>Corse</u></string>
+	<string name="tab3Selected"><u>Tariffe</u></string>
+	
+	<string name="tab1">Cerca</string>
+	<string name="tab2">Corse</string>
+	<string name="tab3">Tariffe</string>
+	
+	<string name="app_name">Buonotourist-Unisa</string>
+	<string name="cerca">Cerca</string>
+	<string name="annulla">Annulla</string>
+	<string name="da">Da :</string>
+	<string name="a">A :</string>
+	<string name="orarioL">Orario :</string>	
+	<string name="costoA">Costo abbonamento:</string>
+	<string name="costoB">Costo biglietto:</string>	
+	<string name="partenza">Partenza</string>
+	<string name="destinazione">Destinazione</string>
+	<string name="orario">Da che ora ?</string>
+	
+	
+	<string name="datiNonValidi">Dati form non validi!</string>
+	
+	
+	<string name="stoControllandoRete">Sto controllando la rete</string>
+	<string name="caricamento">Caricamento.</string>
+	<string name="connessioneAssente">Connessione Assente </string>
+	
+	
+	<string name="contattoServer">Contatto il server</string>
+	<string name="invioDati">Invio i dati.</string>
+	<string name="caricamentoDatiRicevuti">Caricamento dati ricevuti</string>
+	<string name="RicevoDati">Ricevo i dati.</string>
+	
+	<string name="datiInviatiNonValidi">Dati inviati non validi!</string>
+	<string name="risultatiRicerca">Risultati:</string>
+	
+	<string name="andata">Corse Andata:</string>
+	<string name="ritorno">Corse Ritorno:</string>
+	
+	
+	<string name="partenzaDa">Partenza Da:</string>
+	<string name="arrivoA">Arrivo A:</string>
+	
+	<string name="TariffaDa">Tariffa Da:</string>
+	<string name="TariffaA">Tariffa A:</string>
+	
+	<string name="Attenzione">Attenzione!!</string>
+	<string name="Messaggio">Compilare tutti i campi</string>
+	
+	<string name="zeroCorseTrovate">Nessuna corsa trovata!</string>
+	
+	<string name="nomeCorsa">Nome Corsa: </string>
+	<string name="oraPartenza">Ora partenza: </string>
+	<string name="andataRitorno">Andata / Ritorno: </string>
+	
+	<string name="nomePaeseFermata">Paese: </string>
+	<string name="nomeFermataPaese">Fermata: </string>
+	<string name="orarioFermataPaese">Orario : </string>
+	
+		
+	<string name="cliccaQuiFermate">Clicca qui per i dettagli</string>
+	<string name="daCapolinea">Da </string>
+	
+	<string name="contactMail">Problemi? Idee ? Contattaci</string>
+	<string name="fermataNonDisponibile">Spiacenti!Fermata non disponibile!\nInviaci un email con le coordinate!"</string>
+	
+	<string name="impossibileAggiornamePercorso">Impossibile aggiornare percorso!</string>
+	<string name="nessunaFermataTrovata">Nessuna fermata trovata!</string>
+	<string name="laFermataPiuVicina">La fermata più vicina:</string>
+	<string name="erroreFermataVicina1">Tale servizio richiede : \nGPS attivo,accesso alla rete</string>
+	<string name="erroreFermataVicina2">Tale servizio richiede : \nGPS attivo</string>
+	<string name="erroreFermataVicina3">Tale servizio richiede : \naccesso alla rete</string>
+	<string name="gpsAssenteDispositivo">Gps non presente sul dispositivo\n(Impossibile accedere al servizio)</string>
+	<string name="gpsDisponibile">GPS disponibile</string>
+	<string name="gpsTemporaneamenteNonDisponibile">GPS temporaneamente non disponibile</string>
+	<string name="gpsFuoriServizio">GPS fuori servizio</string>
+	<string name="gpsAbilitato">GPS abilitato</string>
+	<string name="gpsDisabilitato">GPS disabilitato</string>	
+	
+	<string name="contactBuonotourist">Chiama Buonotourist!</string>	
+	
+	
+</resources>

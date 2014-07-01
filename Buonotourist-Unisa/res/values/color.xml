@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<resources>
+	<color name="navBar">#FFFFFF</color>
+	<color name="body">#FFFFFF</color>
+	<color name="costiAbbonamentoBiglietto">#DF5A5A</color>
+	<color name="colorSelectRow">#CBE3F2</color>
+</resources>
