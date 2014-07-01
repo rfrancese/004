@@ -429,6 +429,7 @@ public Dialog createA(){
 		            timeSet = "AM";
 		 
 		         
+		        
 		        String minutes = "";
 		        if (mins < 10)
 		            minutes = "0" + mins;
