@@ -525,15 +525,11 @@ public Dialog createA(){
 		        	
 		        }
 			}
-		        else if(timeSet=="AM"){
+		        else if(timeSet=="AM" && hours==12){
 		        	
-		        	if( hours==12)
-			        {
 			        	 aTime = new StringBuilder().append(00).append(':')
 				                .append(minutes).append(':').append('0').append('0').toString();
-				    }
-		        	
-		        }
+				  }
 		        else{
 		          aTime = new StringBuilder().append(hours).append(':')
 		                .append(minutes).append(':').append('0').append('0').toString();
