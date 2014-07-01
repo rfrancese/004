@@ -7,7 +7,7 @@ import java.util.Calendar;
 
 import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.classi.server.MioDbHelper;
-import com.example.buonotouristunisa.R;
+import com.bdsirunisa.buonotouristunisa.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;

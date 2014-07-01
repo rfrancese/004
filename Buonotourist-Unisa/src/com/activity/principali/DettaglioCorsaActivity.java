@@ -15,7 +15,7 @@ import org.json.JSONObject;
 
 import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.classi.server.UserFunctions;
-import com.example.buonotouristunisa.R;
+import com.bdsirunisa.buonotouristunisa.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;

@@ -1,6 +1,6 @@
 package com.activity.principali;
 
-import com.example.buonotouristunisa.R;
+import com.bdsirunisa.buonotouristunisa.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMapClickListener;

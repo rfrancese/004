@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.buonotouristunisa;
+package com.bdsirunisa.buonotouristunisa;
 
 public final class R {
     public static final class anim {
@@ -1967,26 +1967,26 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.example.buonotouristunisa:background}</code></td><td> Specifies a background drawable for the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.example.buonotouristunisa:backgroundSplit}</code></td><td> Specifies a background drawable for the bottom component of a split action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.example.buonotouristunisa:backgroundStacked}</code></td><td> Specifies a background drawable for a second stacked row of the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.example.buonotouristunisa:customNavigationLayout}</code></td><td> Specifies a layout for custom navigation.</td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.example.buonotouristunisa:displayOptions}</code></td><td> Options affecting how the action bar is displayed.</td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.example.buonotouristunisa:divider}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
-           <tr><td><code>{@link #ActionBar_height com.example.buonotouristunisa:height}</code></td><td> Specifies a fixed height.</td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.example.buonotouristunisa:homeLayout}</code></td><td> Specifies a layout to use for the "home" section of the action bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.example.buonotouristunisa:icon}</code></td><td> Specifies the drawable used for the application icon.</td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.example.buonotouristunisa:indeterminateProgressStyle}</code></td><td> Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.example.buonotouristunisa:itemPadding}</code></td><td> Specifies padding that should be applied to the left and right sides of
+           <tr><td><code>{@link #ActionBar_background com.bdsirunisa.buonotouristunisa:background}</code></td><td> Specifies a background drawable for the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.bdsirunisa.buonotouristunisa:backgroundSplit}</code></td><td> Specifies a background drawable for the bottom component of a split action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.bdsirunisa.buonotouristunisa:backgroundStacked}</code></td><td> Specifies a background drawable for a second stacked row of the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.bdsirunisa.buonotouristunisa:customNavigationLayout}</code></td><td> Specifies a layout for custom navigation.</td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.bdsirunisa.buonotouristunisa:displayOptions}</code></td><td> Options affecting how the action bar is displayed.</td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.bdsirunisa.buonotouristunisa:divider}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
+           <tr><td><code>{@link #ActionBar_height com.bdsirunisa.buonotouristunisa:height}</code></td><td> Specifies a fixed height.</td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.bdsirunisa.buonotouristunisa:homeLayout}</code></td><td> Specifies a layout to use for the "home" section of the action bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.bdsirunisa.buonotouristunisa:icon}</code></td><td> Specifies the drawable used for the application icon.</td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.bdsirunisa.buonotouristunisa:indeterminateProgressStyle}</code></td><td> Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.bdsirunisa.buonotouristunisa:itemPadding}</code></td><td> Specifies padding that should be applied to the left and right sides of
              system-provided items in the bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.example.buonotouristunisa:logo}</code></td><td> Specifies the drawable used for the application logo.</td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.example.buonotouristunisa:navigationMode}</code></td><td> The type of navigation to use.</td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.example.buonotouristunisa:progressBarPadding}</code></td><td> Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.example.buonotouristunisa:progressBarStyle}</code></td><td> Specifies a style resource to use for an embedded progress bar.</td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.example.buonotouristunisa:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.example.buonotouristunisa:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
-           <tr><td><code>{@link #ActionBar_title com.example.buonotouristunisa:title}</code></td><td> Specifies title text used for navigationMode="normal" </td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.example.buonotouristunisa:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.bdsirunisa.buonotouristunisa:logo}</code></td><td> Specifies the drawable used for the application logo.</td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.bdsirunisa.buonotouristunisa:navigationMode}</code></td><td> The type of navigation to use.</td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.bdsirunisa.buonotouristunisa:progressBarPadding}</code></td><td> Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.bdsirunisa.buonotouristunisa:progressBarStyle}</code></td><td> Specifies a style resource to use for an embedded progress bar.</td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.bdsirunisa.buonotouristunisa:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.bdsirunisa.buonotouristunisa:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
+           <tr><td><code>{@link #ActionBar_title com.bdsirunisa.buonotouristunisa:title}</code></td><td> Specifies title text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.bdsirunisa.buonotouristunisa:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -2024,7 +2024,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:background
+          @attr name com.bdsirunisa.buonotouristunisa:background
         */
         public static final int ActionBar_background = 10;
         /**
@@ -2038,7 +2038,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:backgroundSplit
+          @attr name com.bdsirunisa.buonotouristunisa:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
@@ -2052,7 +2052,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:backgroundStacked
+          @attr name com.bdsirunisa.buonotouristunisa:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
@@ -2064,7 +2064,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:customNavigationLayout
+          @attr name com.bdsirunisa.buonotouristunisa:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
@@ -2087,7 +2087,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:displayOptions
+          @attr name com.bdsirunisa.buonotouristunisa:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
@@ -2099,7 +2099,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:divider
+          @attr name com.bdsirunisa.buonotouristunisa:divider
         */
         public static final int ActionBar_divider = 9;
         /**
@@ -2117,7 +2117,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:height
+          @attr name com.bdsirunisa.buonotouristunisa:height
         */
         public static final int ActionBar_height = 1;
         /**
@@ -2129,7 +2129,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:homeLayout
+          @attr name com.bdsirunisa.buonotouristunisa:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
@@ -2141,7 +2141,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:icon
+          @attr name com.bdsirunisa.buonotouristunisa:icon
         */
         public static final int ActionBar_icon = 7;
         /**
@@ -2153,7 +2153,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:indeterminateProgressStyle
+          @attr name com.bdsirunisa.buonotouristunisa:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
@@ -2172,7 +2172,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:itemPadding
+          @attr name com.bdsirunisa.buonotouristunisa:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
@@ -2184,7 +2184,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:logo
+          @attr name com.bdsirunisa.buonotouristunisa:logo
         */
         public static final int ActionBar_logo = 8;
         /**
@@ -2204,7 +2204,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>tabMode</code></td><td>2</td><td> The action bar will use a series of horizontal tabs for navigation. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:navigationMode
+          @attr name com.bdsirunisa.buonotouristunisa:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
@@ -2222,7 +2222,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:progressBarPadding
+          @attr name com.bdsirunisa.buonotouristunisa:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
@@ -2234,7 +2234,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:progressBarStyle
+          @attr name com.bdsirunisa.buonotouristunisa:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
@@ -2250,7 +2250,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:subtitle
+          @attr name com.bdsirunisa.buonotouristunisa:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
@@ -2262,7 +2262,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:subtitleTextStyle
+          @attr name com.bdsirunisa.buonotouristunisa:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
@@ -2278,7 +2278,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:title
+          @attr name com.bdsirunisa.buonotouristunisa:title
         */
         public static final int ActionBar_title = 0;
         /**
@@ -2290,7 +2290,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:titleTextStyle
+          @attr name com.bdsirunisa.buonotouristunisa:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /**  Valid LayoutParams for views placed in the action bar as custom views. 
@@ -2321,9 +2321,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowActionBar com.example.buonotouristunisa:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowActionBarOverlay com.example.buonotouristunisa:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBarWindow_windowSplitActionBar com.example.buonotouristunisa:windowSplitActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowActionBar com.bdsirunisa.buonotouristunisa:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowActionBarOverlay com.bdsirunisa.buonotouristunisa:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBarWindow_windowSplitActionBar com.bdsirunisa.buonotouristunisa:windowSplitActionBar}</code></td><td></td></tr>
            </table>
            @see #ActionBarWindow_windowActionBar
            @see #ActionBarWindow_windowActionBarOverlay
@@ -2333,7 +2333,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010020, 0x7f010021, 0x7f010022
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#windowActionBar}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -2343,11 +2343,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:windowActionBar
+          @attr name com.bdsirunisa.buonotouristunisa:windowActionBar
         */
         public static final int ActionBarWindow_windowActionBar = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -2357,11 +2357,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:windowActionBarOverlay
+          @attr name com.bdsirunisa.buonotouristunisa:windowActionBarOverlay
         */
         public static final int ActionBarWindow_windowActionBarOverlay = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#windowSplitActionBar}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#windowSplitActionBar}
           attribute's value can be found in the {@link #ActionBarWindow} array.
 
 
@@ -2371,7 +2371,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:windowSplitActionBar
+          @attr name com.bdsirunisa.buonotouristunisa:windowSplitActionBar
         */
         public static final int ActionBarWindow_windowSplitActionBar = 2;
         /** Attributes that can be used with a ActionMenuItemView.
@@ -2404,11 +2404,11 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.example.buonotouristunisa:background}</code></td><td> Specifies a background for the action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.example.buonotouristunisa:backgroundSplit}</code></td><td> Specifies a background for the split action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_height com.example.buonotouristunisa:height}</code></td><td> Specifies a fixed height for the action mode bar.</td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.example.buonotouristunisa:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.example.buonotouristunisa:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
+           <tr><td><code>{@link #ActionMode_background com.bdsirunisa.buonotouristunisa:background}</code></td><td> Specifies a background for the action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.bdsirunisa.buonotouristunisa:backgroundSplit}</code></td><td> Specifies a background for the split action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_height com.bdsirunisa.buonotouristunisa:height}</code></td><td> Specifies a fixed height for the action mode bar.</td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.bdsirunisa.buonotouristunisa:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.bdsirunisa.buonotouristunisa:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -2429,7 +2429,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:background
+          @attr name com.bdsirunisa.buonotouristunisa:background
         */
         public static final int ActionMode_background = 3;
         /**
@@ -2443,7 +2443,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:backgroundSplit
+          @attr name com.bdsirunisa.buonotouristunisa:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
@@ -2461,7 +2461,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:height
+          @attr name com.bdsirunisa.buonotouristunisa:height
         */
         public static final int ActionMode_height = 0;
         /**
@@ -2473,7 +2473,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:subtitleTextStyle
+          @attr name com.bdsirunisa.buonotouristunisa:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
@@ -2485,7 +2485,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:titleTextStyle
+          @attr name com.bdsirunisa.buonotouristunisa:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /**  Attrbitutes for a ActivityChooserView. 
@@ -2494,8 +2494,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.example.buonotouristunisa:expandActivityOverflowButtonDrawable}</code></td><td> The drawable to show in the button for expanding the activities overflow popup.</td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.example.buonotouristunisa:initialActivityCount}</code></td><td> The maximal number of items initially shown in the activity list.</td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.bdsirunisa.buonotouristunisa:expandActivityOverflowButtonDrawable}</code></td><td> The drawable to show in the button for expanding the activities overflow popup.</td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.bdsirunisa.buonotouristunisa:initialActivityCount}</code></td><td> The maximal number of items initially shown in the activity list.</td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -2517,7 +2517,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:expandActivityOverflowButtonDrawable
+          @attr name com.bdsirunisa.buonotouristunisa:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
@@ -2533,7 +2533,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:initialActivityCount
+          @attr name com.bdsirunisa.buonotouristunisa:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AdsAttrs.
@@ -2542,11 +2542,11 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AdsAttrs_adSize com.example.buonotouristunisa:adSize}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSize com.bdsirunisa.buonotouristunisa:adSize}</code></td><td>
     The size of the ad.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adSizes com.example.buonotouristunisa:adSizes}</code></td><td>
+           <tr><td><code>{@link #AdsAttrs_adSizes com.bdsirunisa.buonotouristunisa:adSizes}</code></td><td>
     A comma-separated list of the supported ad sizes.</td></tr>
-           <tr><td><code>{@link #AdsAttrs_adUnitId com.example.buonotouristunisa:adUnitId}</code></td><td> The ad unit ID.</td></tr>
+           <tr><td><code>{@link #AdsAttrs_adUnitId com.bdsirunisa.buonotouristunisa:adUnitId}</code></td><td> The ad unit ID.</td></tr>
            </table>
            @see #AdsAttrs_adSize
            @see #AdsAttrs_adSizes
@@ -2572,7 +2572,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:adSize
+          @attr name com.bdsirunisa.buonotouristunisa:adSize
         */
         public static final int AdsAttrs_adSize = 0;
         /**
@@ -2592,7 +2592,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:adSizes
+          @attr name com.bdsirunisa.buonotouristunisa:adSizes
         */
         public static final int AdsAttrs_adSizes = 1;
         /**
@@ -2608,7 +2608,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:adUnitId
+          @attr name com.bdsirunisa.buonotouristunisa:adUnitId
         */
         public static final int AdsAttrs_adUnitId = 2;
         /** Attributes that can be used with a CompatTextView.
@@ -2617,7 +2617,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CompatTextView_textAllCaps com.example.buonotouristunisa:textAllCaps}</code></td><td> Present the text in ALL CAPS.</td></tr>
+           <tr><td><code>{@link #CompatTextView_textAllCaps com.bdsirunisa.buonotouristunisa:textAllCaps}</code></td><td> Present the text in ALL CAPS.</td></tr>
            </table>
            @see #CompatTextView_textAllCaps
          */
@@ -2634,7 +2634,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:textAllCaps
+          @attr name com.bdsirunisa.buonotouristunisa:textAllCaps
         */
         public static final int CompatTextView_textAllCaps = 0;
         /** Attributes that can be used with a LinearLayoutICS.
@@ -2643,9 +2643,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LinearLayoutICS_divider com.example.buonotouristunisa:divider}</code></td><td> Drawable to use as a vertical divider between buttons.</td></tr>
-           <tr><td><code>{@link #LinearLayoutICS_dividerPadding com.example.buonotouristunisa:dividerPadding}</code></td><td> Size of padding on either end of a divider.</td></tr>
-           <tr><td><code>{@link #LinearLayoutICS_showDividers com.example.buonotouristunisa:showDividers}</code></td><td> Setting for which dividers to show.</td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_divider com.bdsirunisa.buonotouristunisa:divider}</code></td><td> Drawable to use as a vertical divider between buttons.</td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_dividerPadding com.bdsirunisa.buonotouristunisa:dividerPadding}</code></td><td> Size of padding on either end of a divider.</td></tr>
+           <tr><td><code>{@link #LinearLayoutICS_showDividers com.bdsirunisa.buonotouristunisa:showDividers}</code></td><td> Setting for which dividers to show.</td></tr>
            </table>
            @see #LinearLayoutICS_divider
            @see #LinearLayoutICS_dividerPadding
@@ -2663,7 +2663,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:divider
+          @attr name com.bdsirunisa.buonotouristunisa:divider
         */
         public static final int LinearLayoutICS_divider = 0;
         /**
@@ -2681,7 +2681,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:dividerPadding
+          @attr name com.bdsirunisa.buonotouristunisa:dividerPadding
         */
         public static final int LinearLayoutICS_dividerPadding = 2;
         /**
@@ -2702,7 +2702,7 @@ containing a value of this type.
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:showDividers
+          @attr name com.bdsirunisa.buonotouristunisa:showDividers
         */
         public static final int LinearLayoutICS_showDividers = 1;
         /** Attributes that can be used with a MapAttrs.
@@ -2711,20 +2711,20 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MapAttrs_cameraBearing com.example.buonotouristunisa:cameraBearing}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.example.buonotouristunisa:cameraTargetLat}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.example.buonotouristunisa:cameraTargetLng}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraTilt com.example.buonotouristunisa:cameraTilt}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_cameraZoom com.example.buonotouristunisa:cameraZoom}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_mapType com.example.buonotouristunisa:mapType}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiCompass com.example.buonotouristunisa:uiCompass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.example.buonotouristunisa:uiRotateGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.example.buonotouristunisa:uiScrollGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.example.buonotouristunisa:uiTiltGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomControls com.example.buonotouristunisa:uiZoomControls}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.example.buonotouristunisa:uiZoomGestures}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.example.buonotouristunisa:useViewLifecycle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.example.buonotouristunisa:zOrderOnTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraBearing com.bdsirunisa.buonotouristunisa:cameraBearing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLat com.bdsirunisa.buonotouristunisa:cameraTargetLat}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTargetLng com.bdsirunisa.buonotouristunisa:cameraTargetLng}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraTilt com.bdsirunisa.buonotouristunisa:cameraTilt}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_cameraZoom com.bdsirunisa.buonotouristunisa:cameraZoom}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_mapType com.bdsirunisa.buonotouristunisa:mapType}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiCompass com.bdsirunisa.buonotouristunisa:uiCompass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiRotateGestures com.bdsirunisa.buonotouristunisa:uiRotateGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiScrollGestures com.bdsirunisa.buonotouristunisa:uiScrollGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiTiltGestures com.bdsirunisa.buonotouristunisa:uiTiltGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomControls com.bdsirunisa.buonotouristunisa:uiZoomControls}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_uiZoomGestures com.bdsirunisa.buonotouristunisa:uiZoomGestures}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_useViewLifecycle com.bdsirunisa.buonotouristunisa:useViewLifecycle}</code></td><td></td></tr>
+           <tr><td><code>{@link #MapAttrs_zOrderOnTop com.bdsirunisa.buonotouristunisa:zOrderOnTop}</code></td><td></td></tr>
            </table>
            @see #MapAttrs_cameraBearing
            @see #MapAttrs_cameraTargetLat
@@ -2748,7 +2748,7 @@ containing a value of this type.
             0x7f01000f, 0x7f010010
         };
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#cameraBearing}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#cameraBearing}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2758,11 +2758,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:cameraBearing
+          @attr name com.bdsirunisa.buonotouristunisa:cameraBearing
         */
         public static final int MapAttrs_cameraBearing = 1;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#cameraTargetLat}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2772,11 +2772,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:cameraTargetLat
+          @attr name com.bdsirunisa.buonotouristunisa:cameraTargetLat
         */
         public static final int MapAttrs_cameraTargetLat = 2;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#cameraTargetLng}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2786,11 +2786,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:cameraTargetLng
+          @attr name com.bdsirunisa.buonotouristunisa:cameraTargetLng
         */
         public static final int MapAttrs_cameraTargetLng = 3;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#cameraTilt}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2800,11 +2800,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:cameraTilt
+          @attr name com.bdsirunisa.buonotouristunisa:cameraTilt
         */
         public static final int MapAttrs_cameraTilt = 4;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#cameraZoom}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2814,11 +2814,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:cameraZoom
+          @attr name com.bdsirunisa.buonotouristunisa:cameraZoom
         */
         public static final int MapAttrs_cameraZoom = 5;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#mapType}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2834,11 +2834,11 @@ containing a value of this type.
 <tr><td><code>terrain</code></td><td>3</td><td></td></tr>
 <tr><td><code>hybrid</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.example.buonotouristunisa:mapType
+          @attr name com.bdsirunisa.buonotouristunisa:mapType
         */
         public static final int MapAttrs_mapType = 0;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#uiCompass}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2848,11 +2848,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:uiCompass
+          @attr name com.bdsirunisa.buonotouristunisa:uiCompass
         */
         public static final int MapAttrs_uiCompass = 6;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#uiRotateGestures}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2862,11 +2862,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:uiRotateGestures
+          @attr name com.bdsirunisa.buonotouristunisa:uiRotateGestures
         */
         public static final int MapAttrs_uiRotateGestures = 7;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#uiScrollGestures}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2876,11 +2876,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:uiScrollGestures
+          @attr name com.bdsirunisa.buonotouristunisa:uiScrollGestures
         */
         public static final int MapAttrs_uiScrollGestures = 8;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#uiTiltGestures}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2890,11 +2890,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:uiTiltGestures
+          @attr name com.bdsirunisa.buonotouristunisa:uiTiltGestures
         */
         public static final int MapAttrs_uiTiltGestures = 9;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#uiZoomControls}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2904,11 +2904,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:uiZoomControls
+          @attr name com.bdsirunisa.buonotouristunisa:uiZoomControls
         */
         public static final int MapAttrs_uiZoomControls = 10;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#uiZoomGestures}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2918,11 +2918,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:uiZoomGestures
+          @attr name com.bdsirunisa.buonotouristunisa:uiZoomGestures
         */
         public static final int MapAttrs_uiZoomGestures = 11;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#useViewLifecycle}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2932,11 +2932,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:useViewLifecycle
+          @attr name com.bdsirunisa.buonotouristunisa:useViewLifecycle
         */
         public static final int MapAttrs_useViewLifecycle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.example.buonotouristunisa.R.attr#zOrderOnTop}
+          <p>This symbol is the offset where the {@link com.bdsirunisa.buonotouristunisa.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
 
 
@@ -2946,7 +2946,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.example.buonotouristunisa:zOrderOnTop
+          @attr name com.bdsirunisa.buonotouristunisa:zOrderOnTop
         */
         public static final int MapAttrs_zOrderOnTop = 13;
         /**  Base attributes that are available to all groups. 
@@ -3035,10 +3035,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.example.buonotouristunisa:actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.example.buonotouristunisa:actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
+           <tr><td><code>{@link #MenuItem_actionLayout com.bdsirunisa.buonotouristunisa:actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.bdsirunisa.buonotouristunisa:actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
              and perform operations such as default action for that menu item.</td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.example.buonotouristunisa:actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
+           <tr><td><code>{@link #MenuItem_actionViewClass com.bdsirunisa.buonotouristunisa:actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
              action view.</td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td> The alphabetic shortcut key.</td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td> Whether the item is capable of displaying a check mark.</td></tr>
@@ -3054,7 +3054,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td> The title associated with the item.</td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td> The condensed title associated with the item.</td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td> Whether the item is shown/visible.</td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.example.buonotouristunisa:showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.bdsirunisa.buonotouristunisa:showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -3092,7 +3092,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:actionLayout
+          @attr name com.bdsirunisa.buonotouristunisa:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
@@ -3111,7 +3111,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:actionProviderClass
+          @attr name com.bdsirunisa.buonotouristunisa:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
@@ -3129,7 +3129,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:actionViewClass
+          @attr name com.bdsirunisa.buonotouristunisa:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -3285,7 +3285,7 @@ containing a value of this type.
                  larger segment of its container. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:showAsAction
+          @attr name com.bdsirunisa.buonotouristunisa:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -3396,8 +3396,8 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td> The IME options to set on the query text field.</td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td> The input type to set on the query text field.</td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td> An optional maximum width of the SearchView.</td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.example.buonotouristunisa:iconifiedByDefault}</code></td><td> The default state of the SearchView.</td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.example.buonotouristunisa:queryHint}</code></td><td> An optional query hint string to be displayed in the empty query field.</td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.bdsirunisa.buonotouristunisa:iconifiedByDefault}</code></td><td> The default state of the SearchView.</td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.bdsirunisa.buonotouristunisa:queryHint}</code></td><td> An optional query hint string to be displayed in the empty query field.</td></tr>
            </table>
            @see #SearchView_android_imeOptions
            @see #SearchView_android_inputType
@@ -3450,7 +3450,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:iconifiedByDefault
+          @attr name com.bdsirunisa.buonotouristunisa:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 3;
         /**
@@ -3466,7 +3466,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:queryHint
+          @attr name com.bdsirunisa.buonotouristunisa:queryHint
         */
         public static final int SearchView_queryHint = 4;
         /** Attributes that can be used with a Spinner.
@@ -3483,12 +3483,12 @@ containing a value of this type.
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td> Width of the dropdown in spinnerMode="dropdown".</td></tr>
            <tr><td><code>{@link #Spinner_android_gravity android:gravity}</code></td><td> Gravity setting for positioning the currently selected item.</td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td> Background drawable to use for the dropdown in spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.example.buonotouristunisa:disableChildrenWhenDisabled}</code></td><td> Whether this spinner should mark child views as enabled/disabled when
+           <tr><td><code>{@link #Spinner_disableChildrenWhenDisabled com.bdsirunisa.buonotouristunisa:disableChildrenWhenDisabled}</code></td><td> Whether this spinner should mark child views as enabled/disabled when
              the spinner itself is enabled/disabled.</td></tr>
-           <tr><td><code>{@link #Spinner_popupPromptView com.example.buonotouristunisa:popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
+           <tr><td><code>{@link #Spinner_popupPromptView com.bdsirunisa.buonotouristunisa:popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
              spinnerMode="dropdown".</td></tr>
-           <tr><td><code>{@link #Spinner_prompt com.example.buonotouristunisa:prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
-           <tr><td><code>{@link #Spinner_spinnerMode com.example.buonotouristunisa:spinnerMode}</code></td><td> Display mode for spinner options.</td></tr>
+           <tr><td><code>{@link #Spinner_prompt com.bdsirunisa.buonotouristunisa:prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
+           <tr><td><code>{@link #Spinner_spinnerMode com.bdsirunisa.buonotouristunisa:spinnerMode}</code></td><td> Display mode for spinner options.</td></tr>
            </table>
            @see #Spinner_android_dropDownHorizontalOffset
            @see #Spinner_android_dropDownSelector
@@ -3576,7 +3576,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:disableChildrenWhenDisabled
+          @attr name com.bdsirunisa.buonotouristunisa:disableChildrenWhenDisabled
         */
         public static final int Spinner_disableChildrenWhenDisabled = 9;
         /**
@@ -3590,7 +3590,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:popupPromptView
+          @attr name com.bdsirunisa.buonotouristunisa:popupPromptView
         */
         public static final int Spinner_popupPromptView = 8;
         /**
@@ -3602,7 +3602,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:prompt
+          @attr name com.bdsirunisa.buonotouristunisa:prompt
         */
         public static final int Spinner_prompt = 6;
         /**
@@ -3622,7 +3622,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
                  anchored to the spinner widget itself. </td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:spinnerMode
+          @attr name com.bdsirunisa.buonotouristunisa:spinnerMode
         */
         public static final int Spinner_spinnerMode = 7;
         /**  These are the standard attributes that make up a complete theme. 
@@ -3631,12 +3631,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle com.example.buonotouristunisa:actionDropDownStyle}</code></td><td> Default ActionBar dropdown style.</td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.example.buonotouristunisa:dropdownListPreferredItemHeight}</code></td><td> The preferred item height for dropdown lists.</td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.example.buonotouristunisa:listChoiceBackgroundIndicator}</code></td><td> Drawable used as a background for selected list items.</td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme com.example.buonotouristunisa:panelMenuListTheme}</code></td><td> Default Panel Menu style.</td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth com.example.buonotouristunisa:panelMenuListWidth}</code></td><td> Default Panel Menu width.</td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle com.example.buonotouristunisa:popupMenuStyle}</code></td><td> Default PopupMenu style.</td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle com.bdsirunisa.buonotouristunisa:actionDropDownStyle}</code></td><td> Default ActionBar dropdown style.</td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.bdsirunisa.buonotouristunisa:dropdownListPreferredItemHeight}</code></td><td> The preferred item height for dropdown lists.</td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.bdsirunisa.buonotouristunisa:listChoiceBackgroundIndicator}</code></td><td> Drawable used as a background for selected list items.</td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme com.bdsirunisa.buonotouristunisa:panelMenuListTheme}</code></td><td> Default Panel Menu style.</td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth com.bdsirunisa.buonotouristunisa:panelMenuListWidth}</code></td><td> Default Panel Menu width.</td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle com.bdsirunisa.buonotouristunisa:popupMenuStyle}</code></td><td> Default PopupMenu style.</td></tr>
            </table>
            @see #Theme_actionDropDownStyle
            @see #Theme_dropdownListPreferredItemHeight
@@ -3658,7 +3658,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:actionDropDownStyle
+          @attr name com.bdsirunisa.buonotouristunisa:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 0;
         /**
@@ -3676,7 +3676,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:dropdownListPreferredItemHeight
+          @attr name com.bdsirunisa.buonotouristunisa:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 1;
         /**
@@ -3688,7 +3688,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:listChoiceBackgroundIndicator
+          @attr name com.bdsirunisa.buonotouristunisa:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 5;
         /**
@@ -3700,7 +3700,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:panelMenuListTheme
+          @attr name com.bdsirunisa.buonotouristunisa:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 4;
         /**
@@ -3718,7 +3718,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:panelMenuListWidth
+          @attr name com.bdsirunisa.buonotouristunisa:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 3;
         /**
@@ -3730,7 +3730,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:popupMenuStyle
+          @attr name com.bdsirunisa.buonotouristunisa:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 2;
         /** Attributes that can be used with a View.
@@ -3740,8 +3740,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td> Boolean that controls whether a view can take focus.</td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.example.buonotouristunisa:paddingEnd}</code></td><td> Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
-           <tr><td><code>{@link #View_paddingStart com.example.buonotouristunisa:paddingStart}</code></td><td> Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.bdsirunisa.buonotouristunisa:paddingEnd}</code></td><td> Sets the padding, in pixels, of the end edge; see {@link android.R.attr#padding}.</td></tr>
+           <tr><td><code>{@link #View_paddingStart com.bdsirunisa.buonotouristunisa:paddingStart}</code></td><td> Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}.</td></tr>
            </table>
            @see #View_android_focusable
            @see #View_paddingEnd
@@ -3779,7 +3779,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:paddingEnd
+          @attr name com.bdsirunisa.buonotouristunisa:paddingEnd
         */
         public static final int View_paddingEnd = 2;
         /**
@@ -3797,7 +3797,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:paddingStart
+          @attr name com.bdsirunisa.buonotouristunisa:paddingStart
         */
         public static final int View_paddingStart = 1;
         /**  Attributes for the WalletFragment &lt;fragment&gt; tag 
@@ -3806,10 +3806,10 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_environment com.example.buonotouristunisa:environment}</code></td><td> Google Wallet environment to use </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.example.buonotouristunisa:fragmentMode}</code></td><td> Fragment mode </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.example.buonotouristunisa:fragmentStyle}</code></td><td> A style resource specifing attributes to customize the look and feel of WalletFragment </td></tr>
-           <tr><td><code>{@link #WalletFragmentOptions_theme com.example.buonotouristunisa:theme}</code></td><td> Theme to be used for the Wallet selector </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_environment com.bdsirunisa.buonotouristunisa:environment}</code></td><td> Google Wallet environment to use </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentMode com.bdsirunisa.buonotouristunisa:fragmentMode}</code></td><td> Fragment mode </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_fragmentStyle com.bdsirunisa.buonotouristunisa:fragmentStyle}</code></td><td> A style resource specifing attributes to customize the look and feel of WalletFragment </td></tr>
+           <tr><td><code>{@link #WalletFragmentOptions_theme com.bdsirunisa.buonotouristunisa:theme}</code></td><td> Theme to be used for the Wallet selector </td></tr>
            </table>
            @see #WalletFragmentOptions_environment
            @see #WalletFragmentOptions_fragmentMode
@@ -3836,7 +3836,7 @@ containing a value of this type.
 <tr><td><code>strict_sandbox</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:environment
+          @attr name com.bdsirunisa.buonotouristunisa:environment
         */
         public static final int WalletFragmentOptions_environment = 1;
         /**
@@ -3855,7 +3855,7 @@ containing a value of this type.
 <tr><td><code>selectionDetails</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:fragmentMode
+          @attr name com.bdsirunisa.buonotouristunisa:fragmentMode
         */
         public static final int WalletFragmentOptions_fragmentMode = 3;
         /**
@@ -3867,7 +3867,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:fragmentStyle
+          @attr name com.bdsirunisa.buonotouristunisa:fragmentStyle
         */
         public static final int WalletFragmentOptions_fragmentStyle = 2;
         /**
@@ -3886,7 +3886,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>holo_light</code></td><td>1</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:theme
+          @attr name com.bdsirunisa.buonotouristunisa:theme
         */
         public static final int WalletFragmentOptions_theme = 0;
         /**  Attributes that may be specified in a style resource to customize the look and feel of
@@ -3896,17 +3896,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.example.buonotouristunisa:buyButtonAppearance}</code></td><td> Appearance of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.example.buonotouristunisa:buyButtonHeight}</code></td><td> Height of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.example.buonotouristunisa:buyButtonText}</code></td><td> Text on the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.example.buonotouristunisa:buyButtonWidth}</code></td><td> Width of the buy button.</td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.example.buonotouristunisa:maskedWalletDetailsBackground}</code></td><td> Masked wallet details background </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.example.buonotouristunisa:maskedWalletDetailsButtonBackground}</code></td><td> "Change" button background in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.example.buonotouristunisa:maskedWalletDetailsButtonTextAppearance}</code></td><td> TextAppearance for the "Change" button in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.example.buonotouristunisa:maskedWalletDetailsHeaderTextAppearance}</code></td><td> TextAppearance for headers describing masked wallet details </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.example.buonotouristunisa:maskedWalletDetailsLogoImageType}</code></td><td> Type of the wallet logo image in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.example.buonotouristunisa:maskedWalletDetailsLogoTextColor}</code></td><td> Color of the Google Wallet logo text in masked wallet details view </td></tr>
-           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.example.buonotouristunisa:maskedWalletDetailsTextAppearance}</code></td><td> TextAppearance for masked wallet details </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonAppearance com.bdsirunisa.buonotouristunisa:buyButtonAppearance}</code></td><td> Appearance of the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonHeight com.bdsirunisa.buonotouristunisa:buyButtonHeight}</code></td><td> Height of the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonText com.bdsirunisa.buonotouristunisa:buyButtonText}</code></td><td> Text on the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_buyButtonWidth com.bdsirunisa.buonotouristunisa:buyButtonWidth}</code></td><td> Width of the buy button.</td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsBackground com.bdsirunisa.buonotouristunisa:maskedWalletDetailsBackground}</code></td><td> Masked wallet details background </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonBackground com.bdsirunisa.buonotouristunisa:maskedWalletDetailsButtonBackground}</code></td><td> "Change" button background in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance com.bdsirunisa.buonotouristunisa:maskedWalletDetailsButtonTextAppearance}</code></td><td> TextAppearance for the "Change" button in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance com.bdsirunisa.buonotouristunisa:maskedWalletDetailsHeaderTextAppearance}</code></td><td> TextAppearance for headers describing masked wallet details </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoImageType com.bdsirunisa.buonotouristunisa:maskedWalletDetailsLogoImageType}</code></td><td> Type of the wallet logo image in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsLogoTextColor com.bdsirunisa.buonotouristunisa:maskedWalletDetailsLogoTextColor}</code></td><td> Color of the Google Wallet logo text in masked wallet details view </td></tr>
+           <tr><td><code>{@link #WalletFragmentStyle_maskedWalletDetailsTextAppearance com.bdsirunisa.buonotouristunisa:maskedWalletDetailsTextAppearance}</code></td><td> TextAppearance for masked wallet details </td></tr>
            </table>
            @see #WalletFragmentStyle_buyButtonAppearance
            @see #WalletFragmentStyle_buyButtonHeight
@@ -3942,7 +3942,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>3</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:buyButtonAppearance
+          @attr name com.bdsirunisa.buonotouristunisa:buyButtonAppearance
         */
         public static final int WalletFragmentStyle_buyButtonAppearance = 3;
         /**
@@ -3971,7 +3971,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:buyButtonHeight
+          @attr name com.bdsirunisa.buonotouristunisa:buyButtonHeight
         */
         public static final int WalletFragmentStyle_buyButtonHeight = 0;
         /**
@@ -3991,7 +3991,7 @@ containing a value of this type.
 <tr><td><code>book_now</code></td><td>3</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:buyButtonText
+          @attr name com.bdsirunisa.buonotouristunisa:buyButtonText
         */
         public static final int WalletFragmentStyle_buyButtonText = 2;
         /**
@@ -4020,7 +4020,7 @@ containing a value of this type.
 <tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:buyButtonWidth
+          @attr name com.bdsirunisa.buonotouristunisa:buyButtonWidth
         */
         public static final int WalletFragmentStyle_buyButtonWidth = 1;
         /**
@@ -4034,7 +4034,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:maskedWalletDetailsBackground
+          @attr name com.bdsirunisa.buonotouristunisa:maskedWalletDetailsBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsBackground = 6;
         /**
@@ -4048,7 +4048,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:maskedWalletDetailsButtonBackground
+          @attr name com.bdsirunisa.buonotouristunisa:maskedWalletDetailsButtonBackground
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonBackground = 8;
         /**
@@ -4060,7 +4060,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:maskedWalletDetailsButtonTextAppearance
+          @attr name com.bdsirunisa.buonotouristunisa:maskedWalletDetailsButtonTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsButtonTextAppearance = 7;
         /**
@@ -4072,7 +4072,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:maskedWalletDetailsHeaderTextAppearance
+          @attr name com.bdsirunisa.buonotouristunisa:maskedWalletDetailsHeaderTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsHeaderTextAppearance = 5;
         /**
@@ -4091,7 +4091,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>monochrome</code></td><td>2</td><td></td></tr>
 </table>
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:maskedWalletDetailsLogoImageType
+          @attr name com.bdsirunisa.buonotouristunisa:maskedWalletDetailsLogoImageType
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoImageType = 10;
         /**
@@ -4108,7 +4108,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:maskedWalletDetailsLogoTextColor
+          @attr name com.bdsirunisa.buonotouristunisa:maskedWalletDetailsLogoTextColor
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsLogoTextColor = 9;
         /**
@@ -4120,7 +4120,7 @@ containing a value of this type.
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           <p>This is a private symbol.
-          @attr name com.example.buonotouristunisa:maskedWalletDetailsTextAppearance
+          @attr name com.bdsirunisa.buonotouristunisa:maskedWalletDetailsTextAppearance
         */
         public static final int WalletFragmentStyle_maskedWalletDetailsTextAppearance = 4;
     };

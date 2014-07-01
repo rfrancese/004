@@ -3,7 +3,7 @@ package com.activity.principali;
 import com.classi.server.HttpConnection;
 import com.classi.server.PathJSONParser;
 import com.classi.server.UserFunctions;
-import com.example.buonotouristunisa.R;
+import com.bdsirunisa.buonotouristunisa.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
