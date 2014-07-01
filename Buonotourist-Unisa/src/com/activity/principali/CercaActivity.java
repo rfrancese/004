@@ -419,14 +419,14 @@ public Dialog createA(){
 		        if (hours > 12) {
 		        	
 		            hours -= 12;
-		            timeSet = "AM";
+		            timeSet = "PM";
 		        } else if (hours == 0) {
 		            hours += 12;
-		            timeSet = "PM";
-		        } else if (hours == 12)
 		            timeSet = "AM";
-		        else
+		        } else if (hours == 12)
 		            timeSet = "PM";
+		        else
+		            timeSet = "AM";
 		 
 		         
 		        String minutes = "";
@@ -435,6 +435,18 @@ public Dialog createA(){
 		        else
 		            minutes = String.valueOf(mins);
 		       
+		        
+		        if(timeSet=="AM"){
+		         
+		        	if( hours==12)
+			        {
+			        	 aTime = new StringBuilder().append(00).append(':')
+				                .append(minutes).append(':').append('0').append('0').toString();
+				    }
+			     
+		        	
+		        }
+		        
 		        if(timeSet=="PM"){
 		        // Append in a StringBuilder
 		        if( hours==1)
@@ -516,7 +528,7 @@ public Dialog createA(){
 		        }
 		        if( hours==12)
 		        {
-		        	 aTime = new StringBuilder().append(00).append(':')
+		        	 aTime = new StringBuilder().append(12).append(':')
 			                .append(minutes).append(':').append('0').append('0').toString();
 			 
 		        	
