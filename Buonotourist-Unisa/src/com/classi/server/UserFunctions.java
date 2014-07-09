@@ -1,10 +1,5 @@
 package com.classi.server;
 
-/**
- * Author :Raj Amal
- * Email  :raj.amalw@learn2crack.com
- * Website:www.learn2crack.com
- **/
 
 import java.util.ArrayList;
 import java.util.List;
