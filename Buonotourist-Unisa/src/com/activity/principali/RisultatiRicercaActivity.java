@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import com.activity.principali.SimpleGestureFilter.SimpleGestureListener;
 import com.classi.server.UserFunctions;
+import com.classi.server.UserFunctionsFacade;
 import com.bdsirunisa.buonotouristunisa.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
@@ -207,7 +208,7 @@ public class RisultatiRicercaActivity extends Activity implements SimpleGestureL
 
         @Override
         protected JSONObject doInBackground(String... args) {
-            UserFunctions userFunction = new UserFunctions();
+        	UserFunctionsFacade userFunction = new UserFunctions();
             JSONObject json = userFunction.caricaCorseRicercate(partenza,destinazione,orario,andataRitorno);
             return json;
         }

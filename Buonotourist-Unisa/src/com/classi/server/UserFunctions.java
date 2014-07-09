@@ -13,7 +13,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
 
-public class UserFunctions {
+public class UserFunctions implements UserFunctionsFacade{
 
     private JSONParser jsonParser;
 

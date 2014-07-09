@@ -3,6 +3,7 @@ package com.activity.principali;
 import com.classi.server.HttpConnection;
 import com.classi.server.PathJSONParser;
 import com.classi.server.UserFunctions;
+import com.classi.server.UserFunctionsFacade;
 import com.bdsirunisa.buonotouristunisa.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -411,7 +412,7 @@ public class MapFragmentNearBusStop extends  FragmentActivity{
 
 	        @Override
 	        protected JSONObject doInBackground(String... args) {
-	            UserFunctions userFunction = new UserFunctions();
+	        	UserFunctionsFacade userFunction = new UserFunctions();
 	            JSONObject json = userFunction.trovaFermataPiuVicina(latitudinePosition,longitudinePosition);
 	            return json;
 	        }
